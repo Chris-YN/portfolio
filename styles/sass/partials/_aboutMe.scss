@@ -2,9 +2,12 @@
 
 
 // _aboutMe.scss
+#aboutMe{
+  margin-top: 20%;
+}
+
 .aboutMeFlexParent,
-.textContainerFlexParent
-.skillListFlexParent{
+.textContainerFlexParent{
   display: flex;
   div:first-child{
     width: 40%;
@@ -17,12 +20,42 @@
     color: $vsCodeCommentGrey;
   }
 }
+
+.skills{
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h2{
+    font-size: 1rem;
+    &::after{
+      display: none;
+    }
+  }
+}
+
+.skills::after{
+  content: "";
+  width: 100vw;
+  position: absolute;
+  border-bottom: 1px solid $vsCodeCommentGrey;
+  // bottom:0;
+  right:0%;
+}
+
+
 .skillListFlexParent{
-  color: $vsCodeCommentGrey;
-  font-size: 2em;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin-left: 2%;
   li:first-Child{
     margin-left:0;
+  }
+  li{
+    color: $vsCodeCommentGrey;
+    font-size: 3em;
   }
 }
 

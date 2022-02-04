@@ -292,7 +292,7 @@ a {
 }
 
 .wrapper {
-  width: 90%;
+  width: 1056px;
   background-color: #1d1d1c;
 }
 
@@ -364,6 +364,10 @@ header {
   right: 0%;
 }
 
+#portfolio {
+  margin-top: 50%;
+}
+
 h1 {
   text-align: left;
   padding-left: 5%;
@@ -404,30 +408,61 @@ h2 {
   background-color: salmon;
 }
 
+#aboutMe {
+  margin-top: 20%;
+}
+
 .aboutMeFlexParent,
-.textContainerFlexParent .skillListFlexParent {
+.textContainerFlexParent {
   display: flex;
 }
 .aboutMeFlexParent div:first-child,
-.textContainerFlexParent .skillListFlexParent div:first-child {
+.textContainerFlexParent div:first-child {
   width: 40%;
   padding: 5% 0 0 10%;
   margin-right: 10%;
 }
 .aboutMeFlexParent div:nth-child(2),
-.textContainerFlexParent .skillListFlexParent div:nth-child(2) {
+.textContainerFlexParent div:nth-child(2) {
   width: 50%;
   padding: 5% 10% 0 0;
   color: #797d80;
 }
 
+.skills {
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.skills h2 {
+  font-size: 1rem;
+}
+.skills h2::after {
+  display: none;
+}
+
+.skills::after {
+  content: "";
+  width: 100vw;
+  position: absolute;
+  border-bottom: 1px solid #797d80;
+  right: 0%;
+}
+
 .skillListFlexParent {
-  color: #797d80;
-  font-size: 2em;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin-left: 2%;
 }
 .skillListFlexParent li:first-Child {
   margin-left: 0;
+}
+.skillListFlexParent li {
+  color: #797d80;
+  font-size: 3em;
 }
 
 .textContainerFlexParent {
