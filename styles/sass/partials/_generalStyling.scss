@@ -4,7 +4,7 @@
 // _generalStyling.scss
 .wrapper{
   width: 90%;
-  background-color: $lightGrey;
+  background-color: $vsCodeBackgroundGrey;
 }
 
 .genaralTopNav{
@@ -13,13 +13,17 @@
     width:100%;
     padding-top: 20px;
     padding-bottom: 1%;
+    justify-content: flex-start;
+    p{
+      color: $vsCodeCommentGrey;
+    }
 
     li{
       a:visited {
-        color: $black;
+        color: $vsCodeCommentGrey;
       }
       a:hover {
-        color: $lightGrey;
+        color: $vsCodeWhite;
         background-color: transparent;
         text-decoration: underline;
       }
@@ -27,25 +31,17 @@
     position: relative;
     &::after{
     content: "";
-    width: 90%;
+    width: 100vw;
     position: absolute;
-    border-bottom: 3px solid rgb(226, 226, 226);
+    border-bottom: 1px solid $vsCodeCommentGrey;
     bottom:0;
     }
   }
 }
 
-.topNavContactAbout{
-  ul{
-    justify-content: flex-end;
-    
-
-    li{
-      margin-right: 2%;
-    }
-    &::after{
-    border-bottom: 3px solid rgb(190, 167, 167);
-    }
-  }
+footer{
+  margin-top: 7%;
+  text-align: center;
 }
+
 

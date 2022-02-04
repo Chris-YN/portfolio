@@ -262,14 +262,37 @@ html {
 }
 
 h1 {
-  font-family: "Niramit", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 3rem;
+  color: #00add8;
+}
+h1 span {
+  color: #884bb9;
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
   font-size: 2rem;
-  color: #000000;
+  color: #eef7f8;
+}
+
+p {
+  font-family: "Niramit", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+a {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
 }
 
 .wrapper {
   width: 90%;
-  background-color: #E8EAE3;
+  background-color: #1d1d1c;
 }
 
 .genaralTopNav ul {
@@ -277,36 +300,40 @@ h1 {
   width: 100%;
   padding-top: 20px;
   padding-bottom: 1%;
+  justify-content: flex-start;
   position: relative;
 }
+.genaralTopNav ul p {
+  color: #797d80;
+}
 .genaralTopNav ul li a:visited {
-  color: #000000;
+  color: #797d80;
 }
 .genaralTopNav ul li a:hover {
-  color: #E8EAE3;
+  color: #eef7f8;
   background-color: transparent;
   text-decoration: underline;
 }
 .genaralTopNav ul::after {
   content: "";
-  width: 90%;
+  width: 100vw;
   position: absolute;
-  border-bottom: 3px solid #e2e2e2;
+  border-bottom: 1px solid #797d80;
   bottom: 0;
 }
 
-.topNavContactAbout ul {
-  justify-content: flex-end;
-}
-.topNavContactAbout ul li {
-  margin-right: 2%;
-}
-.topNavContactAbout ul::after {
-  border-bottom: 3px solid #bea7a7;
+footer {
+  margin-top: 7%;
+  text-align: center;
 }
 
-.header {
-  background-color: #E8EAE3;
+header,
+body,
+footer {
+  background-color: #1d1d1c;
+}
+
+header {
   height: 100vh;
 }
 
@@ -315,30 +342,35 @@ h1 {
 }
 
 .bottomHalf {
-  background-color: #418689;
   height: 50vh;
 }
 
-h1 {
-  text-align: center;
+#portfolio {
+  background: #1d1d1c;
 }
 
-.indexTopNav {
-  margin: 0 10%;
+h1 {
+  text-align: left;
 }
+
 .indexTopNav ul {
-  justify-content: center;
+  justify-content: left;
+  padding-left: 5.5%;
 }
 .indexTopNav li {
   margin: 0 1%;
 }
 
+h1 {
+  padding-left: 5%;
+}
+
 .fixedTopNav nav {
-  background-color: aqua;
+  background-color: #1d1d1c;
+  color: #eef7f8;
   position: fixed;
   width: 90%;
   top: 0;
-  right: -5%;
   z-index: 10;
 }
 .fixedTopNav nav ul {
@@ -350,6 +382,10 @@ h1 {
 
 html {
   scroll-behavior: smooth;
+}
+
+h2 {
+  text-align: center;
 }
 
 .portfolioCarousel {
@@ -369,29 +405,28 @@ html {
 }
 .portfolioCarousel button {
   position: absolute;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   top: 50%;
   transform: translateY(-50%);
   z-index: 6;
   background: none;
   border: none;
-  color: rgba(149, 225, 255, 0.5);
+  color: #eef7f8;
   cursor: pointer;
-  background-color: rgba(28, 111, 145, 0.5);
-  border-radius: 50%;
+  border-radius: 20%;
 }
 .portfolioCarousel button:hover,
 .portfolioCarousel button:focus {
-  color: #95e1ff;
-  background-color: white;
+  color: #797d80;
+  background-color: #1d1d1c;
 }
 
 .previous {
-  left: 0.5rem;
+  left: -3.5rem;
 }
 
 .next {
-  right: 0.5rem;
+  right: -3.5rem;
 }
 
 .project {
@@ -427,7 +462,7 @@ html {
 .modal {
   position: fixed;
   top: 5%;
-  transition: all 0.5s ease-in;
+  transition: all 1s ease-in;
   background: white;
   width: 80%;
   height: 80%;

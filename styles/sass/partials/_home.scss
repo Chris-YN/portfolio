@@ -2,28 +2,39 @@
 
 
 // _home.scss
-.header{
-  background-color: $lightGrey;
+header,
+body,
+footer{
+  background-color: $vsCodeBackgroundGrey;
+}
+header{
   height: 100vh;
 }
 
 .topHalf{
   height: 50vh;
+  // background-image: url(./assets/torontoHero3.jpg);
+  // background-repeat: none;
+  // background-size: cover;
 }
 
 .bottomHalf{
-  background-color: $lightGreenishBlue;
   height: 50vh;
 }
 
+#portfolio{
+  background: $vsCodeBackgroundGrey;
+}
+
 h1{
-  text-align: center;
+  text-align: left;
 }
 
 .indexTopNav{
-  margin: 0 10%;
+  
   ul{
-    justify-content: center;
+    justify-content: left;
+    padding-left: 5.5%;
   }
   li{
     margin: 0 1%;
@@ -31,10 +42,15 @@ h1{
 }
 
 
+h1{
+  padding-left: 5%;
+}
 
-// this is additional class for top nav bar in fixed position
+
+//===== class for top nav bar in fixed position =====//
 .fixedTopNav nav{
-  background-color: aqua;
+  background-color: $vsCodeBackgroundGrey;
+  color: $vsCodeWhite;
   ul{
     justify-content: flex-end;
     li{
@@ -44,16 +60,19 @@ h1{
   position: fixed;
   width: 90%;
   top:0;
-  right: -5%;
+  // right: -5%;
   z-index: 10;
 }
 html{
   scroll-behavior: smooth;
 }
+h2{
+  text-align: center;
+}
 
 
 
-// portfolio carousel
+//===== portfolio carousel =====//
 .portfolioCarousel{
   width:850px;
   height: 700px;
@@ -72,33 +91,30 @@ html{
 
   button{
     position: absolute;
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     top: 50%;
     //to make it exactly center..
     transform: translateY(-50%);
     z-index: 6;
     background: none;
     border: none;
-    color: rgba(149, 225, 255, 0.5);
+    color: $vsCodeWhite;
     cursor: pointer;
-    background-color: rgba(28, 111, 145, 0.5);
-    border-radius: 50%;
+    // background-color: rgb(61, 61, 61);
+    border-radius: 20%;
   }
   button:hover,
   button:focus{
-    color: rgba(149, 225, 255, 1);
-    background-color: rgb(255, 255, 255, 1);
+    color: $vsCodeCommentGrey;
+    background-color: $vsCodeBackgroundGrey;
   }
-  // button:focus{
-  //   outline: solid 1px black;
-  // }
 }
 
 .previous{
-  left: .5rem;
+  left: -3.5rem;
 }
 .next{
-  right: .5rem;
+  right: -3.5rem;
 }
  
 .project{
@@ -112,11 +128,10 @@ html{
   opacity: 1;
   transition: .5s opacity ease-in;
 }
-// portfolio carousel ends
 
 
 
-// project modal
+//===== project modal =====//
 .projectModal{
   display: flex;
   justify-content: center;
@@ -141,7 +156,7 @@ html{
 .modal{
   position: fixed;
   top:5%;
-  transition: all .5s ease-in;
+  transition: all 1s ease-in;
   background: white;
   width:80%;
   height: 80%;

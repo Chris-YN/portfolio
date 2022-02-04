@@ -13,8 +13,30 @@ html{
 }
 
 h1{
-  font-family: 'Niramit', sans-serif;
-  font-size: 2rem;
-  color: $black;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 3rem;
+  color: rgb(0, 173, 216);
+  span{
+    color:rgb(136, 75, 185)
+  }
 }
 
+h2{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  color: $vsCodeWhite;
+}
+p{
+  font-family: 'Niramit', sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+
+a{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}

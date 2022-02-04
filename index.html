@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Niramit:wght@200;300;400&family=Nunito:wght@200;300;400&family=Roboto:wght@100;400&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Niramit:wght@200;300;400&family=Nunito:wght@200;300;400&family=Roboto:wght@100;300;400;500&display=swap"
     rel="stylesheet">
   
   <!-- FontAwesome link -->
@@ -35,15 +35,19 @@
 
       
       <div class="bottomHalf">
-        <h1>Webdeveloper<br>Christopher Yun</h1>
+        <h1><span>const:</span> ChristopherYun<br><span>let: </span> WebDeveloper</h1>
 
         <nav class="genaralTopNav indexTopNav" id="stickyNav">
           <ul>
-            <li><a href="#portfolio">Projects</a></li>
-            <li><a href="./contact.html">Contact</a></li>
+            <li aria-hidden="true"><p>// ====</p></li>
+            <li><a href="#portfolioAnchorTarget">Projects</a></li>
+            <li aria-hidden="true"><p>  //  </p>
+            <!-- <li><a href="./contact.html">Contact</a></li> -->
             <li><a href="./aboutMe.html">About me</a></li>
+            <li aria-hidden="true"><p>==== //</p>
+            </li>
           </ul>
-          <!-- .topNav ends   -->
+        <!-- .topNav ends   -->
         </nav>
       <!-- .bottomHalf ends   -->
       </div>
@@ -68,11 +72,11 @@
           <button class="carouselButton previous" data-pCarousel-button="prev"><i class="fas fa-arrow-left"></i></button>
           <button class="carouselButton next" data-pCarousel-button="prev"><i class="fas fa-arrow-right"></i></button>
           <ul data-projects>
-            <li class="proOne project projectLi" data-projectNum="1" data-active><img src="./styles/assets/recipeAppTrimedCarousel.jpg" alt="Screen-shot of Robo Trivia App"></li>
+            <li class="proOne project projectLi" data-projectNum="1" data-active><img src="./styles/assets/recipeAppTrimedCarouselB.jpg" alt="Screen-shot of Robo Trivia App"></li>
 
-            <li class="proTwo project projectLi" data-projectNum="2"><img src="./styles/assets/airAndWeatherTrimedCarousel.jpg" alt="Screen-shot of air and weather app"></li>
+            <li class="proTwo project projectLi" data-projectNum="2"><img src="./styles/assets/airAndWeatherTrimedCarouselB.jpg" alt="Screen-shot of air and weather app"></li>
             
-            <li class="proThree project projectLi" data-projectNum="3"><img src="./styles/assets/roboTriviaTrimedCarousel.jpg" alt="Screen-shot of Robo Trivia App"></li>
+            <li class="proThree project projectLi" data-projectNum="3"><img src="./styles/assets/roboTriviaTrimedCarouselB.jpg" alt="Screen-shot of Robo Trivia App"></li>
           </ul>
         </div>
         <div class="projectModal">
@@ -96,6 +100,7 @@
             </div>
           </div>
         </div>
+        <div id="portfolioAnchorTarget"></div>
       </section>
     <!-- .wrapper for main ends -->
     </div>
@@ -107,7 +112,8 @@
                 Footer
   ===============================-->
   <footer>
-
+    
+    <p>all rights reserved etc etc</p><div id="portfolioAnchorTarget"></div>
   </footer>
 
   <script src="./script.js"></script>
