@@ -349,21 +349,6 @@ header {
   height: 50vh;
 }
 
-#portfolio h2:first-child,
-#aboutMe h2:first-child {
-  color: #dba93c;
-  position: relative;
-}
-#portfolio h2:first-child::after,
-#aboutMe h2:first-child::after {
-  content: "";
-  width: 100vw;
-  position: absolute;
-  border-bottom: 1px solid #797d80;
-  bottom: -20%;
-  right: 0%;
-}
-
 #portfolio {
   margin-top: 50%;
 }
@@ -404,12 +389,55 @@ h2 {
   text-align: center;
 }
 
-.contact {
-  background-color: salmon;
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #2e2e2e;
+}
+footer p {
+  color: #797d80;
+  margin: 5% 0 5% 0;
+}
+
+.contactIconFlexParent {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  margin: 0 auto;
+}
+.contactIconFlexParent li {
+  margin-left: 3%;
+}
+.contactIconFlexParent li a {
+  margin-left: 3%;
+  font-size: 2em;
+  color: #797d80;
+}
+.contactIconFlexParent li a:hover {
+  color: #eef7f8;
+}
+.contactIconFlexParent li:first-Child {
+  margin-left: 0;
 }
 
 #aboutMe {
   margin-top: 20%;
+}
+
+.h2AndOrange {
+  position: relative;
+  color: #dba93c;
+}
+.h2AndOrange h2 {
+  color: #dba93c;
+}
+.h2AndOrange::after {
+  content: "";
+  width: 100vw;
+  position: absolute;
+  border-bottom: 1px solid #797d80;
+  bottom: -12%;
+  right: -5%;
 }
 
 .aboutMeFlexParent,
@@ -437,17 +465,6 @@ h2 {
 }
 .skills h2 {
   font-size: 1rem;
-}
-.skills h2::after {
-  display: none;
-}
-
-.skills::after {
-  content: "";
-  width: 100vw;
-  position: absolute;
-  border-bottom: 1px solid #797d80;
-  right: 0%;
 }
 
 .skillListFlexParent {

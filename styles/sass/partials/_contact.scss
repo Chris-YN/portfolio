@@ -2,6 +2,33 @@
 
 
 // _contact.scss
-.contact{
-  background-color: salmon;
+footer{
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(46, 46, 46);
+  p{
+    color: $vsCodeCommentGrey;
+    margin: 5% 0 5% 0;
+  }
+  
+}
+.contactIconFlexParent{
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  margin:0 auto;
+  li{
+    margin-left: 3%;
+  }
+  li a{
+    margin-left: 3%;
+    font-size: 2em;
+    color: $vsCodeCommentGrey;
+    &:hover{
+      color:$vsCodeWhite;
+    }
+  }
+  li:first-Child{
+    margin-left: 0;
+  }
 }

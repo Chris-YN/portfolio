@@ -67,7 +67,10 @@
               Section About me
       ===============================-->
       <section id="aboutMe">
-        <h2 id="aboutMeAnchorTarget">About me</h2>
+        <div id="aboutMeAnchorTarget" aria-hidden="true"></div>
+        <div class="h2AndOrange">
+          <h2>About me</h2>
+        </div>
         <div class="aboutMeFlexParent">
           <div class="profilePictureContainer">
             <img src="./styles/assets/profilepix.jpg" alt="Picture of me, Chris">
@@ -79,7 +82,7 @@
           </div>
         </div>
 
-        <div class="skills">
+        <div class="skills h2AndOrange">
           <h2>Core Competencies</h2>
           <ul class="skillListFlexParent">
             <li><i class="fab fa-html5"></i></li>
@@ -96,7 +99,7 @@
              Section portfolio
       ===============================-->
       <section id="portfolio">
-        <h2 id="portfolioAnchorTarget">portfolio</h2>
+        <h2 class="h2AndOrange" id="portfolioAnchorTarget">Projects</h2>
         <div class="portfolioCarousel" data-pCarousel>
           <button class="carouselButton previous" data-pCarousel-button="prev"><i class="fas fa-arrow-left"></i></button>
           <button class="carouselButton next" data-pCarousel-button="prev"><i class="fas fa-arrow-right"></i></button>
@@ -145,8 +148,13 @@
                 Footer
   ===============================-->
   <footer>
-    
-    <p>all rights reserved etc etc</p><div id="portfolioAnchorTarget"></div>
+    <h2 class="h2AndOrange">Contact</h2>
+    <ul class="contactIconFlexParent">
+      <li><a href="mailto:developer.Chris.yun@gmail.com"><i class="fas fa-envelope-square"></i></a></li>
+      <li><a href="https://www.linkedin.com/in/christopher-yun-824458181/"><i class="fab fa-linkedin"></i></a></li>
+      <li><a href="https://github.com/Chris-YN/"><i class="fab fa-github-square"></i></a></li>
+    </ul>
+    <p>Designed by Christopher Yun 2021</p>
   </footer>
 
   <script src="./script.js"></script>

@@ -6,6 +6,22 @@
   margin-top: 20%;
 }
 
+.h2AndOrange{
+  position: relative;
+  h2{
+    color: $vsCodeOrange;
+  }
+  color: $vsCodeOrange;
+  &::after{
+    content: "";
+    width: 100vw;
+    position: absolute;
+    border-bottom: 1px solid $vsCodeCommentGrey;
+    bottom:-12%;
+    right:-5%;
+  }
+}
+
 .aboutMeFlexParent,
 .textContainerFlexParent{
   display: flex;
@@ -28,20 +44,18 @@
   align-items: center;
   h2{
     font-size: 1rem;
-    &::after{
-      display: none;
-    }
   }
 }
 
-.skills::after{
-  content: "";
-  width: 100vw;
-  position: absolute;
-  border-bottom: 1px solid $vsCodeCommentGrey;
-  // bottom:0;
-  right:0%;
-}
+
+// .skills::after{
+//   content: "";
+//   width: 100vw;
+//   position: absolute;
+//   border-bottom: 1px solid $vsCodeCommentGrey;
+//   // bottom:0;
+//   right:0%;
+// }
 
 
 .skillListFlexParent{
