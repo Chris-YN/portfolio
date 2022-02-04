@@ -66,19 +66,23 @@ const projectModalToggle = function(){
   const gitHub = document.querySelector("#projectGitHubLink");
   
   if (this.classList[0] == "proOne") {
-    title.innerHTML = "testString 1"
-    image.innerHTML = '<img src="./styles/assets/toronto1.png" alt="toronto One">'
+    title.innerHTML = "Recipe Finder"
+    image.innerHTML = '<img src="./styles/assets/recipeAppTrimedModal.jpg" alt="Screen-shot of Robo Trivia App">'
     discription.innerHTML = "1st project discription here"
+    liveLink.innerHTML = '<a href="https://epic-engelbart-52614a.netlify.app/" target="_blank">Live Site</a>'
+    gitHub.innerHTML = '<a href="https://github.com/recipeFinderMiniApp/recipeFinderMiniApp" target="_blank">GitHub</a>'
 
   } else if (this.classList[0] == "proTwo") {
-    title.innerHTML = "testString 2"
-    image.innerHTML = '<img src="./styles/assets/toronto2.png" alt="toronto two">'
+    title.innerHTML = "Weather and Air quality App"
+    image.innerHTML = '<img src="./styles/assets/airAndWeatherTrimedModal.jpg" alt="Screen-shot of air and weather app">'
     discription.innerHTML = "2nd project discription here"
+    liveLink.innerHTML = '<a href="https://happy-golick-ff6273.netlify.app/" target="_blank">Live Site</a>'
+    gitHub.innerHTML = '<a href="https://github.com/Chris-YN/chrisYunProjectThree" target="_blank">GitHub</a>'
 
 
   } else if (this.classList[0] == "proThree"){
-    title.innerHTML = "testString 3"
-    image.innerHTML = '<img src="./styles/assets/toronto3.png" alt="toronto three">'
+    title.innerHTML = "Robo Trivia"
+    image.innerHTML = '<img src="./styles/assets/roboTriviaTrimedModal.jpg" alt="Screen-shot of Robo Trivia App">'
     discription.innerHTML = "3rd project discription here"
     liveLink.innerHTML = '<a href="https://epic-bohr-0b1267.netlify.app" target="_blank">Live Site</a>'
     gitHub.innerHTML = '<a href="https://github.com/Robo-Trivia/project4-robo-trivia" target="_blank">GitHub</a>'
