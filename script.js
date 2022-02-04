@@ -64,26 +64,32 @@ const projectModalToggle = function(){
   const discription = document.querySelector("#projectDiscription");
   const liveLink = document.querySelector("#projectLiveLink");
   const gitHub = document.querySelector("#projectGitHubLink");
+
+  const recipeFiderText = "// A Git collaborated app to search recipes for various dishes by name and category <br> <br> // App allows search by dish name, random dish display option and option to choosedish by category"
+
+  const weatherAndAirAppText = "// An app to find current weather and air quality for cities in Canada <br> <br> // App displays dynamically changing weather icon and colour in the background thatreflects current weather and air quality <br> <br> // Displays information on current temperature, humidity and Air Quality Index in text"
+
+  const roboTriviaText = "// A Git collaborated web based game with trivia questions for different categories <br> <br> // Utilizes separate API to generate unique robot per player <br> <br> // Player's score is compared to three top scores saved in Firebase real-time databasewith an option to submit the score. submitting higher score updates the high score"
   
   if (this.classList[0] == "proOne") {
-    title.innerHTML = "Recipe Finder"
+    title.innerHTML = "<span>let: </span>Recipe Finder"
     image.innerHTML = '<img src="./styles/assets/recipeAppTrimedModal.jpg" alt="Screen-shot of Robo Trivia App">'
-    discription.innerHTML = "1st project discription here"
+    discription.innerHTML = recipeFiderText
     liveLink.innerHTML = '<a href="https://epic-engelbart-52614a.netlify.app/" target="_blank">Live Site</a>'
     gitHub.innerHTML = '<a href="https://github.com/recipeFinderMiniApp/recipeFinderMiniApp" target="_blank">GitHub</a>'
 
   } else if (this.classList[0] == "proTwo") {
-    title.innerHTML = "Weather and Air quality App"
+    title.innerHTML = "<span>let: </span>Weather and Air quality App"
     image.innerHTML = '<img src="./styles/assets/airAndWeatherTrimedModal.jpg" alt="Screen-shot of air and weather app">'
-    discription.innerHTML = "2nd project discription here"
+    discription.innerHTML = weatherAndAirAppText
     liveLink.innerHTML = '<a href="https://happy-golick-ff6273.netlify.app/" target="_blank">Live Site</a>'
     gitHub.innerHTML = '<a href="https://github.com/Chris-YN/chrisYunProjectThree" target="_blank">GitHub</a>'
 
 
   } else if (this.classList[0] == "proThree"){
-    title.innerHTML = "Robo Trivia"
+    title.innerHTML = "<span>let: </span>Robo Trivia"
     image.innerHTML = '<img src="./styles/assets/roboTriviaTrimedModal.jpg" alt="Screen-shot of Robo Trivia App">'
-    discription.innerHTML = "3rd project discription here"
+    discription.innerHTML = roboTriviaText
     liveLink.innerHTML = '<a href="https://epic-bohr-0b1267.netlify.app" target="_blank">Live Site</a>'
     gitHub.innerHTML = '<a href="https://github.com/Robo-Trivia/project4-robo-trivia" target="_blank">GitHub</a>'
 

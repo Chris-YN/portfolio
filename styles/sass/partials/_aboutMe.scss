@@ -2,6 +2,30 @@
 
 
 // _aboutMe.scss
-.aboutMe{
-  background-color: aqua;
+.aboutMeFlexParent,
+.textContainerFlexParent
+.skillListFlexParent{
+  display: flex;
+  div:first-child{
+    width: 40%;
+    padding: 5% 0 0 10%;
+    margin-right: 10%;
+  }
+  div:nth-child(2){
+    width: 50%;
+    padding: 5% 10% 0 0;
+    color: $vsCodeCommentGrey;
+  }
+}
+.skillListFlexParent{
+  color: $vsCodeCommentGrey;
+  font-size: 2em;
+  margin-left: 2%;
+  li:first-Child{
+    margin-left:0;
+  }
+}
+
+.textContainerFlexParent{
+  flex-direction: column;
 }

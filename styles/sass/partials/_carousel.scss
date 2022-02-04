@@ -1,0 +1,62 @@
+
+
+
+// carousel.scss
+.portfolioCarousel{
+  width:850px;
+  height: 700px;
+  max-height: 1050px;
+
+  position: relative;
+  margin: 0 auto;
+  li{
+    cursor: pointer;
+  }
+  img{
+    display: block;
+    // width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+  }
+
+  button{
+    position: absolute;
+    font-size: 2.2rem;
+    top: 50%;
+    //to make it exactly center..
+    transform: translateY(-50%);
+    z-index: 6;
+    background: none;
+    border: none;
+    color: $vsCodeWhite;
+    background-color: $vsCodeCommentGrey;
+    cursor: pointer;
+    // background-color: rgb(61, 61, 61);
+    border-radius: 20%;
+  }
+  button:hover,
+  button:focus{
+    color: $vsCodeBackgroundGrey;
+    background-color: $vsCodeWhite;
+  }
+}
+
+.previous{
+  left: -3.5rem;
+}
+.next{
+  right: -3.5rem;
+}
+ 
+.project{
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  
+}
+
+.project[data-active]{
+  opacity: 1;
+  transition: .5s opacity ease-in;
+}

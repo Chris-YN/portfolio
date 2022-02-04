@@ -19,6 +19,9 @@
     }
 
     li{
+      a{
+        color: $vsCodeCommentGrey;
+      }
       a:visited {
         color: $vsCodeCommentGrey;
       }

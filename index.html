@@ -43,7 +43,7 @@
             <li><a href="#portfolioAnchorTarget">Projects</a></li>
             <li aria-hidden="true"><p>  //  </p>
             <!-- <li><a href="./contact.html">Contact</a></li> -->
-            <li><a href="./aboutMe.html">About me</a></li>
+            <li><a href="#aboutMeAnchorTarget">About me</a></li>
             <li aria-hidden="true"><p>==== //</p>
             </li>
           </ul>
@@ -64,10 +64,37 @@
   <main>
     <div class="wrapper">
       <!-- ==========================
-                  Section
+              Section About me
+      ===============================-->
+      <section id="aboutMe">
+        <h2 id="aboutMeAnchorTarget">About me</h2>
+        <div class="aboutMeFlexParent">
+          <div class="profilePictureContainer">
+            <img src="./styles/assets/profilepix.jpg" alt="Picture of me, Chris">
+          </div>
+          <div class="textContainerFlexParent">
+            <p>Hello! I am a front-end web developer with background in computer network administration and graphic design. <br><br>
+            With passion for efficient code writing and clean effective design, I'm exited to make the leap and continue to advance my skills with the right company. 
+            </p>
+          </div>
+          <div class="skills">
+            <ul calss="skillListFlexParent">
+              <li><i class="fab fa-html5"></i></li>
+              <li><i class="fab fa-css3-alt"></i></li>
+              <li><i class="fab fa-js-square"></i></li>
+              <li><i class="fab fa-sass"></i></li>
+              <li><i class="fab fa-react"></i></li>
+            </ul>
+          </div>
+        </div>
+      <!-- section aboutMe ends -->
+      </section>
+
+      <!-- ==========================
+             Section portfolio
       ===============================-->
       <section id="portfolio">
-        <h2>portfolio</h2>
+        <h2 id="portfolioAnchorTarget">portfolio</h2>
         <div class="portfolioCarousel" data-pCarousel>
           <button class="carouselButton previous" data-pCarousel-button="prev"><i class="fas fa-arrow-left"></i></button>
           <button class="carouselButton next" data-pCarousel-button="prev"><i class="fas fa-arrow-right"></i></button>
@@ -87,20 +114,24 @@
               <div class="modalCloseButton">
                 <i class="far fa-window-close"></i>
               </div>
-              <p>some content</p>
 
-              <h2 id="projectTitle">test title for console log</h2>
-              <div id="projectImgContainer"></div>
-              <p id="projectDiscription"></p>
-              <ul>
-                <li id="projectLiveLink"></li>
-                <li id="projectGitHubLink"></li>
-              </ul>
+              <h2 id="projectTitle"></h2>
+
+              <div class="modalImageAndTextFlexParent">
+                <div id="projectImgContainer"></div>
+                <div class="modalTextFlexParent">
+                  <p id="projectDiscription"></p>
+                  <ul>
+                    <li id="projectLiveLink"></li>
+                    <li><p>//</p></li>
+                    <li id="projectGitHubLink"></li>
+                  </ul>
+                </div>
+              </div>
 
             </div>
           </div>
         </div>
-        <div id="portfolioAnchorTarget"></div>
       </section>
     <!-- .wrapper for main ends -->
     </div>
