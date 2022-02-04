@@ -4,8 +4,20 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- css link -->
   <link rel="stylesheet" href="./styles/style.css">
-  <title>Document</title>
+  
+  <!-- Google font link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Niramit:wght@200;300;400&family=Nunito:wght@200;300;400&family=Roboto:wght@100;400&display=swap"
+    rel="stylesheet">
+  
+  <!-- FontAwesome link -->
+  <script src="https://kit.fontawesome.com/12e0e6e5dc.js" crossorigin="anonymous"></script>
+
+  <title>Christopher</title>
 </head>
 
 
@@ -14,9 +26,28 @@
              Header 
 ===============================-->
 <body>
-  <header>
+  <header class="header">
     <div class="wrapper">
-      <h1>Christopher Yun</h1>
+      <div class="topHalf">
+        
+      <!-- .topHalf ends   -->
+      </div>
+
+      
+      <div class="bottomHalf">
+        <h1>Webdeveloper<br>Christopher Yun</h1>
+
+        <nav class="genaralTopNav indexTopNav" id="stickyNav">
+          <ul>
+            <li><a href="#portfolio">Projects</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="./aboutMe.html">About me</a></li>
+          </ul>
+          <!-- .topNav ends   -->
+        </nav>
+      <!-- .bottomHalf ends   -->
+      </div>
+      
     <!-- .wrapper for header ends -->
     </div>
   </header>
@@ -31,8 +62,40 @@
       <!-- ==========================
                   Section
       ===============================-->
-      <section>
+      <section id="portfolio">
+        <h2>portfolio</h2>
+        <div class="portfolioCarousel" data-pCarousel>
+          <button class="carouselButton previous" data-pCarousel-button="prev"><i class="fas fa-arrow-left"></i></button>
+          <button class="carouselButton next" data-pCarousel-button="prev"><i class="fas fa-arrow-right"></i></button>
+          <ul data-projects>
+            <li class="proOne project projectLi" data-projectNum="1" data-active><img src="./styles/assets/toronto1.png" alt="toronto one"></li>
 
+            <li class="proTwo project projectLi" data-projectNum="2"><img src="./styles/assets/toronto2.png" alt="toronto two"></li>
+            
+            <li class="proThree project projectLi" data-projectNum="3"><img src="./styles/assets/toronto3.png" alt="toronto three"></li>
+          </ul>
+        </div>
+        <div class="projectModal">
+          <div class="overlay overlayHidden">
+          </div>
+          <div class="modal modalHidden">
+            <div class="modalContents">
+              <div class="modalCloseButton">
+                <i class="far fa-window-close"></i>
+              </div>
+              <p>some content</p>
+
+              <h2 id="projectTitle">test title for console log</h2>
+              <div id="projectImgContainer"></div>
+              <p id="projectDiscription"></p>
+              <ul>
+                <li id="projectLiveLink"></li>
+                <li id="projectGitHubLink"></li>
+              </ul>
+
+            </div>
+          </div>
+        </div>
       </section>
     <!-- .wrapper for main ends -->
     </div>
@@ -47,6 +110,6 @@
 
   </footer>
 
-    
+  <script src="./script.js"></script>
 </body>
 </html>

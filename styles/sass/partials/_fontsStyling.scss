@@ -2,8 +2,19 @@
 
 
 // _fontsStyling.scss
+
+// font-family: 'Niramit', sans-serif;
+// font-family: 'Nunito', sans-serif;
+// font-family: 'Roboto', sans-serif;
+
 html{
   font-size: 125%;
   line-height: 1.15;
+}
+
+h1{
+  font-family: 'Niramit', sans-serif;
+  font-size: 2rem;
+  color: $black;
 }
 

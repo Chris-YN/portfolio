@@ -1,0 +1,16 @@
+/* CSS code, add in a separate file or style tag */
+/* always applied */
+nav {
+  width: 100%;
+  background-color: black;
+  text-align: center;
+  margin: 0 auto;
+  color: white;
+}
+
+/* applied after scroll height reached */
+.fixed-nav nav {
+  position: fixed;
+  top:0;
+  z-index: 10;
+}

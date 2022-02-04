@@ -4,5 +4,48 @@
 // _generalStyling.scss
 .wrapper{
   width: 90%;
-  background-color: teal;
+  background-color: $lightGrey;
 }
+
+.genaralTopNav{
+  ul{
+    display: flex;
+    width:100%;
+    padding-top: 20px;
+    padding-bottom: 1%;
+
+    li{
+      a:visited {
+        color: $black;
+      }
+      a:hover {
+        color: $lightGrey;
+        background-color: transparent;
+        text-decoration: underline;
+      }
+    }
+    position: relative;
+    &::after{
+    content: "";
+    width: 90%;
+    position: absolute;
+    border-bottom: 3px solid rgb(226, 226, 226);
+    bottom:0;
+    }
+  }
+}
+
+.topNavContactAbout{
+  ul{
+    justify-content: flex-end;
+    
+
+    li{
+      margin-right: 2%;
+    }
+    &::after{
+    border-bottom: 3px solid rgb(190, 167, 167);
+    }
+  }
+}
+
