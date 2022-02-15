@@ -95,7 +95,6 @@ const projectModalToggle = function(){
 
     }
 
-
   // projectImages.forEach( (projectImage)=>{
   //   if (projectImage.dataset.active === true){
   //     const currentProjectId = projectImage.dataset.projectNum;

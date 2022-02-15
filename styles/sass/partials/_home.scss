@@ -2,81 +2,37 @@
 
 
 // _home.scss
-header,
-body,
-footer{
-  background-color: $vsCodeBackgroundGrey;
-}
 header{
   height: 100vh;
 }
 
+
 .topHalf{
   height: 50vh;
-  // background-image: url(./assets/torontoHero3.jpg);
-  // background-repeat: none;
-  // background-size: cover;
+  img{
+    width: 30%;
+  }
+  input{
+    background-color: $vsCodeBackgroundGrey;
+    border:none;
+    color: $vsCodeWhite;
+  }
 }
+input:focus{
+  color:$vsCodeWhite;
+  outline:none;
+}
+
 
 .bottomHalf{
-  height: 50vh;
+  height: 50vh; 
 }
 
-// #portfolio,
-// #aboutMe{
-//   h2:first-child{
-//     color: $vsCodeOrange;
-//     position: relative;
-//     &::after{
-//       content: "";
-//       width: 100vw;
-//       position: absolute;
-//       border-bottom: 1px solid $vsCodeCommentGrey;
-//       bottom:-20%;
-//       right:0%;
-//     }
-//   }
-// }
-#portfolio{
-  margin-top:50%;
-}
 
 h1{
   text-align: left;
   padding-left: 5%;
 }
 
-.indexTopNav{
-  
-  ul{
-    justify-content: left;
-    padding-left: 5.5%;
-  }
-  li{
-    margin: 0 1%;
-  }
-}
 
 
-//===== class for top nav bar in fixed position =====//
-.fixedTopNav nav{
-  background-color: $vsCodeBackgroundGrey;
-  color: $vsCodeWhite;
-  ul{
-    justify-content: flex-end;
-    li{
-      margin-right: 2%;
-    }
-  }
-  position: fixed;
-  width: 90%;
-  top:0;
-  // right: -5%;
-  z-index: 8;
-}
-html{
-  scroll-behavior: smooth;
-}
-h2{
-  text-align: center;
-}

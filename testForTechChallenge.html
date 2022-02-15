@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+//     5. Define a function that takes a string and returns the number of vowels.
+//         Example:
+//       vowels(“Hello World!”)
+//       Returns:
+// // 3
+
+
+
+const vowelChecker = (string) => {
+  const charArray = [...string];
+  console.log(charArray);
+  console.log(charArray.length);
+  let counter = 0
+
+  for (let i = 0; i < charArray.length; i++) {
+    
+    // console.log(i)
+    if(charArray[i] == "a"){
+      console.log("a found")
+      counter++
+    }else if (charArray[i] == "e"){
+      console.log("e found")
+      counter++
+    } else if (charArray[i] == "i") {
+      console.log("i found")
+      counter++
+    } else if (charArray[i] == "o") {
+      console.log("o found")
+      counter++
+    } else if (charArray[i] == "u") {
+      console.log("u found")
+      counter++
+    }
+  }
+  return counter;
+}
+console.log(vowelChecker("testString"));
+
+    
+
+
+    
+
+
+
+
+  </script>
+</body>
+</html>

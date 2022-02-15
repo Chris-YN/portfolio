@@ -2,56 +2,46 @@
 
 
 // _generalStyling.scss
+header,
+body,
+footer{
+  background-color: grey;
+}
+
+
+
 .wrapper{
-  width: 1056px;
+  max-width: 1280px;
+  width: 80%;
+  margin: 0 auto;
   background-color: $vsCodeBackgroundGrey;
 }
 
-.genaralTopNav{
-  ul{
-    display: flex;
-    width:100%;
-    padding-top: 20px;
-    padding-bottom: 1%;
-    justify-content: flex-start;
-    p{
-      color: $vsCodeCommentGrey;
-    }
 
-    li{
-      a{
-        color: $vsCodeCommentGrey;
-      }
-      a:visited {
-        color: $vsCodeCommentGrey;
-      }
-      a:hover {
-        color: $vsCodeWhite;
-        background-color: transparent;
-        text-decoration: underline;
-      }
-    }
-    position: relative;
-    &::after{
+
+html{
+  scroll-behavior: smooth;
+}
+
+
+
+h2{
+  text-align: left;
+  padding-left: 13.2%;
+}
+
+
+
+.afterLine{
+  position: relative;
+  &::after{
     content: "";
-    width: 100vw;
+    width: 100%;
     position: absolute;
-    border-bottom: 1px solid $vsCodeCommentGrey;
-    bottom:0;
-    }
+    border-bottom: 1.5px solid $vsCodeCommentGrey;
+    bottom:-5%;
+    left: 0;
   }
 }
-
-footer{
-  margin-top: 7%;
-  text-align: center;
-}
-
-// .aboutMeAnchorTarget{
-//   height: 100px;
-//   background: white;
-//   display: hidden;
-  
-// }
 
 
