@@ -3,10 +3,10 @@
 
 // carousel.scss
 .portfolioCarousel{
-  margin-top: 10%;
   width:74%;
   position: relative;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   li{
     cursor: pointer;
   }
@@ -18,11 +18,10 @@
     }
   }
   .placeHolder{
-    margin: 4% 0;
     visibility: hidden;
   }
 
-  button{
+  .portfolioCarousel button{
     position: absolute;
     font-size: 2.2rem;
     top: 50%;
@@ -37,8 +36,8 @@
     // background-color: rgb(61, 61, 61);
     border-radius: 20%;
   }
-  button:hover,
-  button:focus{
+  .portfolioCarousel button:hover,
+  .portfolioCarousel button:focus{
     color: $vsCodeBackgroundGrey;
     background-color: $vsCodeWhite;
   }

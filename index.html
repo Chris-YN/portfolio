@@ -87,15 +87,15 @@
       ===============================-->
       <section id="aboutMe">
         <div id="aboutMeAnchorTarget" aria-hidden="true"></div>
-        <div class="afterLine">
+        <div class="sectionTopPadding afterLine">
           <h2>
             <span aria-hidden="true" class="h1Purple">let </span>
             <span aria-hidden="true" class="h1Orange">info </span>
             <span aria-hidden="true" class="h1White">= </span>
-            aboutMe
+            { aboutMe }
           </h2>
         </div>
-        <div class="aboutMeFlexParent">
+        <div class="aboutMeFlexParent contentTopPadding">
           <div class="profilePictureContainer">
             <img src="./styles/assets/profilepix.jpg" alt="Picture of me, Chris">
           </div>
@@ -108,16 +108,16 @@
 
         <div class="skills">
 
-          <div class="afterLine">
+          <div class=" contentTopMargin afterLine">
             <h2>
             <span aria-hidden="true" class="h1Purple">let </span>
             <span aria-hidden="true" class="h1Orange">skills </span>
             <span aria-hidden="true" class="h1White">= </span>
-            coreCompenencies</h2>
+            [ coreCompenencies ]</h2>
           </div>
 
-          <div class="skillsIconBackground">
-            <ul class="skillListFlexParent">
+          <div class="skillsIconBackground contentTopMargin">
+            <ul class="skillListFlexParent ">
               <ul class="skillNamePairFlexParent">
                 <li><i class="fab fa-html5"></i></li>
                 <li><p>HTML</p></li>
@@ -174,19 +174,25 @@
       <!-- ==========================
              Section portfolio
       ===============================-->
-      <section id="portfolio">
-        <div class="afterLine">
+      <section id="projects">
+        <div class="sectionTopPadding afterLine">
           <h2 id="portfolioAnchorTarget">
             <span aria-hidden="true" class="h1Purple">let </span>
             <span aria-hidden="true" class="h1Orange">works </span>
             <span aria-hidden="true" class="h1White">= </span>
-            projects
+            [ projects ]
           </h2>
+          <p>
+            // Click on left or right arrow to navigate </br>
+            // Click on slide to bring up more description and links to the project
+          </p>
         </div>
-        <div class="portfolioCarousel" data-pCarousel>
+        <div class="portfolioCarousel contentTopMargin" data-pCarousel>
           <button class="carouselButton previous" data-pCarousel-button="prev"><i class="fas fa-arrow-left"></i></button>
           <button class="carouselButton next" data-pCarousel-button="prev"><i class="fas fa-arrow-right"></i></button>
+
           <img class="placeHolder"src="./styles/assets/recipeAppTrimedCarouselB.jpg" alt="Screen-shot of Robo Trivia App">
+
           <ul data-projects>
             <li class="proOne project projectLi" data-projectNum="1" data-active><img src="./styles/assets/recipeAppTrimedCarouselB.jpg" alt="Screen-shot of Robo Trivia App"></li>
 
@@ -232,17 +238,46 @@
                 Footer
   ===============================-->
   <footer>
-    
-    <h2 class="afterLine">Contact</h2>
-    <ul class="contactIconFlexParent">
-      <li><a href="mailto:developer.Chris.yun@gmail.com"><i class="fas fa-envelope-square"></i></a></li>
-      <li><a href="https://www.linkedin.com/in/christopher-yun-824458181/"><i class="fab fa-linkedin"></i></a></li>
-      <li><a href="https://github.com/Chris-YN/"><i class="fab fa-github-square"></i></a></li>
-    </ul>
-    <p>Designed and developed by Christopher Yun 2021</p>
+    <div class="wrapper">
+      
+      <div class="contentTopPadding afterLine">
+        <h2 id="contactMeAnchorTarget">
+          <span aria-hidden="true" class="h1Purple">const </span>
+          <span aria-hidden="true" class="h1Orange">contact </span>
+          <span aria-hidden="true" class="h1White">= </span>
+          ( contactMe )
+          <span aria-hidden="true" class="h1White"> => &nbsp;{ &nbsp;}</span>
+        </h2>
+      </div>
+
+      <div class="footerFlexParent">
+        <p class="contentTopMargin">// Drop me a line! I will get back to you very soon.</p>
+        <form method="" class="contactFormFlexParent">
+          <label class="visuallyHidden" for="">Name</label>
+          <input class="name" type="text" placeholder=" // Enter your name" required />
+        
+          <label class="visuallyHidden" for="">Email</label>
+          <input class="email" type="email" placeholder=" // Your email" required />
+        
+          <label class="visuallyHidden" for="">Message</label>
+          <textarea class="messageField" name="" id="" rows="10" placeholder=" // Your kind message here" required></textarea>
+
+          <button type="submit">Submit</button>
+
+          <ul class="contactIconFlexParent">
+            <li><a href="https://www.linkedin.com/in/christopher-yun-824458181/"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://github.com/Chris-YN/"><i class="fab fa-github-square"></i></a></li>
+          </ul>
+        </form>
+        
+      <!-- .footerFlexParent ends -->
+      </div>
+        
+      <p>Designed and developed by Christopher Yun 2022</p>
+    </div>
   </footer>
   
 
-  <script src="./script.js"></script>
+  <script type="module" src="./script.js"></script>
 </body>
 </html>

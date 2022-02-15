@@ -63,6 +63,8 @@
   // this overrides built in bottom positioning for .afterLine 
   &::after{
     bottom:0;
+    width: 100%;
+    left:0;
   }
 
   p,

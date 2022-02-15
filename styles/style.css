@@ -230,6 +230,20 @@ html {
   overflow: hidden;
 }
 
+.visuallyHidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 a {
   text-decoration: none;
 }
@@ -328,6 +342,26 @@ h2 {
   padding-left: 13.2%;
 }
 
+.contentTopMargin {
+  margin-top: 5.5%;
+}
+
+.contentTopPadding {
+  padding-top: 5%;
+}
+
+.beforeLine {
+  position: relative;
+}
+.beforeLine::before {
+  content: "";
+  width: 72%;
+  position: absolute;
+  border-bottom: 1.5px solid #797d80;
+  top: 35%;
+  left: 13%;
+}
+
 .afterLine {
   position: relative;
 }
@@ -337,7 +371,7 @@ h2 {
   position: absolute;
   border-bottom: 1.5px solid #797d80;
   bottom: -5%;
-  left: 0;
+  left: 0%;
 }
 
 header {
@@ -417,6 +451,8 @@ h1 {
 }
 .fixedTopNav nav::after {
   bottom: 0;
+  width: 100%;
+  left: 0;
 }
 .fixedTopNav nav p,
 .fixedTopNav nav p a,
@@ -435,20 +471,40 @@ h1 {
   margin-right: 2%;
 }
 
-#portfolio h2 {
-  padding-top: 13%;
+#projects {
+  padding-bottom: 13%;
+}
+#projects h2 {
+  padding-top: 11%;
+}
+#projects p {
+  font-size: 0.8rem;
+  padding: 0.8% 0 0 16%;
+  color: #797d80;
+  line-height: 1.1rem;
 }
 
-footer {
-  padding-top: 7%;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  background-color: #2e2e2e;
+footer .wrapper {
+  background: black;
 }
 footer p {
   color: #797d80;
-  margin: 5% 0 5% 0;
+}
+footer .wrapper p:last-child {
+  text-align: center;
+  padding: 3% 0 2% 0;
+}
+
+.footerFlexParent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.footerFlexParent p:first-child {
+  align-self: flex-start;
+  font-size: 0.8rem;
+  padding: 0 0 0 13%;
 }
 
 .contactIconFlexParent {
@@ -472,6 +528,54 @@ footer p {
   margin-left: 0;
 }
 
+.contactFormFlexParent {
+  width: 74%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contactFormFlexParent .email {
+  margin: 2% 0 2% 0;
+}
+.contactFormFlexParent input,
+.contactFormFlexParent textarea {
+  background-color: #1d1d1c;
+  color: #eef7f8;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 0 10px 10px;
+}
+.contactFormFlexParent input::-moz-placeholder, .contactFormFlexParent textarea::-moz-placeholder {
+  color: #797d80;
+}
+.contactFormFlexParent input:-ms-input-placeholder, .contactFormFlexParent textarea:-ms-input-placeholder {
+  color: #797d80;
+}
+.contactFormFlexParent input::placeholder,
+.contactFormFlexParent textarea::placeholder {
+  color: #797d80;
+}
+.contactFormFlexParent input:focus,
+.contactFormFlexParent textarea:focus {
+  outline: none;
+}
+.contactFormFlexParent label {
+  height: 15px;
+}
+.contactFormFlexParent input,
+.contactFormFlexParent textarea {
+  width: 100%;
+}
+.contactFormFlexParent button {
+  margin: 5% 0 7% 0;
+  width: 50%;
+  border: none;
+  border-radius: 5px;
+}
+.contactFormFlexParent button:hover {
+  background-color: #dba93c;
+}
+
 #aboutMe h2 {
   padding-top: 13%;
 }
@@ -484,18 +588,19 @@ footer p {
 .aboutMeFlexParent div:first-child,
 .textContainerFlexParent div:first-child {
   width: 40%;
-  padding: 5% 0 0 10%;
+  padding: 0 0 0 10%;
   margin-right: 10%;
 }
 .aboutMeFlexParent div:nth-child(2),
 .textContainerFlexParent div:nth-child(2) {
   width: 40%;
-  padding: 5% 10% 0 0;
+  padding: 0 10% 0 0;
   color: #797d80;
 }
 
 .skillsIconBackground {
-  margin: 2% 13% 0 13%;
+  margin-right: 13%;
+  margin-left: 13%;
   padding: 3% 0 8% 0;
   background-color: black;
   border-radius: 1.7%;
@@ -561,10 +666,10 @@ footer p {
 }
 
 .portfolioCarousel {
-  margin-top: 10%;
   width: 74%;
   position: relative;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 .portfolioCarousel li {
   cursor: pointer;
@@ -579,11 +684,10 @@ footer p {
 }
 
 .placeHolder {
-  margin: 4% 0;
   visibility: hidden;
 }
 
-button {
+.portfolioCarousel button {
   position: absolute;
   font-size: 2.2rem;
   top: 50%;
@@ -597,8 +701,8 @@ button {
   border-radius: 20%;
 }
 
-button:hover,
-button:focus {
+.portfolioCarousel button:hover,
+.portfolioCarousel button:focus {
   color: #1d1d1c;
   background-color: #eef7f8;
 }

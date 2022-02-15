@@ -30,7 +30,25 @@ h2{
   padding-left: 13.2%;
 }
 
+.contentTopMargin{
+  margin-top: 5.5%;
+}
 
+.contentTopPadding{
+  padding-top: 5%;
+}
+
+.beforeLine{
+  position: relative;
+  &::before{
+    content: "";
+    width: 72%;
+    position: absolute;
+    border-bottom: 1.5px solid $vsCodeCommentGrey;
+    top:35%;
+    left: 13%;
+  }
+}
 
 .afterLine{
   position: relative;
@@ -40,8 +58,11 @@ h2{
     position: absolute;
     border-bottom: 1.5px solid $vsCodeCommentGrey;
     bottom:-5%;
-    left: 0;
+    left: 0%;
   }
 }
+
+
+
 
 

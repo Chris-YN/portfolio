@@ -3,16 +3,30 @@
 
 // _footer.scss
 footer{
-  padding-top: 7%;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  background-color: rgb(46, 46, 46);
+  .wrapper{
+    background: black;
+  }
   p{
     color: $vsCodeCommentGrey;
-    margin: 5% 0 5% 0;
   }
-  
+  .wrapper{
+    p:last-child{
+      text-align: center;
+      padding: 3% 0 2% 0;
+    }
+  }
+}
+
+.footerFlexParent{
+  p:first-child{
+    align-self: flex-start;
+    font-size: .8rem;
+    padding: 0 0 0 13%;
+  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 .contactIconFlexParent{
   display: flex;
@@ -32,5 +46,45 @@ footer{
   }
   li:first-Child{
     margin-left: 0;
+  }
+}
+
+.contactFormFlexParent{
+  .email{
+    margin: 2% 0 2% 0;
+  }
+  input,
+  textarea{
+    background-color: $vsCodeBackgroundGrey;
+    color:$vsCodeWhite;
+    border:none;
+    border-radius: 5px;
+    padding: 10px 0 10px 10px;
+    &::placeholder{
+      color:$vsCodeCommentGrey;
+    }
+    &:focus{
+      outline: none;
+    }
+  }
+  width: 74%;
+  label{
+    height: 15px;
+  }
+  input,
+  textarea{
+    width: 100%;
+  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  button{
+    margin: 5% 0 7% 0;
+    width: 50%;
+    border:none;
+    border-radius: 5px;
+    &:hover{
+      background-color: $vsCodeOrange;
+    }
   }
 }

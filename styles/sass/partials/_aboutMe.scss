@@ -16,12 +16,12 @@
 
   div:first-child{
     width: 40%;
-    padding: 5% 0 0 10%;
+    padding: 0 0 0 10%;
     margin-right: 10%;
   }
   div:nth-child(2){
     width: 40%;
-    padding: 5% 10% 0 0;
+    padding: 0 10% 0 0;
     color: $vsCodeCommentGrey;
   }
 }
@@ -32,7 +32,8 @@
 
 //===== skills background =====/
 .skillsIconBackground{
-  margin: 2% 13% 0 13%;
+  margin-right:13%;
+  margin-left: 13%;
   padding: 3% 0 8% 0;
   background-color: black;
   border-radius: 1.7%;
