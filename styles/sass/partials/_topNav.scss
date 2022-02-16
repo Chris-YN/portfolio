@@ -52,12 +52,11 @@
 }
 //===== class for top nav bar in fixed position =====//
 .fixedTopNav nav{
-  background-color: black;
+  background-color: $vsCodeBlack;
   width:80%;
   max-width: 1280px;
   position: fixed;
   top:0;
-  
   z-index: 8;
 
   // this overrides built in bottom positioning for .afterLine 

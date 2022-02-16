@@ -23,12 +23,13 @@ h1{
     font-size: 1.8rem;
   }
 }
-
-.h1Purple{
-  color:$VsCodePurple;
-}
-.h1Orange{
-    color:$vsCodeOrange;
+h1,
+h2{
+  .h1Purple{
+    color:$VsCodePurple;
+  }
+  .h1Orange{
+      color:$vsCodeOrange;
   }
   .h1White{
     color:$vsCodeCommentGrey;
@@ -36,6 +37,7 @@ h1{
   .h1Blue{
     color:$vsCodeblue;
   }
+}
 
 h2{
   font-family: 'Roboto', sans-serif;

@@ -50,7 +50,8 @@ h2{
   }
 }
 
-.afterLine{
+.afterLine,
+.shortAfterLine{
   position: relative;
   &::after{
     content: "";
@@ -59,6 +60,13 @@ h2{
     border-bottom: 1.5px solid $vsCodeCommentGrey;
     bottom:-5%;
     left: 0%;
+  }
+}
+
+.shortAfterLine{
+  &::after{
+    width:84%;
+    left:8%;
   }
 }
 

@@ -4,7 +4,7 @@
 // _footer.scss
 footer{
   .wrapper{
-    background: black;
+    background: $vsCodeBlack;
   }
   p{
     color: $vsCodeCommentGrey;
@@ -53,6 +53,9 @@ footer{
   .email{
     margin: 2% 0 2% 0;
   }
+  textarea{
+    resize: none;
+  }
   input,
   textarea{
     background-color: $vsCodeBackgroundGrey;
@@ -80,6 +83,7 @@ footer{
   align-items: center;
   button{
     margin: 5% 0 7% 0;
+    padding: 1% 0;
     width: 50%;
     border:none;
     border-radius: 5px;

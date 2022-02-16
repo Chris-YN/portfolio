@@ -122,8 +122,8 @@ const projectModalToggle = function(){
   const projectImages = document.querySelectorAll(".projectLi");
   
 
-  console.log(this)
-  console.log(this.classList[0])
+  // console.log(this)
+  // console.log(this.classList[0])
 
   const title = document.querySelector("#projectTitle");
   const image = document.querySelector("#projectImgContainer");
@@ -131,21 +131,28 @@ const projectModalToggle = function(){
   const liveLink = document.querySelector("#projectLiveLink");
   const gitHub = document.querySelector("#projectGitHubLink");
 
-  const recipeFiderText = "// A Git collaborated app to search recipes for various dishes by name and category <br> <br> // App allows search by dish name, random dish display option and option to choosedish by category"
+  const recipeFiderText = "<span class='pGrey'>//</span> A Git collaborated app to search recipes for various dishes by name and category <br> <br> <span class='pGrey'>//</span> App allows search by dish name, random dish display option and option to choosedish by category"
 
-  const weatherAndAirAppText = "// An app to find current weather and air quality for cities in Canada <br> <br> // App displays dynamically changing weather icon and colour in the background thatreflects current weather and air quality <br> <br> // Displays information on current temperature, humidity and Air Quality Index in text"
+  const weatherAndAirAppText = "<span class='pGrey'>//</span> An app to find current weather and air quality for cities in Canada <br> <br> <span class='pGrey'>//</span> App displays dynamically changing weather icon and colour in the background thatreflects current weather and air quality <br> <br> <span class='pGrey'>//</span> Displays information on current temperature, humidity and Air Quality Index in text"
 
-  const roboTriviaText = "// A Git collaborated web based game with trivia questions for different categories <br> <br> // Utilizes separate API to generate unique robot per player <br> <br> // Player's score is compared to three top scores saved in Firebase real-time databasewith an option to submit the score. submitting higher score updates the high score"
+  const roboTriviaText = "<span class='pGrey'>//</span> A Git collaborated web based game with trivia questions for different categories <br> <br> <span class='pGrey'>//</span> Utilizes separate API to generate unique robot per player <br> <br> <span class='pGrey'>//</span> Player's score is compared to three top scores saved in Firebase real-time databasewith an option to submit the score. submitting higher score updates the high score"
   
   if (this.classList[0] == "proOne") {
-    title.innerHTML = "<span>let: </span>Recipe Finder"
+    title.innerHTML = `<span aria-hidden="true" class="h1Purple">let </span>
+      <span aria-hidden="true" class="h1Orange"> title </span >
+        <span aria-hidden="true" class="h1White">= </span>
+    Recipe Finder`
     image.innerHTML = '<img src="./styles/assets/recipeAppTrimedModal.jpg" alt="Screen-shot of Robo Trivia App">'
     discription.innerHTML = recipeFiderText
     liveLink.innerHTML = '<a href="https://epic-engelbart-52614a.netlify.app/" target="_blank">Live Site</a>'
     gitHub.innerHTML = '<a href="https://github.com/recipeFinderMiniApp/recipeFinderMiniApp" target="_blank">GitHub</a>'
 
   } else if (this.classList[0] == "proTwo") {
-    title.innerHTML = "<span>let: </span>Weather and Air quality App"
+    title.innerHTML = `
+      <span aria-hidden="true" class="h1Purple">let </span>
+      <span aria-hidden="true" class="h1Orange"> title </span >
+      <span aria-hidden="true" class="h1White">= </span>
+      Weather and Air quality app`
     image.innerHTML = '<img src="./styles/assets/airAndWeatherTrimedModal.jpg" alt="Screen-shot of air and weather app">'
     discription.innerHTML = weatherAndAirAppText
     liveLink.innerHTML = '<a href="https://happy-golick-ff6273.netlify.app/" target="_blank">Live Site</a>'
