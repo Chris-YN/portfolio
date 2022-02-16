@@ -382,6 +382,237 @@ h2 {
   left: 8%;
 }
 
+@media (max-width: 1210px) {
+  h1 .h1Blue {
+    font-size: 2.5rem;
+  }
+  h1 .h1Purple,
+h1 .h1Orange,
+h1 .h1White {
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 995px) {
+  h1 .h1Blue {
+    font-size: 2rem;
+  }
+  h1 .h1Purple,
+h1 .h1Orange,
+h1 .h1White {
+    font-size: 1rem;
+  }
+
+  .aboutMeFlexParent .profilePictureContainer {
+    padding-left: 5%;
+  }
+  .aboutMeFlexParent .textContainerFlexParent {
+    padding-right: 5%;
+  }
+
+  .skillsIconBackground .skillListFlexParent {
+    align-items: baseline;
+  }
+
+  .skillListFlexParent .skillNamePairFlexParent {
+    width: calc(100%/3);
+  }
+  .skillListFlexParent .skillNamePairFlexParent:nth-child(8), .skillListFlexParent .skillNamePairFlexParent:nth-child(9) {
+    width: calc(100%/3);
+  }
+  .skillListFlexParent .skillNamePairFlexParent:nth-child(8) p, .skillListFlexParent .skillNamePairFlexParent:nth-child(9) p {
+    padding-top: 13px;
+  }
+  .skillListFlexParent .skillNamePairFlexParent:nth-child(10) {
+    width: 100%;
+    padding-right: calc(100%/3*2);
+  }
+  .skillListFlexParent ul li i {
+    font-size: 2.5rem;
+  }
+  .skillListFlexParent ul li img {
+    width: 46px;
+  }
+  .skillListFlexParent ul li p {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 795px) {
+  h1 {
+    line-height: 1.5rem;
+  }
+  h1 .h1White::after {
+    content: "\a";
+    white-space: pre;
+  }
+  h1 .h1Blue {
+    padding-left: 3%;
+  }
+  h1 .h1Purple,
+h1 .h1Orange,
+h1 .h1White {
+    font-size: 0.8rem;
+  }
+
+  .mediaQueryHidden {
+    display: none;
+  }
+
+  #stickyNav {
+    width: 100%;
+    right: 0;
+  }
+  #stickyNav ul {
+    justify-content: center;
+  }
+
+  .sectionProject div:first-child p {
+    padding-right: 1%;
+  }
+  .sectionProject .portfolioCarousel {
+    width: 68%;
+  }
+  .sectionProject .portfolioCarousel .previous {
+    left: -17%;
+  }
+  .sectionProject .portfolioCarousel .next {
+    right: -17%;
+  }
+  .sectionProject .portfolioCarousel button {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 665px) {
+  .wrapper {
+    width: 100%;
+  }
+
+  h1 {
+    margin: 0 0 3% 10%;
+    line-height: 1.1rem;
+  }
+  h1 .h1Blue {
+    font-size: 1.8rem;
+  }
+
+  nav p,
+nav a {
+    font-size: 0.8rem;
+  }
+
+  .indexTopNav {
+    padding-left: 0;
+  }
+  .indexTopNav::after {
+    width: 100%;
+  }
+  .indexTopNav ul {
+    justify-content: center;
+  }
+  .indexTopNav a {
+    white-space: nowrap;
+  }
+
+  .aboutMeFlexParent .profilePictureContainer {
+    padding-left: 2%;
+    margin-right: 2%;
+  }
+  .aboutMeFlexParent .textContainerFlexParent {
+    padding-right: 2%;
+  }
+}
+@media (max-width: 435px) {
+  .mediaQueryHidden {
+    display: none;
+  }
+}
+@media (max-width: 375px) {
+  h1 .h1Blue {
+    font-size: 1.3rem;
+  }
+
+  #stickyNav {
+    width: 100%;
+    right: 0;
+  }
+  #stickyNav ul {
+    justify-content: center;
+  }
+
+  .textContainerFlexParent p {
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+  }
+
+  .aboutMeFlexParent .textContainerFlexParent {
+    width: 50%;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+  h2 .h1White::after {
+    content: "\a";
+    white-space: pre;
+  }
+
+  .skillsIconBackground .skillListFlexParent {
+    align-items: baseline;
+  }
+
+  .skillListFlexParent .skillNamePairFlexParent {
+    width: calc(100%/3);
+  }
+  .skillListFlexParent .skillNamePairFlexParent:nth-child(8), .skillListFlexParent .skillNamePairFlexParent:nth-child(9) {
+    width: calc(100%/3);
+  }
+  .skillListFlexParent .skillNamePairFlexParent:nth-child(8) p, .skillListFlexParent .skillNamePairFlexParent:nth-child(9) p {
+    padding-top: 13px;
+  }
+  .skillListFlexParent .skillNamePairFlexParent:nth-child(10) {
+    width: 100%;
+    padding-right: calc(100%/3*2);
+  }
+  .skillListFlexParent ul li i {
+    font-size: 1.5rem;
+  }
+  .skillListFlexParent ul li img {
+    width: 26px;
+  }
+  .skillListFlexParent ul li p {
+    font-size: 0.8rem;
+  }
+
+  .skills .skillsIconBackground {
+    margin: 1% 0 0 0;
+  }
+
+  .sectionProject div:first-child p {
+    padding-right: 1%;
+  }
+  .sectionProject .portfolioCarousel {
+    width: 68%;
+  }
+  .sectionProject .portfolioCarousel .previous {
+    left: -17%;
+  }
+  .sectionProject .portfolioCarousel .next {
+    right: -17%;
+  }
+  .sectionProject .portfolioCarousel button {
+    font-size: 1.5rem;
+  }
+
+  .projectModal .modal {
+    border-radius: 12px;
+  }
+  .projectModal .modalImageAndTextFlexParent .modalTextFlexParent p {
+    font-size: 0.8rem;
+  }
+  .projectModal .modalImageAndTextFlexParent .modalTextFlexParent ul {
+    font-size: 0.8rem;
+    flex-direction: column;
+  }
+}
 header {
   height: 100vh;
 }
@@ -412,13 +643,18 @@ h1 {
   padding-left: 5%;
 }
 
-.indexTopNav {
+nav {
   padding-left: 5%;
+}
+nav ul {
+  justify-content: left;
+}
+
+.indexTopNav {
   padding-bottom: 1%;
 }
 .indexTopNav ul {
   padding-top: 5%;
-  justify-content: left;
 }
 .indexTopNav li {
   margin: 0 1%;
@@ -597,14 +833,14 @@ footer .wrapper p:last-child {
   display: flex;
   justify-content: space-evenly;
 }
-.aboutMeFlexParent div:first-child,
-.textContainerFlexParent div:first-child {
+
+.profilePictureContainer {
   width: 40%;
   padding: 0 0 0 10%;
   margin-right: 10%;
 }
-.aboutMeFlexParent div:nth-child(2),
-.textContainerFlexParent div:nth-child(2) {
+
+.textContainerFlexParent {
   width: 40%;
   padding: 0 10% 0 0;
   color: #797d80;
@@ -835,6 +1071,7 @@ footer .wrapper p:last-child {
 }
 
 .modalCloseButton {
+  z-index: 10;
   cursor: pointer;
   position: absolute;
   top: 10px;

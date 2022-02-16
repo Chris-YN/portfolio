@@ -2,3 +2,348 @@
 
 
 // _mediaQuery.scss
+@media (max-width: 1210px){
+  //===== header =====//
+  h1{
+    .h1Blue{
+      // from 3rem
+      font-size: 2.5rem;
+    }
+    // from 1.8rem
+    .h1Purple,
+    .h1Orange,
+    .h1White{
+      font-size: 1.3rem;
+    }
+  }
+}
+
+
+
+  // ================================//
+ // ===== major break point 1 ===== //
+// ================================//
+@media (max-width: 995px){
+  //===== header =====//
+  h1{
+    .h1Blue{
+      // from 2.5rem
+      font-size: 2rem;
+    }
+    .h1Purple,
+    .h1Orange,
+    .h1White{
+      // from 1.3rem
+      font-size: 1rem;
+    }
+  }
+
+  //===== aboutMe=====//
+  .aboutMeFlexParent{
+    .profilePictureContainer{
+      //from 10%
+      padding-left: 5%;
+    }
+      
+    .textContainerFlexParent{
+      // from 10%
+      padding-right: 5%;
+    }
+  }
+
+  //===== coreCompetencies =====//
+  .skillsIconBackground{
+    .skillListFlexParent{
+      align-items: baseline;
+    }
+  }
+  .skillListFlexParent {
+    .skillNamePairFlexParent{
+      width: calc(100%/3);
+
+      &:nth-child(8),
+      &:nth-child(9){
+        width: calc(100%/3);
+        
+        p{
+          padding-top:13px;
+        }
+      }
+      &:nth-child(10){
+        width: 100%;
+        padding-right: calc(100%/3*2);
+      }
+
+    }
+    ul{
+      
+      li{
+        i{
+          // from 3rem
+          font-size: 2.5rem;
+        }
+        img{
+          width: 46px;
+        }
+        p{
+          font-size: .8rem;
+        }
+      }
+    }
+  }
+
+}
+
+
+@media (max-width: 795px){
+  //===== header =====//
+  h1{
+    line-height: 1.5rem;
+    .h1White::after{
+      content: "\a";
+      white-space: pre;
+    }
+    .h1Blue{
+      padding-left: 3%;
+    }
+    .h1Purple,
+    .h1Orange,
+    .h1White{
+      // from 1rem
+      font-size: .8rem;
+    }
+  }
+  //===== fixed nav =====//
+  .mediaQueryHidden{
+    display: none;
+  }
+  #stickyNav{
+    width: 100%;
+    right: 0;
+    ul{
+      justify-content: center;
+    }
+  }
+  
+
+  //===== carousel =====//
+  .sectionProject{
+    div:first-child{
+      p{
+        padding-right: 1%;
+      }
+    }
+   .portfolioCarousel{
+     width: 68%;
+     .previous{
+       left:-17%;
+     }
+     .next{
+       right:-17%;
+     }
+     button{
+       // from 2.2rem
+       font-size: 2rem;
+     }
+   }
+  }
+}
+
+
+
+  // ================================//
+ // ===== major break point 2 ===== //
+// ================================//
+@media (max-width: 665px){
+  //===== wrapper =====//
+  .wrapper{
+    width: 100%;
+  }
+
+  //===== header =====//
+  h1{
+    margin: 0 0 3% 10%;
+    // from line-height 1.5rem
+    line-height: 1.1rem;
+    .h1Blue{
+      // from 2.0rem
+      font-size: 1.8rem;
+    }
+  }
+
+  nav{
+    p,
+    a{
+      // from 1rem
+      font-size: .8rem;
+    }
+  }
+  .indexTopNav{
+    &::after{
+      width: 100%;
+    }
+    padding-left: 0;
+    ul{
+      justify-content: center;
+    }
+    a{
+      white-space: nowrap;
+    }
+  }
+
+  //===== abourMe =====//
+  .aboutMeFlexParent{
+    .profilePictureContainer{
+      //from 5%
+      padding-left: 2%;
+      margin-right: 2%;
+    }
+      
+    .textContainerFlexParent{
+      // from 5%
+      padding-right: 2%;
+    }
+  }
+}
+
+
+@media (max-width: 435px){
+  //===== header =====//
+  // to hide comment like styling from top nav
+  .mediaQueryHidden{
+    display: none;
+  }
+}
+
+
+
+  // ================================//
+ // ===== major break point 3 ===== //
+// ================================//
+@media (max-width: 375px){
+  //===== header =====//
+  h1{
+    .h1Blue{
+        // from 1.8rem
+        font-size: 1.3rem;
+    }
+  }
+
+  //===== fixed nav =====//
+  #stickyNav{
+    width: 100%;
+    right: 0;
+    ul{
+      justify-content: center;
+    }
+  }
+
+  //===== aboutMe =====//
+  .textContainerFlexParent{
+    p{
+      // from 0.8rem
+      font-size: .8rem;
+      line-height: 1.2rem;
+    }
+  }
+  .aboutMeFlexParent{
+    .textContainerFlexParent{
+      width: 50%;
+    }
+  }
+
+
+  h2{
+    // from 2rem
+    font-size: 1.3rem;
+    .h1White::after{
+      content: "\a";
+      white-space: pre;
+    }
+  }
+
+  //===== coreCompetencies =====//
+  .skillsIconBackground{
+    .skillListFlexParent{
+      align-items: baseline;
+    }
+  }
+  .skillListFlexParent {
+    .skillNamePairFlexParent{
+      width: calc(100%/3);
+      &:nth-child(8),
+      &:nth-child(9){
+        width: calc(100%/3);
+        p{
+          padding-top:13px;
+        }
+      }
+      &:nth-child(10){
+        width: 100%;
+        padding-right: calc(100%/3*2);
+      }
+
+    }
+    ul{
+      
+      li{
+        i{
+          font-size: 1.5rem;
+        }
+        img{
+          width: 26px;
+        }
+        p{
+          font-size: .8rem;
+        }
+      }
+    }
+  }
+  .skills{
+    .skillsIconBackground{
+      margin: 1% 0 0 0;
+
+    }
+  }
+
+
+  //===== carousel =====//
+  .sectionProject{
+    div:first-child{
+      p{
+        padding-right: 1%;
+      }
+    }
+   .portfolioCarousel{
+     width: 68%;
+     .previous{
+       left:-17%;
+     }
+     .next{
+       right:-17%;
+     }
+     button{
+       // from 2.2rem
+       font-size: 1.5rem;
+     }
+   }
+  }
+
+  //===== modal =====//
+  .projectModal{
+    .modal{
+      border-radius: 12px;
+    }
+    .modalImageAndTextFlexParent{
+      .modalTextFlexParent{
+        p{
+          font-size: .8rem;
+        }
+        ul{
+          font-size: .8rem;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}

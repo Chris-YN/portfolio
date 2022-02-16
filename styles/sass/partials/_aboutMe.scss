@@ -13,20 +13,17 @@
 .textContainerFlexParent{
   display: flex;
   justify-content: space-evenly;
-
-  div:first-child{
-    width: 40%;
-    padding: 0 0 0 10%;
-    margin-right: 10%;
-  }
-  div:nth-child(2){
-    width: 40%;
-    padding: 0 10% 0 0;
-    color: $vsCodeCommentGrey;
-  }
 }
-
-
+.profilePictureContainer{
+  width: 40%;
+  padding: 0 0 0 10%;
+  margin-right: 10%;
+}
+.textContainerFlexParent{
+  width: 40%;
+  padding: 0 10% 0 0;
+  color: $vsCodeCommentGrey;
+}
 
 
 
