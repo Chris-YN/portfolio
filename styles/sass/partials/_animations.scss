@@ -1,0 +1,91 @@
+
+
+
+// _animations.scss
+body{
+  position: relative;
+}
+
+.wholeScreenSpread{
+  background-color: $vsCodeWhite;
+  display: none;
+  z-index: 20;
+  width: 100%;
+  height: 100vh;
+}
+
+.active{
+  display: block;
+  position: absolute;
+}
+
+@keyframes slideFlashIn{
+  0%{
+    left: -100%;
+  }
+  70%{
+    left:0;
+  }
+  100%{
+    left:0;
+  }
+}
+@keyframes slideFlashOut{
+  0%{
+    left: 0;
+  }
+  100%{
+    left:-100%;
+  }
+}
+.hiddenInputMessage{
+  visibility: hidden;
+}
+.hiddenInputParaVisible{
+  visibility: visible;
+  color: $vsCodeWhite;
+}
+
+.wrapperLight,
+.aboutMeLight,
+.projectsLight,
+footer .footerDivLight,
+.bodyDivLight
+{
+  background-color: $vsCodeWhite;
+}
+
+.spanLightRed{
+  color:$vsCodeLightRed;
+  font-size: 1.3rem;
+}
+
+.h1LightBlue{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 3rem;
+  color:$vsCodeLightTeal;
+}
+
+.h2Light{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  color:$vsCodeLightTeal;
+}
+
+.inputLight{
+  background-color: $vsCodeWhite;
+  border:none;
+  color: $vsCodeBlack;
+}
+
+.skillsIconBackgroundLight{
+  background-color: $vsCodeBackgroundGrey;
+}
+
+.fixedTopNavLight{
+  background-color: $vsCodeBackgroundGrey;
+}
+
+

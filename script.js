@@ -69,8 +69,77 @@ const gotData = (data) => {
 
 
 
+// ===== hidden function ===== //
 
-// =====sticky topNav bar =====/
+
+
+document.querySelector(".hiddenForm").addEventListener("submit", (e)=>{
+  e.preventDefault();
+  const hiddenTerminalInputField = document.querySelector(".hiddenInput");
+  let hiddenTerminalInput = document.querySelector(".hiddenInput").value;
+  console.log(hiddenTerminalInput)
+  if (hiddenTerminalInput == "lighter") {
+    const lighterClasses = () => {
+      document.querySelector(".bodyDiv").classList.add("bodyDivLight");
+      document.querySelector(".wrapper").classList.add("wrapperLight");
+      document.querySelector("#aboutMe").classList.add("aboutMeLight");
+      document.querySelector("#projects").classList.add("projectsLight");
+      document.querySelector(".footerDiv").classList.add("footerDivLight");
+      const darkH1Orange = document.querySelectorAll(".h1Orange")
+      console.log(darkH1Orange);
+      darkH1Orange.forEach((span)=>{
+        span.classList.add("spanLightRed");
+        span.classList.remove("h1Orange")
+      });
+      const darkH1Blue = document.querySelectorAll(".h1Blue")
+      console.log(darkH1Orange);
+      darkH1Blue.forEach((span) => {
+        span.classList.add("h1LightBlue");
+        span.classList.remove("h1Blue")
+      });
+      const darkH2 = document.querySelectorAll("h2")
+      console.log(darkH1Orange);
+      darkH2.forEach((h2) => {
+        h2.classList.add("h2Light");
+        // h2.classList.remove("h1Blue")
+      });
+      document.querySelector("input").classList.remove("hiddenInput");
+      document.querySelector("input").classList.add("inputLight");
+      document.querySelector(".skillsIconBackground").classList.add("skillsIconBackgroundLight");
+    };
+    setTimeout(lighterClasses, 1100);
+    animate()
+    hiddenTerminalInputField.value = "";
+  } else {
+    document.querySelector(".hiddenInputMessage").classList.add("hiddenInputParaVisible");
+    document.querySelector(".hiddenInputMessage").innerHTML = "try another word"
+    hiddenTerminalInputField.value = "";
+    setTimeout( ()=>{
+      document.querySelector(".hiddenInputMessage").classList.remove("hiddenInputParaVisible");
+    }, 3000 )
+    }
+  }
+);
+// ===== animations =====//
+function animate() {
+  const mainImage = document.querySelector(".wholeScreenSpread")
+
+  setTimeout(() => {
+    mainImage.classList.add("active");
+    mainImage.style.animation = "slideFlashIn 1s forwards";
+  }, 300)
+  setTimeout(() => {
+    // mainImage.classList.add("active");
+    mainImage.style.animation = "slideFlashOut 1s forwards";
+  }, 1100)
+}
+// animate();
+
+
+
+
+
+// ===== sticky topNav bar =====//
 const nav = document.querySelector('#stickyNav');
 const navTop = nav.offsetTop;
 
@@ -91,7 +160,7 @@ window.addEventListener("scroll", stickyNavigation);
 
 //===== project Carousel =====//
 const cButtons = document.querySelectorAll("[data-pCarousel-button]");
-console.log(cButtons);
+// console.log(cButtons);
 
 cButtons.forEach( (button)=>{
   button.addEventListener("click", ()=>{

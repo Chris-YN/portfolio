@@ -12,16 +12,16 @@ header{
   img{
     width: 30%;
   }
-  input{
+  .hiddenInput{
     background-color: $vsCodeBackgroundGrey;
     border:none;
     color: $vsCodeWhite;
   }
+  input:focus{
+    outline:none;
+  }
 }
-input:focus{
-  color:$vsCodeWhite;
-  outline:none;
-}
+
 
 
 .bottomHalf{

@@ -5,14 +5,16 @@
 @media (max-width: 1210px){
   //===== header =====//
   h1{
-    .h1Blue{
+    .h1Blue,
+    .h1LightBlue{
       // from 3rem
       font-size: 2.5rem;
     }
     // from 1.8rem
     .h1Purple,
     .h1Orange,
-    .h1White{
+    .h1White,
+    .spanLightRed{
       font-size: 1.3rem;
     }
   }
@@ -26,13 +28,15 @@
 @media (max-width: 995px){
   //===== header =====//
   h1{
-    .h1Blue{
+    .h1Blue,
+    .h1LightBlue{
       // from 2.5rem
       font-size: 2rem;
     }
     .h1Purple,
     .h1Orange,
-    .h1White{
+    .h1White,
+    .spanLightRed{
       // from 1.3rem
       font-size: 1rem;
     }
@@ -102,12 +106,14 @@
       content: "\a";
       white-space: pre;
     }
-    .h1Blue{
+    .h1Blue,
+    .h1LightBlue{
       padding-left: 3%;
     }
     .h1Purple,
     .h1Orange,
-    .h1White{
+    .h1White,
+    .spanLightRed{
       // from 1rem
       font-size: .8rem;
     }
@@ -179,7 +185,8 @@
     margin: 0 0 3% 10%;
     // from line-height 1.5rem
     line-height: 1.1rem;
-    .h1Blue{
+    .h1Blue,
+    .h1LightBlue{
       // from 2.0rem
       font-size: 1.8rem;
     }
@@ -237,7 +244,8 @@
 @media (max-width: 470px){
   //===== header =====//
   h1{
-    .h1Blue{
+    .h1Blue,
+    .h1LightBlue{
         // from 1.8rem
         font-size: 1.3rem;
     }

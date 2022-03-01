@@ -3,9 +3,10 @@
 
 // _generalStyling.scss
 header,
-body,
+.bodyDiv,
+main,
 footer{
-  background-color: grey;
+  background-color: $vsCodeBlack;
 }
 
 
@@ -69,8 +70,3 @@ h2{
     left:8%;
   }
 }
-
-
-
-
-
