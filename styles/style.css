@@ -843,6 +843,9 @@ footer .wrapper p:last-child {
   background-color: #dba93c;
 }
 
+#aboutMe {
+  margin-top: 5%;
+}
 #aboutMe h2 {
   padding-top: 13%;
 }
