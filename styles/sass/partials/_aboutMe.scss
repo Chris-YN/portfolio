@@ -36,7 +36,7 @@
   margin-left: 13%;
   padding: 3% 0 8% 0;
   background-color: $vsCodeBlack;
-  border-radius: 1.7%;
+  border-radius: 2%;
 }
 
 
@@ -75,7 +75,7 @@
   ul:nth-child(9){
     width: calc(100% / 4);
   }
-  ul:nth-child(10){
+  ul:nth-child(11){
     width:calc(100% / 4 * 3);
     padding-right: calc(100% / 4 * 2);
     li p{
@@ -83,7 +83,7 @@
       line-height: 1.3rem;
     }
   }
-  ul:nth-child(6),
+  ul:nth-child(8),
   ul:nth-child(9),
   ul:nth-child(10){
     li p{
@@ -91,6 +91,9 @@
         // -this works together with padding top on img above the p
       padding-top:11.5px;
     }
+  }
+  ul:nth-child(6) i{
+    font-size: 1.84rem;
   }
 }
 

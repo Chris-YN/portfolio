@@ -39,13 +39,16 @@ footer{
   li a{
     margin-left: 3%;
     font-size: 2em;
-    color: $vsCodeCommentGrey;
-    &:hover{
-      color:$vsCodeWhite;
-    }
   }
   li:first-Child{
     margin-left: 0;
+  }
+}
+
+.footerADefault{
+  color: $vsCodeCommentGrey;
+  &:hover{
+    color:$vsCodeOrange;
   }
 }
 
@@ -87,8 +90,12 @@ footer{
     width: 50%;
     border:none;
     border-radius: 5px;
-    &:hover{
-      background-color: $vsCodeOrange;
-    }
+  }
+}
+.contactSubmitDefault{
+  background-color: $vsCodeCommentGrey;
+  color:$vsCodeBlack;
+  &:hover{
+    background-color: $vsCodeOrange;
   }
 }

@@ -69,58 +69,168 @@ const gotData = (data) => {
 
 
 
+//===== blinking cursor ===== //
+// let cursor = true;
+// let speed = 220;
+
+// setInterval(() => {
+//   if (cursor) {
+//     document.getElementById('cursor').style.opacity = 0;
+//     cursor = false;
+//   } else {
+//     document.getElementById('cursor').style.opacity = 1;
+//     cursor = true;
+//   }
+// }, speed);
+
+
+
+
 // ===== hidden function ===== //
 
-
+// isThemeDefault is used to track current theme
+let isThemeDefault = true;
+// declared globaly to remove input instruction on theme
+const instructionParagraph = document.querySelector(".inputInstruction");
 
 document.querySelector(".hiddenForm").addEventListener("submit", (e)=>{
   e.preventDefault();
+
   const hiddenTerminalInputField = document.querySelector(".hiddenInput");
-  let hiddenTerminalInput = document.querySelector(".hiddenInput").value;
-  console.log(hiddenTerminalInput)
-  if (hiddenTerminalInput == "lighter") {
+  let hiddenTerminalInput = document.querySelector(".hiddenInput").value.toLowerCase();
+  const divBodyDiv = document.querySelector(".bodyDiv");
+  const divWrapper = document.querySelector(".wrapper");
+  const idAboutMe = document.querySelector("#aboutMe");
+  const idProjects = document.querySelector("#projects");
+  const divFooterDiv = document.querySelector(".footerDiv");
+
+  const defaultH1Orange = document.querySelectorAll(".h1Orange");
+  const defaultH1Blue = document.querySelectorAll(".h1Blue");
+  const defaultH2 = document.querySelectorAll("h2");
+
+  const divHiddenInput = document.querySelector(".hiddenInput");
+  const divSkillsIconBackground = document.querySelector(".skillsIconBackground");
+  const divContactSubmitDefault = document.querySelector(".contactSubmitDefault");
+  const divFooterADefault = document.querySelector(".footerADefault");
+
+  const divHiddenInputMessage = document.querySelector(".hiddenInputMessage");
+
+  const lightH1Orange = document.querySelectorAll(".spanLightRed");
+  const lightH1Blue = document.querySelectorAll(".h1LightBlue");
+  const lightH2 = document.querySelectorAll("h2");
+  
+  // theme change from dark to light
+  if (isThemeDefault && hiddenTerminalInput == "lighter") {
     const lighterClasses = () => {
-      document.querySelector(".bodyDiv").classList.add("bodyDivLight");
-      document.querySelector(".wrapper").classList.add("wrapperLight");
-      document.querySelector("#aboutMe").classList.add("aboutMeLight");
-      document.querySelector("#projects").classList.add("projectsLight");
-      document.querySelector(".footerDiv").classList.add("footerDivLight");
-      const darkH1Orange = document.querySelectorAll(".h1Orange")
-      console.log(darkH1Orange);
-      darkH1Orange.forEach((span)=>{
+      divBodyDiv.classList.add("bodyDivLight");
+      divWrapper.classList.add("wrapperLight");
+      idAboutMe.classList.add("aboutMeLight");
+      idProjects.classList.add("projectsLight");
+      divFooterDiv.classList.add("footerDivLight");
+
+      defaultH1Orange.forEach((span)=>{
         span.classList.add("spanLightRed");
         span.classList.remove("h1Orange")
       });
-      const darkH1Blue = document.querySelectorAll(".h1Blue")
-      console.log(darkH1Orange);
-      darkH1Blue.forEach((span) => {
+
+      defaultH1Blue.forEach((span) => {
         span.classList.add("h1LightBlue");
         span.classList.remove("h1Blue")
       });
-      const darkH2 = document.querySelectorAll("h2")
-      console.log(darkH1Orange);
-      darkH2.forEach((h2) => {
+      
+      defaultH2.forEach((h2) => {
         h2.classList.add("h2Light");
-        // h2.classList.remove("h1Blue")
       });
-      document.querySelector("input").classList.remove("hiddenInput");
-      document.querySelector("input").classList.add("inputLight");
-      document.querySelector(".skillsIconBackground").classList.add("skillsIconBackgroundLight");
+
+      divHiddenInput.classList.add("inputLight");
+      divHiddenInput.classList.remove("inputDefault");
+      divSkillsIconBackground.classList.add("skillsIconBackgroundLight");
+      divContactSubmitDefault.classList.add("contactSubmitLight");
+      divFooterADefault.classList.add("footerALight")
     };
     setTimeout(lighterClasses, 1100);
     animate()
     hiddenTerminalInputField.value = "";
-  } else {
-    document.querySelector(".hiddenInputMessage").classList.add("hiddenInputParaVisible");
-    document.querySelector(".hiddenInputMessage").innerHTML = "try another word"
+    isThemeDefault = false;
+    // instructionParagraph.classList.remove("inputInstructionAnimate");
+    inputInstructionForDarker()
+    // instructionParagraph.classList.add("inputInstructionAnimateAlt");
+  } 
+
+  // lighter entered while theme is on light
+  else if (!isThemeDefault && hiddenTerminalInput == "lighter") {
+    divHiddenInputMessage.classList.add("hiddenInputParaVisible");
+    divHiddenInputMessage.innerHTML = '// Theme is already on Light. Try "darker" command'
+    hiddenTerminalInputField.value = "";
+    setTimeout(() => {
+      divHiddenInputMessage.classList.remove("hiddenInputParaVisible");
+    }, 3500)
+  }
+  
+  // theme change from light to dark
+  else if(!isThemeDefault && hiddenTerminalInput == "darker") {
+    const defaultClasses = () => {
+      divBodyDiv.classList.remove("bodyDivLight");
+      divWrapper.classList.remove("wrapperLight");
+      idAboutMe.classList.remove("aboutMeLight");
+      idProjects.classList.remove("projectsLight");
+      divFooterDiv.classList.remove("footerDivLight");
+      
+      lightH1Orange.forEach((span) => {
+        span.classList.add("h1Orange");
+        span.classList.remove("spanLightRed")
+      });
+
+      lightH1Blue.forEach((span) => {
+        span.classList.add("h1Blue");
+        span.classList.remove("h1LightBlue")
+      });
+      
+      lightH2.forEach((h2) => {
+        h2.classList.remove("h2Light");
+        // h2.classList.remove("h1Blue")
+      });
+
+      divHiddenInput.classList.add("inputDefault");
+      divHiddenInput.classList.remove("inputLight");
+      divSkillsIconBackground.classList.remove("skillsIconBackgroundLight");
+      divContactSubmitDefault.classList.remove("contactSubmitLight");
+      divFooterADefault.classList.remove("footerALight");
+    };
+
+    setTimeout(defaultClasses, 1100);
+    animate()
+    hiddenTerminalInputField.value = "";
+    isThemeDefault = true;
+
+    //this stops inputinstruction to still show after the theme change
+    // instructionParagraph.classList.remove("inputInstructionAnimate");
+    inputInstructionForLighter()
+    // instructionParagraph.classList.add("inputInstructionAnimateAlt");
+  } 
+
+  // darker entered while theme is on darker
+  else if (isThemeDefault && hiddenTerminalInput == "darker"){
+    divHiddenInputMessage.classList.add("hiddenInputParaVisible");
+    divHiddenInputMessage.innerHTML = '// Theme is already on Dark. Try "lighter" command'
+    hiddenTerminalInputField.value = "";
+    setTimeout(() => {
+      divHiddenInputMessage.classList.remove("hiddenInputParaVisible");
+    }, 3500)
+  }
+  
+  else{
+    divHiddenInputMessage.classList.add("hiddenInputParaVisible");
+    divHiddenInputMessage.innerHTML = '// invalid command. Please try command "lighter" or "darker"'
     hiddenTerminalInputField.value = "";
     setTimeout( ()=>{
-      document.querySelector(".hiddenInputMessage").classList.remove("hiddenInputParaVisible");
+      divHiddenInputMessage.classList.remove("hiddenInputParaVisible");
     }, 3000 )
-    }
   }
-);
-// ===== animations =====//
+
+});
+
+// ===== screen curtain animations =====//
 function animate() {
   const mainImage = document.querySelector(".wholeScreenSpread")
 
@@ -134,6 +244,23 @@ function animate() {
   }, 1100)
 }
 // animate();
+
+
+// hidden input instruction
+function inputInstructionForLighter() {
+    instructionParagraph.innerHTML= '<--- Click(tap) and type "lighter" then press enter for light theme';
+}
+
+function inputInstructionForDarker() {
+  if(!isThemeDefault){
+    instructionParagraph.innerHTML = '<--- Click(tap) and type "darker" then press enter for dark theme';
+    // instructionParagraph.style.animation = "instruction 1s forwards"
+  }
+}
+
+if (isThemeDefault) {
+  inputInstructionForLighter();
+}
 
 
 

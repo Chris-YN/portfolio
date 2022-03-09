@@ -35,12 +35,7 @@
       
       <div class="wrapper">
         <div class="topHalf">
-          <!-- <img src="./styles/assets/toronto-sleve.png" alt=""> -->
-          <form class="hiddenForm" action="">
-            <input class="hiddenInput" type="text">
-            <p class="hiddenInputMessage hiddenInputParaVisible"></p>
-          </form>
-          
+          <!-- <span id="cursor"> | </span> --> 
         <!-- .topHalf ends   -->
         </div>
 
@@ -95,9 +90,18 @@
               </li>
               
             </ul>
+            
           <!-- .topNav ends   -->
           </nav>
-          
+          <div class="FormAndInstructionFlexParent">
+            <form class="hiddenForm" action="">
+              <input class="hiddenInput inputDefault" type="text">
+              
+            </form>
+            <p class="inputInstruction inputInstructionAnimate"></p>
+          </div>
+          <p class="hiddenInputMessage hiddenInputParaVisible"></p>
+
         <!-- .bottomHalf ends   -->
         </div>
         
@@ -128,7 +132,7 @@
           </div>
           <div class="aboutMeFlexParent contentTopPadding">
             <div class="profilePictureContainer">
-              <img src="./styles/assets/profilepix.jpg" alt="Picture of me, Chris">
+              <img src="./styles/assets/profilepixS.jpg" alt="Picture of me, Chris">
             </div>
             <div class="textContainerFlexParent">
               <p>// Hello! I am a front-end web developer with background in computer network administration and graphic design. <br><br>
@@ -170,8 +174,10 @@
                   <li><p>React</p></li>
                 </ul>
                 <ul class="skillNamePairFlexParent">
-                  <li><img src="./styles/assets/terminalCleanedGrey.png" alt="terminal icon"></li>
-                  <li><p>Terminal</p></li>
+                  <li><i class="fa-solid fa-gears"></i></li>
+                  <li>
+                    <p>REST API</p>
+                  </li>
                 </ul>
                 <!-- <ul class="skillNamePairFlexParent">
                   <li><i class="fa-brands fa-git-alt"></i></li>
@@ -182,19 +188,20 @@
                   <li><p>Github</p></li>
                 </ul>
                 <ul class="skillNamePairFlexParent">
-                  <li><img src="./styles/assets/spikey.png" alt="logo"></li>
+                  <li><img src="./styles/assets/spikeyS.png" alt="logo"></li>
                   <li><p>Firebase</p></li>
                 </ul>
                 <ul class="skillNamePairFlexParent">
-                  <li><img src="./styles/assets/sp.png" alt="logo"></li>
+                  <li><img src="./styles/assets/spS.png" alt="logo"></li>
                   <li><p>PhotoShop</p></li>
                 </ul>
                 <ul class="skillNamePairFlexParent">
-                  <li><img src="./styles/assets/responsiveDesignBlockedCleanedGrey.png" alt="responsive design logo"></li>
+                  <li><img src="./styles/assets/responsiveDesignBlockedCleanedGreyS.png" alt="responsive design logo"></li>
                   <li>
                     <p>Responsive</br>Design</p>
                   </li>
                 </ul>
+                
       
               </ul>
             </div>
@@ -300,11 +307,11 @@
             <label class="visuallyHidden" for="">Message</label>
             <textarea class="messageField" name="" id="" rows="10" placeholder=" // Your kind message here" required></textarea>
 
-            <button type="submit">Submit</button>
+            <button class="contactSubmitDefault" type="submit">Submit</button>
 
             <ul class="contactIconFlexParent">
-              <li><a href="https://www.linkedin.com/in/christopher-yun-824458181/"><i class="fab fa-linkedin"></i></a></li>
-              <li><a href="https://github.com/Chris-YN/"><i class="fab fa-github-square"></i></a></li>
+              <li><a class="footerADefault" href="https://www.linkedin.com/in/christopher-yun-824458181/"><i class="fab fa-linkedin"></i></a></li>
+              <li><a class="footerADefault" href="https://github.com/Chris-YN/"><i class="fab fa-github-square"></i></a></li>
             </ul>
           </form>
           
