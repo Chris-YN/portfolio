@@ -247,7 +247,7 @@ document.querySelector(".hiddenForm").addEventListener("submit", (e)=>{
     hiddenTerminalInputField.value = "";
     setTimeout( ()=>{
       divHiddenInputMessage.classList.remove("hiddenInputParaVisible");
-    }, 30000 )
+    }, 3000 )
   }
 
   // invalid command entered while in light theme
