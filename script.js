@@ -69,6 +69,27 @@ const gotData = (data) => {
 
 
 
+// // ===== for mobile distortion fix ===== //
+// // android device fix
+// let viewport = document.querySelector("meta[name = viewport]");
+// viewport.setAttribute("content", "width = device - width, initial - scale=1.0, maximum - scale=1.0, user - scalable=0");
+
+// // keyboard load fix
+// //keyboard up fix
+// document.documentElement.style.setProperty("overflow", "auto"); 
+// const metaViewport = document.querySelector("meta[name = viewport]");
+// metaViewport.setAttribute("content", "height =" + initialHeight + "px, width = device - width, initial - scale=1.0");
+
+// // keyboard down fix
+// // const metaViewport = document.querySelector("meta[name = viewport]");
+// metaViewport.setAttribute("content", "width = device - width, initial - scale=1.0, maximum - scale=1.0, user - scalable=0")
+
+
+
+
+
+
+
 //===== blinking cursor ===== //
 // let cursor = true;
 // let speed = 220;
@@ -159,11 +180,11 @@ document.querySelector(".hiddenForm").addEventListener("submit", (e)=>{
 
   // lighter entered while theme is on light
   else if (!isThemeDefault && hiddenTerminalInput == "lighter") {
-    divHiddenInputMessage.classList.add("hiddenInputParaVisible");
+    divHiddenInputMessage.classList.add("hiddenInputParaVisibleLight");
     divHiddenInputMessage.innerHTML = '// Theme is already on Light. Try "darker" command'
     hiddenTerminalInputField.value = "";
     setTimeout(() => {
-      divHiddenInputMessage.classList.remove("hiddenInputParaVisible");
+      divHiddenInputMessage.classList.remove("hiddenInputParaVisibleLight");
     }, 3500)
   }
   
@@ -219,13 +240,24 @@ document.querySelector(".hiddenForm").addEventListener("submit", (e)=>{
     }, 3500)
   }
   
-  else{
+  // invalid command enetered while in dark theme
+  else if (isThemeDefault && hiddenTerminalInput !== "lighter"){
     divHiddenInputMessage.classList.add("hiddenInputParaVisible");
-    divHiddenInputMessage.innerHTML = '// invalid command. Please try command "lighter" or "darker"'
+    divHiddenInputMessage.innerHTML = '// invalid command. Please try command "lighter"'
     hiddenTerminalInputField.value = "";
     setTimeout( ()=>{
       divHiddenInputMessage.classList.remove("hiddenInputParaVisible");
-    }, 3000 )
+    }, 30000 )
+  }
+
+  // invalid command entered while in light theme
+  else if (!isThemeDefault && hiddenTerminalInput !== "darker") {
+    divHiddenInputMessage.classList.add("hiddenInputParaVisibleLight");
+    divHiddenInputMessage.innerHTML = '// invalid command. Please try command "darker"'
+    hiddenTerminalInputField.value = "";
+    setTimeout(() => {
+      divHiddenInputMessage.classList.remove("hiddenInputParaVisibleLight");
+    }, 3000)
   }
 
 });

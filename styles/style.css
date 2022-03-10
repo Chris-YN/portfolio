@@ -1173,6 +1173,10 @@ body {
     left: -100%;
   }
 }
+.hiddenInputErrorMsgContainer {
+  height: 150px;
+}
+
 .hiddenInputMessage {
   visibility: hidden;
   margin-left: 5%;
@@ -1183,7 +1187,14 @@ body {
   visibility: visible;
   color: #00add8;
   opacity: 0.6;
-  padding-bottom: 5%;
+  z-index: 30;
+}
+
+.hiddenInputParaVisibleLight {
+  visibility: visible;
+  color: #00add8;
+  opacity: 0.6;
+  z-index: 30;
 }
 
 .wrapperLight,
