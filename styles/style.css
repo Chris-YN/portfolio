@@ -1178,20 +1178,20 @@ body {
 }
 
 .hiddenInputMessage {
-  visibility: hidden;
+  opacity: 0;
   margin-left: 5%;
   margin-right: 5%;
 }
 
 .hiddenInputParaVisible {
-  visibility: visible;
+  opacity: 1;
   color: #00add8;
   opacity: 0.6;
   z-index: 30;
 }
 
 .hiddenInputParaVisibleLight {
-  visibility: visible;
+  opacity: 1;
   color: #00add8;
   opacity: 0.6;
   z-index: 30;

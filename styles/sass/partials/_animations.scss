@@ -43,18 +43,18 @@ body{
 
 }
 .hiddenInputMessage{
-  visibility: hidden;
+  opacity: 0;
   margin-left: 5%;
   margin-right:5%;
 }
 .hiddenInputParaVisible{
-  visibility: visible;
+  opacity: 1;
   color: $vsCodeblue;
   opacity: .6;
   z-index: 30;
 }
 .hiddenInputParaVisibleLight{
-  visibility: visible;
+  opacity: 1;
   color: $vsCodeblue;
   opacity: .6;
   z-index: 30;
