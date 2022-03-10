@@ -843,9 +843,6 @@ footer .wrapper p:last-child {
   background-color: #dba93c;
 }
 
-#aboutMe {
-  margin-top: 5%;
-}
 #aboutMe h2 {
   padding-top: 13%;
 }
@@ -1186,6 +1183,7 @@ body {
   visibility: visible;
   color: #00add8;
   opacity: 0.6;
+  padding-bottom: 5%;
 }
 
 .wrapperLight,
