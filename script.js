@@ -173,19 +173,18 @@ document.querySelector(".hiddenForm").addEventListener("submit", (e)=>{
     animate()
     hiddenTerminalInputField.value = "";
     isThemeDefault = false;
-    // instructionParagraph.classList.remove("inputInstructionAnimate");
     inputInstructionForDarker()
-    // instructionParagraph.classList.add("inputInstructionAnimateAlt");
   } 
 
   // lighter entered while theme is on light
   else if (!isThemeDefault && hiddenTerminalInput == "lighter") {
-    divHiddenInputMessage.classList.add("hiddenInputParaVisibleLight");
-    divHiddenInputMessage.innerHTML = '// Theme is already on Light. Try "darker" command'
+    instructionParagraph.innerHTML = '<---  // Theme is already on Light. Try "darker" command'
     hiddenTerminalInputField.value = "";
-    setTimeout(() => {
-      divHiddenInputMessage.classList.remove("hiddenInputParaVisibleLight");
-    }, 3500)
+
+    // == below is for seperate error message. err msg is incoporated to divHiddenInputMessage.classList.add("hiddenInputParaVisibleLight");instruction currently
+    // setTimeout(() => {
+    //   divHiddenInputMessage.classList.remove("hiddenInputParaVisibleLight");
+    // }, 3500)
   }
   
   // theme change from light to dark
@@ -223,41 +222,43 @@ document.querySelector(".hiddenForm").addEventListener("submit", (e)=>{
     animate()
     hiddenTerminalInputField.value = "";
     isThemeDefault = true;
-
-    //this stops inputinstruction to still show after the theme change
-    // instructionParagraph.classList.remove("inputInstructionAnimate");
     inputInstructionForLighter()
-    // instructionParagraph.classList.add("inputInstructionAnimateAlt");
   } 
 
   // darker entered while theme is on darker
   else if (isThemeDefault && hiddenTerminalInput == "darker"){
-    divHiddenInputMessage.classList.add("hiddenInputParaVisible");
-    divHiddenInputMessage.innerHTML = '// Theme is already on Dark. Try "lighter" command'
+    instructionParagraph.innerHTML = '<---  // Theme is already on Dark. Try "lighter" command'
     hiddenTerminalInputField.value = "";
-    setTimeout(() => {
-      divHiddenInputMessage.classList.remove("hiddenInputParaVisible");
-    }, 3500)
+
+    // == below is for seperate error message. err msg is incoporated to instruction currently
+    //  divHiddenInputMessage.classList.add("hiddenInputParaVisible");
+    // setTimeout(() => {
+    //   divHiddenInputMessage.classList.remove("hiddenInputParaVisible");
+    // }, 3500)
   }
   
   // invalid command enetered while in dark theme
   else if (isThemeDefault && hiddenTerminalInput !== "lighter"){
-    divHiddenInputMessage.classList.add("hiddenInputParaVisible");
-    divHiddenInputMessage.innerHTML = '// invalid command. Please try command "lighter"'
+    instructionParagraph.innerHTML = '<---  // invalid command. Please try command "lighter"'
     hiddenTerminalInputField.value = "";
-    setTimeout( ()=>{
-      divHiddenInputMessage.classList.remove("hiddenInputParaVisible");
-    }, 3000 )
+
+    // == below is for seperate error message. err msg is incoporated to instruction currently
+    // divHiddenInputMessage.classList.add("hiddenInputParaVisible");
+    // setTimeout( ()=>{
+    //   divHiddenInputMessage.classList.remove("hiddenInputParaVisible");
+    // }, 3000 )
   }
 
   // invalid command entered while in light theme
   else if (!isThemeDefault && hiddenTerminalInput !== "darker") {
-    divHiddenInputMessage.classList.add("hiddenInputParaVisibleLight");
-    divHiddenInputMessage.innerHTML = '// invalid command. Please try command "darker"'
+    instructionParagraph.innerHTML = '<---  // invalid command. Please try command "darker"'
     hiddenTerminalInputField.value = "";
-    setTimeout(() => {
-      divHiddenInputMessage.classList.remove("hiddenInputParaVisibleLight");
-    }, 3000)
+
+    // == below is for seperate error message. err msg is incoporated to instruction currently
+    // divHiddenInputMessage.classList.add("hiddenInputParaVisibleLight");
+    // setTimeout(() => {
+    //   divHiddenInputMessage.classList.remove("hiddenInputParaVisibleLight");
+    // }, 3000)
   }
 
 });
@@ -271,21 +272,21 @@ function animate() {
     mainImage.style.animation = "slideFlashIn 1s forwards";
   }, 300)
   setTimeout(() => {
-    // mainImage.classList.add("active");
     mainImage.style.animation = "slideFlashOut 1s forwards";
   }, 1100)
 }
-// animate();
+
+
 
 
 // hidden input instruction
 function inputInstructionForLighter() {
-    instructionParagraph.innerHTML= '<--- Click(tap) and type "lighter" then press enter for light theme';
+    instructionParagraph.innerHTML= '<---  // Click(tap) and type "lighter" then press enter for light theme';
 }
 
 function inputInstructionForDarker() {
   if(!isThemeDefault){
-    instructionParagraph.innerHTML = '<--- Click(tap) and type "darker" then press enter for dark theme';
+    instructionParagraph.innerHTML = '<---  // Click(tap) and type "darker" then press enter for dark theme';
     // instructionParagraph.style.animation = "instruction 1s forwards"
   }
 }
