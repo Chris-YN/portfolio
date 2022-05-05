@@ -1,7 +1,15 @@
+##################
 ### test files ###
 ##################
-
 testIndex.html
 testScript.js
 testStyle.css
 testForTechChallenge.html
+
+
+
+##################
+## Misc ignores ##
+##################
+aboutMe.html
+contant.html

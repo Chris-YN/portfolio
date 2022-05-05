@@ -366,6 +366,8 @@ const projectModalToggle = function(){
 
   const roboTriviaText = "<span class='pGrey'>//</span> A Git collaborated web based game with trivia questions for different categories <br> <br> <span class='pGrey'>//</span> Utilizes separate API to generate unique robot per player <br> <br> <span class='pGrey'>//</span> Player's score is compared to three top scores saved in Firebase real-time databasewith an option to submit the score. submitting higher score updates the high score"
   
+  const designConversionCreativeText = "<span class='pGrey'>//</span> Design conversion project for CREATIVE<br> <br> <span class='pGrey'>//</span> This  multi page site was built, following provided design brief"
+  
   if (this.classList[0] == "proOne") {
     title.innerHTML = `<span aria-hidden="true" class="h1Purple">let </span>
       <span aria-hidden="true" class="h1Orange"> title </span >
@@ -395,7 +397,15 @@ const projectModalToggle = function(){
     liveLink.innerHTML = '<a href="https://epic-bohr-0b1267.netlify.app" target="_blank">Live Site</a>'
     gitHub.innerHTML = '<a href="https://github.com/Robo-Trivia/project4-robo-trivia" target="_blank">GitHub</a>'
 
-    }
+
+  } else if (this.classList[0] == "proFour") {
+    title.innerHTML = "<span>let: </span>Design conversion for CREATIVE"
+    image.innerHTML = '<img src="./styles/assets/designConversionModalOne.jpg" alt="Screen-shot of design conversion project, CREATIVE">'
+    discription.innerHTML = designConversionCreativeText
+    liveLink.innerHTML = '<a href="https://funny-longma-5762a5.netlify.app" target="_blank">Live Site</a>'
+    gitHub.innerHTML = '<a href="https://github.com/Chris-YN/psdConversionOne" target="_blank">GitHub</a>'
+  
+  }
 
   // projectImages.forEach( (projectImage)=>{
   //   if (projectImage.dataset.active === true){

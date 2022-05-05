@@ -283,7 +283,7 @@ h1 .h1White {
 
 h1 .h1Purple,
 h2 .h1Purple {
-  color: #884bb9;
+  color: rgb(136, 75, 185);
 }
 h1 .h1Orange,
 h2 .h1Orange {
@@ -291,18 +291,18 @@ h2 .h1Orange {
 }
 h1 .h1White,
 h2 .h1White {
-  color: #797d80;
+  color: rgb(121, 125, 128);
 }
 h1 .h1Blue,
 h2 .h1Blue {
-  color: #00add8;
+  color: rgb(0, 173, 216);
 }
 
 h2 {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 2rem;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 h2 span {
   font-size: 0.9rem;
@@ -325,14 +325,14 @@ header,
 .bodyDiv,
 main,
 footer {
-  background-color: black;
+  background-color: rgb(0, 0, 0);
 }
 
 .wrapper {
   max-width: 1280px;
   width: 80%;
   margin: 0 auto;
-  background-color: #1d1d1c;
+  background-color: rgb(29, 29, 28);
 }
 
 html {
@@ -359,7 +359,7 @@ h2 {
   content: "";
   width: 72%;
   position: absolute;
-  border-bottom: 1.5px solid #797d80;
+  border-bottom: 1.5px solid rgb(121, 125, 128);
   top: 35%;
   left: 13%;
 }
@@ -373,7 +373,7 @@ h2 {
   content: "";
   width: 100%;
   position: absolute;
-  border-bottom: 1.5px solid #797d80;
+  border-bottom: 1.5px solid rgb(121, 125, 128);
   bottom: -5%;
   left: 0%;
 }
@@ -683,13 +683,13 @@ nav ul {
   display: flex;
 }
 .genaralTopNav ul p {
-  color: #797d80;
+  color: rgb(121, 125, 128);
 }
 .genaralTopNav ul li a {
-  color: #797d80;
+  color: rgb(121, 125, 128);
 }
 .genaralTopNav ul li a:visited {
-  color: #797d80;
+  color: rgb(121, 125, 128);
 }
 .genaralTopNav ul li a:hover {
   color: #dba93c;
@@ -697,7 +697,7 @@ nav ul {
 }
 
 .fixedTopNav nav {
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   width: 80%;
   max-width: 1280px;
   position: fixed;
@@ -712,7 +712,7 @@ nav ul {
 .fixedTopNav nav p,
 .fixedTopNav nav p a,
 .fixedTopNav nav p a:visited {
-  color: white;
+  color: rgb(255, 255, 255);
 }
 .fixedTopNav nav p a:hover {
   color: #dba93c;
@@ -735,15 +735,15 @@ nav ul {
 .sectionProject p {
   font-size: 0.8rem;
   padding: 0.8% 0 0 16%;
-  color: #797d80;
+  color: #d1301b;
   line-height: 1.1rem;
 }
 
 footer .wrapper {
-  background: black;
+  background: rgb(0, 0, 0);
 }
 footer p {
-  color: #797d80;
+  color: rgb(121, 125, 128);
 }
 footer .wrapper p:last-child {
   text-align: center;
@@ -780,7 +780,7 @@ footer .wrapper p:last-child {
 }
 
 .footerADefault {
-  color: #797d80;
+  color: rgb(121, 125, 128);
 }
 .footerADefault:hover {
   color: #dba93c;
@@ -800,21 +800,21 @@ footer .wrapper p:last-child {
 }
 .contactFormFlexParent input,
 .contactFormFlexParent textarea {
-  background-color: #1d1d1c;
-  color: white;
+  background-color: rgb(29, 29, 28);
+  color: rgb(255, 255, 255);
   border: none;
   border-radius: 5px;
   padding: 10px 0 10px 10px;
 }
 .contactFormFlexParent input::-moz-placeholder, .contactFormFlexParent textarea::-moz-placeholder {
-  color: #797d80;
+  color: rgb(121, 125, 128);
 }
 .contactFormFlexParent input:-ms-input-placeholder, .contactFormFlexParent textarea:-ms-input-placeholder {
-  color: #797d80;
+  color: rgb(121, 125, 128);
 }
 .contactFormFlexParent input::placeholder,
 .contactFormFlexParent textarea::placeholder {
-  color: #797d80;
+  color: rgb(121, 125, 128);
 }
 .contactFormFlexParent input:focus,
 .contactFormFlexParent textarea:focus {
@@ -836,8 +836,8 @@ footer .wrapper p:last-child {
 }
 
 .contactSubmitDefault {
-  background-color: #797d80;
-  color: black;
+  background-color: rgb(121, 125, 128);
+  color: rgb(0, 0, 0);
 }
 .contactSubmitDefault:hover {
   background-color: #dba93c;
@@ -865,14 +865,14 @@ footer .wrapper p:last-child {
 .textContainerFlexParent {
   width: 40%;
   padding: 0 10% 0 0;
-  color: #797d80;
+  color: rgb(121, 125, 128);
 }
 
 .skillsIconBackground {
   margin-right: 13%;
   margin-left: 13%;
   padding: 3% 0 8% 0;
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   border-radius: 2%;
 }
 
@@ -924,10 +924,10 @@ footer .wrapper p:last-child {
 .skillNamePairFlexParent {
   flex-direction: column;
   align-items: center;
-  color: #797d80;
+  color: rgb(121, 125, 128);
 }
 .skillNamePairFlexParent li p {
-  color: #797d80;
+  color: rgb(121, 125, 128);
   font-family: "Niramit", sans-serif;
   font-weight: 300;
   font-size: 1rem;
@@ -969,15 +969,15 @@ footer .wrapper p:last-child {
   z-index: 6;
   background: none;
   border: none;
-  color: white;
-  background-color: #797d80;
+  color: rgb(255, 255, 255);
+  background-color: rgb(121, 125, 128);
   cursor: pointer;
   border-radius: 20%;
 }
 
 .portfolioCarousel button:hover,
 .portfolioCarousel button:focus {
-  color: #1d1d1c;
+  color: rgb(29, 29, 28);
   background-color: #dba93c;
 }
 
@@ -1030,7 +1030,7 @@ footer .wrapper p:last-child {
   padding: 0 3% 3% 3%;
 }
 .modal .modalContents h2 {
-  color: #00add8;
+  color: rgb(0, 173, 216);
   font-weight: 500;
   text-align: center;
   padding: 7% 0 0 0;
@@ -1047,7 +1047,7 @@ footer .wrapper p:last-child {
   padding-bottom: 5%;
 }
 .modal .modalContents p span {
-  color: #797d80;
+  color: rgb(121, 125, 128);
   font-size: 0.7rem;
 }
 
@@ -1075,7 +1075,7 @@ footer .wrapper p:last-child {
   width: 50%;
 }
 .modalImageAndTextFlexParent div:nth-child(2) p {
-  color: #1d1d1c;
+  color: rgb(29, 29, 28);
   font-size: 0.95rem;
 }
 
@@ -1093,7 +1093,7 @@ footer .wrapper p:last-child {
   color: #dba93c;
 }
 .modalTextFlexParent ul:nth-child(2) a:hover {
-  color: #797d80;
+  color: rgb(121, 125, 128);
 }
 
 .modalCloseButton {
@@ -1102,11 +1102,11 @@ footer .wrapper p:last-child {
   position: absolute;
   top: 10px;
   right: 10px;
-  color: #884bb9;
+  color: rgb(136, 75, 185);
   font-size: 1.4rem;
 }
 .modalCloseButton:hover {
-  color: #797d80;
+  color: rgb(121, 125, 128);
 }
 
 .carouselButtonHidden {
@@ -1122,7 +1122,7 @@ body {
 }
 
 .wholeScreenSpread {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   display: none;
   z-index: 20;
   width: 100%;
@@ -1185,14 +1185,14 @@ body {
 
 .hiddenInputParaVisible {
   opacity: 1;
-  color: #00add8;
+  color: rgb(0, 173, 216);
   opacity: 0.6;
   z-index: 30;
 }
 
 .hiddenInputParaVisibleLight {
   opacity: 1;
-  color: #00add8;
+  color: rgb(0, 173, 216);
   opacity: 0.6;
   z-index: 30;
 }
@@ -1202,11 +1202,11 @@ body {
 .projectsLight,
 footer .footerDivLight,
 .bodyDivLight {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
 }
 
 .spanLightRed {
-  color: #e92a4a;
+  color: #d1301b;
   font-size: 1.3rem;
 }
 
@@ -1214,41 +1214,41 @@ footer .footerDivLight,
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 3rem;
-  color: #14bbbb;
+  color: rgb(20, 187, 187);
 }
 
 .h2Light {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 2rem;
-  color: #14bbbb;
+  color: rgb(20, 187, 187);
 }
 
 .skillsIconBackgroundLight {
-  background-color: #1d1d1c;
+  background-color: rgb(29, 29, 28);
 }
 
 .fixedTopNavLight {
-  background-color: #1d1d1c;
+  background-color: rgb(29, 29, 28);
 }
 
 .contactSubmitLight {
-  background-color: #797d80;
-  color: white;
+  background-color: rgb(121, 125, 128);
+  color: rgb(255, 255, 255);
 }
 .contactSubmitLight:hover {
   background-color: #dba93c;
 }
 
 .footerALight {
-  color: #797d80;
+  color: rgb(121, 125, 128);
 }
 .footerALight:hover {
   color: #dba93c;
 }
 
 #cursor {
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .FormAndInstructionFlexParent {
@@ -1266,7 +1266,7 @@ footer .footerDivLight,
 .hiddenInput {
   width: 95%;
   border: none;
-  color: #797d80;
+  color: rgb(121, 125, 128);
 }
 
 input:focus {
@@ -1274,11 +1274,11 @@ input:focus {
 }
 
 .inputDefault {
-  background-color: #1d1d1c;
+  background-color: rgb(29, 29, 28);
 }
 
 .inputLight {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
 }
 
 #cursor {
