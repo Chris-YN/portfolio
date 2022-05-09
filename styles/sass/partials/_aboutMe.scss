@@ -73,8 +73,9 @@
       // -this works together with padding top on p underneath the img
     padding-top:7.5px;
   }
-  ul:nth-child(9){
-    width: calc(100% / 4);
+  ul:nth-child(9),
+  ul:nth-child(10){
+    width: calc(100% / 2);
   }
   ul:nth-child(11){
     width:calc(100% / 4 * 3);

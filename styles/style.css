@@ -488,6 +488,20 @@ h1 .spanLightRed {
     font-size: 2rem;
   }
 }
+@media (max-width: 765px) {
+  .aboutMeFlexParent {
+    flex-direction: column;
+    align-items: center;
+  }
+  .aboutMeFlexParent .profilePictureContainer {
+    width: 40%;
+    padding: 0;
+  }
+  .aboutMeFlexParent .textContainerFlexParent {
+    width: 100%;
+    padding: 5% 5% 0% 5%;
+  }
+}
 @media (max-width: 700px) {
   .skills div h2 .h1White::after {
     content: "\a";
@@ -552,6 +566,10 @@ h1 .h1LightBlue {
     content: "\a";
     white-space: pre;
   }
+
+  .aboutMeFlexParent .profilePictureContainer {
+    width: 60%;
+  }
 }
 @media (max-width: 435px) {
   .mediaQueryHidden {
@@ -570,10 +588,6 @@ h1 .h1LightBlue {
   .textContainerFlexParent p {
     font-size: 0.8rem;
     line-height: 1.2rem;
-  }
-
-  .aboutMeFlexParent .textContainerFlexParent {
-    width: 50%;
   }
 
   .skillsIconBackground .skillListFlexParent {
@@ -901,8 +915,9 @@ footer .wrapper p:last-child {
   margin-bottom: 1%;
   padding-top: 7.5px;
 }
-.skillListFlexParent ul:nth-child(9) {
-  width: 25%;
+.skillListFlexParent ul:nth-child(9),
+.skillListFlexParent ul:nth-child(10) {
+  width: 50%;
 }
 .skillListFlexParent ul:nth-child(11) {
   width: 75%;
