@@ -144,12 +144,10 @@ input:focus{
 
 .inputDefault{
   background-color: $vsCodeBackgroundGrey;
-  // color: $vsCodeCommentGrey;
 }
 
 .inputLight{
   background-color: $vsCodeWhite;
-  // color: $vsCodeCommentGrey;
 }
 
 
@@ -165,49 +163,6 @@ input:focus{
     opacity: 0;
     color: $vsCodeOrange;
   }
-  // 14%{
-  //   opacity: 0;
-  //   color: $vsCodeOrange;
-  // }
-  // 15%{
-  //   opacity: .5;
-  //   color: $vsCodeOrange;
-  // }
-  // 16%{
-  //   opacity: 0;
-  //   color: $vsCodeOrange;
-  // }
-  // 17%{
-  //   opacity: .5;
-  //   color: $vsCodeOrange;
-  // }
-  // 18%{
-  //   opacity: 0;
-  //   color: $vsCodeOrange;
-  // }
-  // 19%{
-  //   opacity: .5;
-  //   color: $vsCodeOrange;
-  // }
-  // 20%{
-  //   opacity: 0;
-  //   color: $vsCodeOrange;
-  // }
-  // 30%{
-  //   opacity: 0;
-  //   color: $vsCodeOrange;
-  // }
-  // 40%{
-  //   opacity: .2;
-  //   color: $vsCodeOrange;
-  // }
-  // 50%{
-  //   opacity: .4;
-  //   color: $vsCodeOrange;
-  // }
-  // 60%{
-  //   opacity: .6;
-  // }
   70%{
     opacity: .6;
     color: $vsCodeOrange;
@@ -225,6 +180,3 @@ input:focus{
 .inputInstructionAnimate{
   animation: instruction 4s infinite;
 }
-// .inputInstructionAnimateAlt{
-//   animation: instruction 4s infinite;
-// }
