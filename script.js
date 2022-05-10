@@ -67,8 +67,6 @@ const gotData = (data) => {
 
 
 
-
-
 // // ===== for mobile distortion fix ===== //
 // // android device fix
 // let viewport = document.querySelector("meta[name = viewport]");
@@ -76,7 +74,7 @@ const gotData = (data) => {
 
 // // keyboard load fix
 // //keyboard up fix
-// document.documentElement.style.setProperty("overflow", "auto"); 
+// document.documentElement.style.setProperty("overflow", "auto");
 // const metaViewport = document.querySelector("meta[name = viewport]");
 // metaViewport.setAttribute("content", "height =" + initialHeight + "px, width = device - width, initial - scale=1.0");
 
@@ -86,7 +84,7 @@ const gotData = (data) => {
 
 
 
-
+//===== typewriter Effect ===== //
 
 
 
@@ -180,11 +178,6 @@ document.querySelector(".hiddenForm").addEventListener("submit", (e)=>{
   else if (!isThemeDefault && hiddenTerminalInput == "lighter") {
     instructionParagraph.innerHTML = '<---  // Theme is already on Light. Try "darker" command'
     hiddenTerminalInputField.value = "";
-
-    // == below is for seperate error message. err msg is incoporated to divHiddenInputMessage.classList.add("hiddenInputParaVisibleLight");instruction currently
-    // setTimeout(() => {
-    //   divHiddenInputMessage.classList.remove("hiddenInputParaVisibleLight");
-    // }, 3500)
   }
   
   // theme change from light to dark
@@ -229,39 +222,22 @@ document.querySelector(".hiddenForm").addEventListener("submit", (e)=>{
   else if (isThemeDefault && hiddenTerminalInput == "darker"){
     instructionParagraph.innerHTML = '<---  // Theme is already on Dark. Try "lighter" command'
     hiddenTerminalInputField.value = "";
-
-    // == below is for seperate error message. err msg is incoporated to instruction currently
-    //  divHiddenInputMessage.classList.add("hiddenInputParaVisible");
-    // setTimeout(() => {
-    //   divHiddenInputMessage.classList.remove("hiddenInputParaVisible");
-    // }, 3500)
   }
   
   // invalid command enetered while in dark theme
   else if (isThemeDefault && hiddenTerminalInput !== "lighter"){
     instructionParagraph.innerHTML = '<---  // invalid command. Please try command "lighter"'
     hiddenTerminalInputField.value = "";
-
-    // == below is for seperate error message. err msg is incoporated to instruction currently
-    // divHiddenInputMessage.classList.add("hiddenInputParaVisible");
-    // setTimeout( ()=>{
-    //   divHiddenInputMessage.classList.remove("hiddenInputParaVisible");
-    // }, 3000 )
   }
 
   // invalid command entered while in light theme
   else if (!isThemeDefault && hiddenTerminalInput !== "darker") {
     instructionParagraph.innerHTML = '<---  // invalid command. Please try command "darker"'
     hiddenTerminalInputField.value = "";
-
-    // == below is for seperate error message. err msg is incoporated to instruction currently
-    // divHiddenInputMessage.classList.add("hiddenInputParaVisibleLight");
-    // setTimeout(() => {
-    //   divHiddenInputMessage.classList.remove("hiddenInputParaVisibleLight");
-    // }, 3000)
   }
-
 });
+
+
 
 // ===== screen curtain animations =====//
 function animate() {
@@ -407,55 +383,19 @@ const projectModalToggle = function(){
   
   }
 
-  // projectImages.forEach( (projectImage)=>{
-  //   if (projectImage.dataset.active === true){
-  //     const currentProjectId = projectImage.dataset.projectNum;
-  //     console.log(currentProjectId);
-  //   }
-  // });
 
-  // projectImages.innerHTML = ""
-  // if (this.dataset.projectNum == 1) {
-  //   projectImages.innerHTML = "testString 1"
-  //   } else if (this.dataset.projectNum == 2) {
-  //   projectImages.innerHTML = "testString 2"
-  //   } else if (this.dataset.projectNum == 3){
-  //   projectImages.innerHTML = "testString 3"
-  //   }
 
-  // project1.innerHTML = `<p>one</p>`
-  // project2.innerHTML = "two"
-  // project3.innerHTML = "three" 
-
-  // projectImages.forEach( (projectImage)=>{
-  //   const pDescription = document.querySelector("#projectDiscription");
-  //   pDescription.innerHTML = ""
-  //   if (projectImage.dataset.projectNum == 1) {
-  //   pDescription.innerHTML = "testString 1"
-  //   } else if (projectImage.dataset.projectNum == 2) {
-  //   pDescription.innerHTML = "testString 2"
-  //   } else if (projectImage.dataset.projectNum == 3){
-  //   pDescription.innerHTML = "testString 3"
-  //   }
-  // })
-  
-  
-  
   // to hide carousel button while modal is up. 
   // modal has position:fixed applied
   const cButtonsToHide = document.querySelectorAll(".carouselButton");
   cButtonsToHide.forEach( (cButtonToHide)=>{
     cButtonToHide.classList.toggle("carouselButtonHidden")
   })
-
-  
 }
 
 const projectImages = document.querySelectorAll(".projectLi");
 projectImages.forEach( (projectImage)=>{
   projectImage.addEventListener("click", projectModalToggle);
-
-  
 })
 
 document.querySelector(".modalCloseButton").addEventListener("click", projectModalToggle);
