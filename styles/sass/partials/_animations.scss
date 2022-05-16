@@ -164,7 +164,7 @@ input:focus{
     color: $vsCodeOrange;
   }
   70%{
-    opacity: .6;
+    opacity: .4;
     color: $vsCodeOrange;
   }
   100%{
@@ -178,5 +178,78 @@ input:focus{
   margin-right: 10%;
 }
 .inputInstructionAnimate{
-  animation: instruction 4s infinite;
+  animation: instruction 8s 6.6s infinite;
 }
+
+
+@keyframes navFadeIn{
+  0%{
+    opacity: 0;
+  }
+  
+  66%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+.navFadeInAnimation {
+  animation: navFadeIn 2.5s 1;
+}
+@keyframes navFlash {
+  0% {
+    opacity: 1;
+    color: $vsCodeCommentGrey;
+  }
+  25%{
+    opacity: 1;
+    color: $vsCodeOrange;
+    text-shadow: 0 0 1 $VsCodePurple;
+  }
+  50%{
+    opacity: 1;
+    color: $vsCodeCommentGrey;
+    text-shadow: 0 0 0;
+  }
+  75%{
+    opacity: 1;
+    color: $vsCodeOrange;
+    text-shadow: 0 0 1 $VsCodePurple;
+  }
+  100%{
+    opacity: 1;
+    color: $vsCodeCommentGrey;
+    text-shadow: 0 0 0;
+  }
+}
+.navFlashAnimationOne{
+  animation: navFlash 1s 3s 1;
+}
+.navFlashAnimationTwo{
+  animation: navFlash 1s 3.8s 1;
+}
+.navFlashAnimationThree{
+  animation: navFlash 1s 4.6s 1;
+}
+
+// @keyframes navFlashColorWoosh {
+//   0% {
+//     opacity: 1;
+//     color: $vsCodeOrange;
+//   }
+//   100% {
+//     opacity: 1;
+//   }
+// }
+// .navFlashSwooshAnimationOne {
+//   animation: navFlashColorWoosh .5s 5s 1;
+// }
+
+// .navFlashSwooshAnimationTwo {
+//   animation: navFlashColorWoosh .5s 5.5s 1;
+// }
+
+// .navFlashSwooshAnimationThree {
+//   animation: navFlashColorWoosh .5s 6s 1;
+// }

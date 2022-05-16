@@ -708,20 +708,26 @@ nav ul {
 .genaralTopNav ul li a:hover {
   color: #dba93c;
   text-decoration: underline;
+  text-shadow: 0 0 1.5px #caa045;
 }
 
 .fixedTopNav nav {
-  background-color: rgb(0, 0, 0);
+  background-color: #caa045;
   width: 80%;
   max-width: 1280px;
   position: fixed;
   top: 0;
   z-index: 8;
+  padding: 0;
+}
+.fixedTopNav nav ul {
+  justify-content: center;
 }
 .fixedTopNav nav::after {
   bottom: 0;
   width: 100%;
   left: 0;
+  border: 1.5px solid rgb(255, 255, 255);
 }
 .fixedTopNav nav p,
 .fixedTopNav nav p a,
@@ -729,12 +735,12 @@ nav ul {
   color: rgb(255, 255, 255);
 }
 .fixedTopNav nav p a:hover {
-  color: #dba93c;
+  color: rgb(121, 125, 128);
   text-decoration: underline;
+  text-shadow: 0 0 0.5px #dba93c;
 }
 .fixedTopNav nav ul {
-  justify-content: flex-end;
-  padding-top: 1%;
+  padding: 1% 0 1% 0;
 }
 .fixedTopNav nav ul li {
   margin-right: 2%;
@@ -1306,7 +1312,7 @@ input:focus {
     color: #dba93c;
   }
   70% {
-    opacity: 0.6;
+    opacity: 0.4;
     color: #dba93c;
   }
   100% {
@@ -1321,7 +1327,7 @@ input:focus {
     color: #dba93c;
   }
   70% {
-    opacity: 0.6;
+    opacity: 0.4;
     color: #dba93c;
   }
   100% {
@@ -1336,6 +1342,102 @@ input:focus {
 }
 
 .inputInstructionAnimate {
-  -webkit-animation: instruction 4s infinite;
-          animation: instruction 4s infinite;
+  -webkit-animation: instruction 8s 6.6s infinite;
+          animation: instruction 8s 6.6s infinite;
+}
+
+@-webkit-keyframes navFadeIn {
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes navFadeIn {
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.navFadeInAnimation {
+  -webkit-animation: navFadeIn 2.5s 1;
+          animation: navFadeIn 2.5s 1;
+}
+
+@-webkit-keyframes navFlash {
+  0% {
+    opacity: 1;
+    color: rgb(121, 125, 128);
+  }
+  25% {
+    opacity: 1;
+    color: #dba93c;
+    text-shadow: 0 0 1 rgb(136, 75, 185);
+  }
+  50% {
+    opacity: 1;
+    color: rgb(121, 125, 128);
+    text-shadow: 0 0 0;
+  }
+  75% {
+    opacity: 1;
+    color: #dba93c;
+    text-shadow: 0 0 1 rgb(136, 75, 185);
+  }
+  100% {
+    opacity: 1;
+    color: rgb(121, 125, 128);
+    text-shadow: 0 0 0;
+  }
+}
+
+@keyframes navFlash {
+  0% {
+    opacity: 1;
+    color: rgb(121, 125, 128);
+  }
+  25% {
+    opacity: 1;
+    color: #dba93c;
+    text-shadow: 0 0 1 rgb(136, 75, 185);
+  }
+  50% {
+    opacity: 1;
+    color: rgb(121, 125, 128);
+    text-shadow: 0 0 0;
+  }
+  75% {
+    opacity: 1;
+    color: #dba93c;
+    text-shadow: 0 0 1 rgb(136, 75, 185);
+  }
+  100% {
+    opacity: 1;
+    color: rgb(121, 125, 128);
+    text-shadow: 0 0 0;
+  }
+}
+.navFlashAnimationOne {
+  -webkit-animation: navFlash 1s 3s 1;
+          animation: navFlash 1s 3s 1;
+}
+
+.navFlashAnimationTwo {
+  -webkit-animation: navFlash 1s 3.8s 1;
+          animation: navFlash 1s 3.8s 1;
+}
+
+.navFlashAnimationThree {
+  -webkit-animation: navFlash 1s 4.6s 1;
+          animation: navFlash 1s 4.6s 1;
 }/*# sourceMappingURL=style.css.map */
