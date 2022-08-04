@@ -365,11 +365,11 @@ h2 {
 }
 
 .afterLine,
-.shortAfterLine {
+.shortAfterLine .beforeLine {
   position: relative;
 }
 .afterLine::after,
-.shortAfterLine::after {
+.shortAfterLine .beforeLine::after {
   content: "";
   width: 100%;
   position: absolute;
@@ -406,18 +406,15 @@ h1 .h1White,
 h1 .spanLightRed {
     font-size: 1rem;
   }
-
   .aboutMeFlexParent .profilePictureContainer {
     padding-left: 5%;
   }
   .aboutMeFlexParent .textContainerFlexParent {
     padding-right: 5%;
   }
-
   .skillsIconBackground .skillListFlexParent {
     align-items: baseline;
   }
-
   .skillListFlexParent .skillNamePairFlexParent {
     width: 33.3333333333%;
   }
@@ -459,11 +456,9 @@ h1 .h1White,
 h1 .spanLightRed {
     font-size: 0.8rem;
   }
-
   .mediaQueryHidden {
     display: none;
   }
-
   #stickyNav {
     width: 100%;
     right: 0;
@@ -471,7 +466,6 @@ h1 .spanLightRed {
   #stickyNav ul {
     justify-content: center;
   }
-
   .sectionProject div:first-child p {
     padding-right: 1%;
   }
@@ -512,7 +506,6 @@ h1 .spanLightRed {
   .wrapper {
     width: 100%;
   }
-
   h1 {
     margin: 0 0 3% 10%;
     line-height: 1.1rem;
@@ -521,12 +514,10 @@ h1 .spanLightRed {
 h1 .h1LightBlue {
     font-size: 1.8rem;
   }
-
   nav p,
 nav a {
     font-size: 0.8rem;
   }
-
   .indexTopNav {
     padding-left: 0;
   }
@@ -539,7 +530,6 @@ nav a {
   .indexTopNav a {
     white-space: nowrap;
   }
-
   .aboutMeFlexParent .profilePictureContainer {
     padding-left: 2%;
     margin-right: 2%;
@@ -547,7 +537,6 @@ nav a {
   .aboutMeFlexParent .textContainerFlexParent {
     padding-right: 2%;
   }
-
   footer .wrapper h2 .h1White::after {
     content: "\a";
     white-space: pre;
@@ -558,7 +547,6 @@ nav a {
 h1 .h1LightBlue {
     font-size: 1.3rem;
   }
-
   h2 {
     font-size: 1.3rem;
   }
@@ -566,7 +554,6 @@ h1 .h1LightBlue {
     content: "\a";
     white-space: pre;
   }
-
   .aboutMeFlexParent .profilePictureContainer {
     width: 60%;
   }
@@ -584,16 +571,13 @@ h1 .h1LightBlue {
   #stickyNav ul {
     justify-content: center;
   }
-
   .textContainerFlexParent p {
     font-size: 0.8rem;
     line-height: 1.2rem;
   }
-
   .skillsIconBackground .skillListFlexParent {
     align-items: baseline;
   }
-
   .skillListFlexParent .skillNamePairFlexParent {
     width: 33.3333333333%;
   }
@@ -616,11 +600,9 @@ h1 .h1LightBlue {
   .skillListFlexParent ul li p {
     font-size: 0.8rem;
   }
-
   .skills .skillsIconBackground {
     margin: 1% 0 0 0;
   }
-
   .sectionProject div:first-child p {
     padding-right: 1%;
   }
@@ -636,7 +618,6 @@ h1 .h1LightBlue {
   .sectionProject .portfolioCarousel button {
     font-size: 1.5rem;
   }
-
   .projectModal .modal {
     border-radius: 12px;
   }
@@ -708,17 +689,17 @@ nav ul {
 .genaralTopNav ul li a:hover {
   color: #dba93c;
   text-decoration: underline;
-  text-shadow: 0 0 1.5px #caa045;
+  text-shadow: 0 0 1px #caa045;
 }
 
 .fixedTopNav nav {
-  background-color: #caa045;
+  background-color: rgb(38, 152, 180);
   width: 80%;
   max-width: 1280px;
   position: fixed;
   top: 0;
   z-index: 8;
-  padding: 0;
+  padding: 12px 0;
 }
 .fixedTopNav nav ul {
   justify-content: center;
@@ -727,7 +708,7 @@ nav ul {
   bottom: 0;
   width: 100%;
   left: 0;
-  border: 1.5px solid rgb(255, 255, 255);
+  border-bottom: 3px solid rgb(255, 255, 255);
 }
 .fixedTopNav nav p,
 .fixedTopNav nav p a,
@@ -735,9 +716,9 @@ nav ul {
   color: rgb(255, 255, 255);
 }
 .fixedTopNav nav p a:hover {
-  color: rgb(121, 125, 128);
+  color: rgb(136, 75, 185);
   text-decoration: underline;
-  text-shadow: 0 0 0.5px #dba93c;
+  text-shadow: 0 0 0.7px rgb(136, 75, 185);
 }
 .fixedTopNav nav ul {
   padding: 1% 0 1% 0;
@@ -1350,9 +1331,6 @@ input:focus {
   0% {
     opacity: 0;
   }
-  66% {
-    opacity: 0;
-  }
   100% {
     opacity: 1;
   }
@@ -1362,16 +1340,13 @@ input:focus {
   0% {
     opacity: 0;
   }
-  66% {
-    opacity: 0;
-  }
   100% {
     opacity: 1;
   }
 }
 .navFadeInAnimation {
-  -webkit-animation: navFadeIn 2.5s 1;
-          animation: navFadeIn 2.5s 1;
+  -webkit-animation: navFadeIn 0.9s 1;
+          animation: navFadeIn 0.9s 1;
 }
 
 @-webkit-keyframes navFlash {
@@ -1380,7 +1355,7 @@ input:focus {
     color: rgb(121, 125, 128);
   }
   25% {
-    opacity: 1;
+    opacity: 0.7;
     color: #dba93c;
     text-shadow: 0 0 1 rgb(136, 75, 185);
   }
@@ -1390,7 +1365,7 @@ input:focus {
     text-shadow: 0 0 0;
   }
   75% {
-    opacity: 1;
+    opacity: 0.7;
     color: #dba93c;
     text-shadow: 0 0 1 rgb(136, 75, 185);
   }
@@ -1407,7 +1382,7 @@ input:focus {
     color: rgb(121, 125, 128);
   }
   25% {
-    opacity: 1;
+    opacity: 0.7;
     color: #dba93c;
     text-shadow: 0 0 1 rgb(136, 75, 185);
   }
@@ -1417,7 +1392,7 @@ input:focus {
     text-shadow: 0 0 0;
   }
   75% {
-    opacity: 1;
+    opacity: 0.7;
     color: #dba93c;
     text-shadow: 0 0 1 rgb(136, 75, 185);
   }
@@ -1428,16 +1403,16 @@ input:focus {
   }
 }
 .navFlashAnimationOne {
-  -webkit-animation: navFlash 1s 3s 1;
-          animation: navFlash 1s 3s 1;
+  -webkit-animation: navFlash 0.9s 1.2s 1;
+          animation: navFlash 0.9s 1.2s 1;
 }
 
 .navFlashAnimationTwo {
-  -webkit-animation: navFlash 1s 3.8s 1;
-          animation: navFlash 1s 3.8s 1;
+  -webkit-animation: navFlash 0.9s 2s 1;
+          animation: navFlash 0.9s 2s 1;
 }
 
 .navFlashAnimationThree {
-  -webkit-animation: navFlash 1s 4.6s 1;
-          animation: navFlash 1s 4.6s 1;
+  -webkit-animation: navFlash 0.9s 2.8s 1;
+          animation: navFlash 0.9s 2.8s 1;
 }/*# sourceMappingURL=style.css.map */

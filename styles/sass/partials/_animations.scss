@@ -182,55 +182,63 @@ input:focus{
 }
 
 
-@keyframes navFadeIn{
-  0%{
+@keyframes navFadeIn {
+  0% {
     opacity: 0;
   }
-  
-  66%{
-    opacity: 0;
-  }
-  100%{
+
+  // 66%{
+  //   opacity: 0.2;
+  // }
+  100% {
     opacity: 1;
   }
 }
+
 .navFadeInAnimation {
-  animation: navFadeIn 2.5s 1;
+  animation: navFadeIn .9s 1;
 }
 @keyframes navFlash {
   0% {
     opacity: 1;
     color: $vsCodeCommentGrey;
   }
-  25%{
-    opacity: 1;
+
+  25% {
+    opacity: 0.7;
     color: $vsCodeOrange;
     text-shadow: 0 0 1 $VsCodePurple;
   }
-  50%{
+
+  50% {
     opacity: 1;
     color: $vsCodeCommentGrey;
     text-shadow: 0 0 0;
   }
-  75%{
-    opacity: 1;
+
+  75% {
+    opacity: 0.7;
     color: $vsCodeOrange;
     text-shadow: 0 0 1 $VsCodePurple;
   }
-  100%{
+
+  100% {
     opacity: 1;
     color: $vsCodeCommentGrey;
     text-shadow: 0 0 0;
   }
 }
-.navFlashAnimationOne{
-  animation: navFlash 1s 3s 1;
+
+.navFlashAnimationOne {
+  animation: navFlash 0.9s 1.2s 1;
 }
-.navFlashAnimationTwo{
-  animation: navFlash 1s 3.8s 1;
+
+.navFlashAnimationTwo {
+  animation: navFlash 0.9s 2.0s 1;
 }
-.navFlashAnimationThree{
-  animation: navFlash 1s 4.6s 1;
+
+.navFlashAnimationThree {
+  animation: navFlash 0.9s 2.8s 1;
 }
 
 // @keyframes navFlashColorWoosh {

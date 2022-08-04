@@ -51,30 +51,30 @@ nav{
       a:hover {
         color: $vsCodeOrange;
         text-decoration: underline;
-        text-shadow: 0 0 1.5px $vsCodedarkerOrange;
+        text-shadow: 0 0 1px $vsCodedarkerOrange;
       }
     }
   }
 }
 //===== class for top nav bar in fixed position =====//
 .fixedTopNav nav{
-  background-color: $vsCodedarkerOrange;
+  background-color: $vsCodeBlueToned;
   width:80%;
   max-width: 1280px;
   position: fixed;
   top:0;
   z-index: 8;
-  padding: 0;
+  padding: 12px 0;
   ul{
     justify-content: center;
   }
 
-  // this overrides built in bottom positioning for .afterLine 
+  // this overrides built in bottom positioning for .afterLine
   &::after{
     bottom:0;
     width: 100%;
     left:0;
-    border: 1.5px solid $vsCodeWhite;
+    border-bottom: 3px solid $vsCodeWhite;
   }
 
   p,
@@ -84,9 +84,9 @@ nav{
   }
   
   p a:hover {
-    color: $vsCodeCommentGrey;
+    color: $VsCodePurple;
     text-decoration: underline;
-    text-shadow: 0 0 .5px $vsCodeOrange;
+    text-shadow: 0 0 0.7px $VsCodePurple;
   }
   
   ul{
