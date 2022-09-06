@@ -488,8 +488,10 @@ h1 .spanLightRed {
     align-items: center;
   }
   .aboutMeFlexParent .profilePictureContainer {
-    width: 40%;
+    width: 210px;
     padding: 0;
+    margin-bottom: 50%;
+    margin-right: 0;
   }
   .aboutMeFlexParent .textContainerFlexParent {
     width: 100%;
@@ -533,6 +535,7 @@ nav a {
   .aboutMeFlexParent .profilePictureContainer {
     padding-left: 2%;
     margin-right: 2%;
+    margin-bottom: 43%;
   }
   .aboutMeFlexParent .textContainerFlexParent {
     padding-right: 2%;
@@ -556,6 +559,7 @@ h1 .h1LightBlue {
   }
   .aboutMeFlexParent .profilePictureContainer {
     width: 60%;
+    margin-bottom: 83%;
   }
 }
 @media (max-width: 435px) {
@@ -867,6 +871,19 @@ footer .wrapper p:last-child {
   width: 40%;
   padding: 0 10% 0 0;
   color: rgb(121, 125, 128);
+}
+
+.picturesContainer {
+  position: relative;
+}
+
+.pictureZero,
+.pictureOne,
+.pictureTwo,
+.pictureThree {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .skillsIconBackground {
@@ -1417,4 +1434,107 @@ input:focus {
 .navFlashAnimationThree {
   -webkit-animation: navFlash 0.9s 2.8s 1;
           animation: navFlash 0.9s 2.8s 1;
+}
+
+@-webkit-keyframes smileOne {
+  0% {
+    opacity: 1;
+  }
+  1% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  76% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes smileOne {
+  0% {
+    opacity: 1;
+  }
+  1% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  76% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes smileTwo {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  26% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  76% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes smileTwo {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  26% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  76% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.pictureOne {
+  -webkit-animation: smileOne 4.5s 1s 5;
+          animation: smileOne 4.5s 1s 5;
+}
+
+.pictureTwo {
+  -webkit-animation: smileTwo 4.5s 1s 5;
+          animation: smileTwo 4.5s 1s 5;
 }/*# sourceMappingURL=style.css.map */

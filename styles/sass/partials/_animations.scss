@@ -261,3 +261,71 @@ input:focus{
 // .navFlashSwooshAnimationThree {
 //   animation: navFlashColorWoosh .5s 6s 1;
 // }
+
+
+@keyframes smileOne {
+  0% {
+    opacity: 1;
+  }
+
+  1% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  75% {
+    opacity: 0;
+  }
+
+  76% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes smileTwo {
+  0% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  26% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  75% {
+    opacity: 0;
+  }
+
+  76% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+.pictureOne {
+  animation: smileOne 4.5s 1s 5;
+}
+
+.pictureTwo {
+  animation: smileTwo 4.5s 1s 5;
+}

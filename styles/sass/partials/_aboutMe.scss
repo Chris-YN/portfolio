@@ -31,6 +31,22 @@
 
 
 
+//===== smile pictures =====//
+.picturesContainer {
+  position: relative;
+}
+
+.pictureZero,
+.pictureOne,
+.pictureTwo,
+.pictureThree {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+
 //===== skills background =====/
 .skillsIconBackground{
   margin-right:13%;
@@ -42,9 +58,7 @@
 
 
 
-
-
-//===== skill list =====/
+//===== skill list =====//
 .skillListFlexParent,
 .skillNamePairFlexParent{
   display: flex;
