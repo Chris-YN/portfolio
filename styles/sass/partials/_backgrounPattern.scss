@@ -1,0 +1,22 @@
+// .radial{
+//   // width: 100vw;
+//   // height: 100vh;
+//   background: radial-gradient(circle at top right, white 0, transparent 20%);
+//   // background-color: red($color: #000000);
+// }
+
+.wrapper {
+  // background-color: aqua;
+  background:
+  linear-gradient( rgb(211, 210, 205) 0, rgba(153, 153, 153, 1) 40%, transparent 100%),
+    repeating-linear-gradient(-45deg,
+      transparent,
+      transparent 5px,
+      rgba(153, 153, 153, 0.3) 5px,
+      rgba(153, 153, 153, 0.3) 8px,
+      rgba(71, 71, 71, 0.3) 8px,
+      rgba(71, 71, 71, 0.3) 10px),
+      radial-gradient(circle at top right, rgba(153, 153, 153, 1) 0, rgba(71, 71, 71, 1)100%);
+  background-color: rgb(95, 95, 95);
+
+}

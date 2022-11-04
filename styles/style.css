@@ -273,6 +273,7 @@ html {
 h1 {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   font-size: 3rem;
 }
 h1 .h1Purple,
@@ -330,9 +331,9 @@ footer {
 
 .wrapper {
   max-width: 1280px;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
-  background-color: rgb(29, 29, 28);
+  background-color: #0a2022;
 }
 
 html {
@@ -1537,4 +1538,9 @@ input:focus {
 .pictureTwo {
   -webkit-animation: smileTwo 4.5s 1s 5;
           animation: smileTwo 4.5s 1s 5;
+}
+
+.wrapper {
+  background: linear-gradient(rgb(211, 210, 205) 0, rgb(153, 153, 153) 40%, transparent 100%), repeating-linear-gradient(-45deg, transparent, transparent 5px, rgba(153, 153, 153, 0.3) 5px, rgba(153, 153, 153, 0.3) 8px, rgba(71, 71, 71, 0.3) 8px, rgba(71, 71, 71, 0.3) 10px), radial-gradient(circle at top right, rgb(153, 153, 153) 0, rgb(71, 71, 71) 100%);
+  background-color: rgb(95, 95, 95);
 }/*# sourceMappingURL=style.css.map */
