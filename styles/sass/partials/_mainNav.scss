@@ -1,0 +1,115 @@
+// _mainNav.scss
+.mainNav{
+  width: 100%;
+  height: 10%;
+  position: relative;
+}
+
+.mainNavItems {
+  transform: rotate(-45deg);
+  margin-bottom: 50px;
+}
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////
+/// Previous ver ///
+///////////////////////////////////////////////////////////////////////////
+// nav{
+//   padding-left: 5%;
+//   ul{
+//     justify-content: left;
+//   }
+// }
+// .indexTopNav{
+
+//   padding-bottom: 1%;
+//   ul{
+//     padding-top: 5%;
+//   }
+//   li{
+//     margin: 0 1%;
+//   }
+//   ul{
+//     li:first-child{
+//       margin:0;
+//       margin-right: 1%;
+//     }
+//   }
+
+
+//   // this overrides built in :: after to align left of line with nav
+//   &::after{
+//     width: 95%;
+//     left:5%;
+//   }
+// }
+
+
+
+// //===== class for top nav bar in initial position =====//
+// .genaralTopNav{
+//   ul{
+//     display: flex;
+//     p{
+//       color: $vsCodeCommentGrey;
+//     }
+//     li{
+//       a{
+//         color: $vsCodeCommentGrey;
+//       }
+//       a:visited {
+//         color: $vsCodeCommentGrey;
+//       }
+//       a:hover {
+//         color: $vsCodeOrange;
+//         text-decoration: underline;
+//         text-shadow: 0 0 1px $vsCodedarkerOrange;
+//       }
+//     }
+//   }
+// }
+// //===== class for top nav bar in fixed position =====//
+// .fixedTopNav nav{
+//   background-color: $vsCodeBlueToned;
+//   width:80%;
+//   max-width: 1280px;
+//   position: fixed;
+//   top:0;
+//   z-index: 8;
+//   padding: 3px 0;
+//   ul{
+//     justify-content: center;
+//   }
+
+//   // this overrides built in bottom positioning for .afterLine
+//   &::after{
+//     bottom:0;
+//     width: 100%;
+//     left:0;
+//     border-bottom: 2px solid $vsCodeWhite;
+//   }
+
+//   p,
+//   p a,
+//   p a:visited{
+//     color: $vsCodeWhite;
+//   }
+
+//   p a:hover {
+//     color: $VsCodePurple;
+//     text-decoration: underline;
+//     text-shadow: 0 0 0.7px $VsCodePurple;
+//   }
+
+//   ul{
+//     // justify-content: flex-end;
+//     padding: 1% 0 1% 0;
+//     li{
+//       margin-right: 2%;
+//     }
+//   }
+
+// }

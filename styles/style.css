@@ -271,42 +271,18 @@ html {
 }
 
 h1 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-  font-size: 3rem;
-}
-h1 .h1Purple,
-h1 .h1Orange,
-h1 .h1White {
-  font-size: 1.8rem;
+  font-family: "Cabin", sans-serif;
+  font-weight: 700;
+  color: white;
+  font-size: 5rem;
 }
 
-h1 .h1Purple,
-h2 .h1Purple {
-  color: rgb(136, 75, 185);
-}
-h1 .h1Orange,
-h2 .h1Orange {
-  color: #dba93c;
-}
-h1 .h1White,
-h2 .h1White {
-  color: rgb(121, 125, 128);
-}
-h1 .h1Blue,
-h2 .h1Blue {
-  color: rgb(0, 173, 216);
-}
-
-h2 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 2rem;
-  color: rgb(255, 255, 255);
-}
-h2 span {
-  font-size: 0.9rem;
+.leftBlock h2,
+.rightBlock h2 {
+  font-family: "Cabin", sans-serif;
+  font-weight: 700;
+  font-size: 7rem;
+  color: white;
 }
 
 p {
@@ -316,28 +292,23 @@ p {
   line-height: 1.5rem;
 }
 
-a {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 1rem;
-}
-
-header,
-.bodyDiv,
-main,
-footer {
-  background-color: rgb(0, 0, 0);
-}
-
-.wrapper {
-  max-width: 1280px;
-  width: 90%;
-  margin: 0 auto;
-  background-color: #0a2022;
+.mainNav p {
+  font-family: "Cabin", sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+  color: white;
 }
 
 html {
   scroll-behavior: smooth;
+  background-color: white;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 h2 {
@@ -382,6 +353,14 @@ h2 {
 .shortAfterLine::after {
   width: 84%;
   left: 8%;
+}
+
+a {
+  cursor: pointer;
+}
+
+a:visited {
+  color: inherit;
 }
 
 @media (max-width: 1210px) {
@@ -634,102 +613,28 @@ h1 .h1LightBlue {
     flex-direction: column;
   }
 }
-header {
+.headerContainer {
   height: 100vh;
 }
 
-.topHalf {
-  height: 50vh;
-}
-.topHalf img {
-  width: 30%;
-}
-
-.bottomHalf {
-  height: 50vh;
-}
-
-h1 {
-  text-align: left;
-  padding-left: 5%;
-}
-
-nav {
-  padding-left: 5%;
-}
-nav ul {
-  justify-content: left;
-}
-
-.indexTopNav {
-  padding-bottom: 1%;
-}
-.indexTopNav ul {
-  padding-top: 5%;
-}
-.indexTopNav li {
-  margin: 0 1%;
-}
-.indexTopNav ul li:first-child {
-  margin: 0;
-  margin-right: 1%;
-}
-.indexTopNav::after {
-  width: 95%;
-  left: 5%;
-}
-
-.genaralTopNav ul {
+.h1FlexParent {
   display: flex;
-}
-.genaralTopNav ul p {
-  color: rgb(121, 125, 128);
-}
-.genaralTopNav ul li a {
-  color: rgb(121, 125, 128);
-}
-.genaralTopNav ul li a:visited {
-  color: rgb(121, 125, 128);
-}
-.genaralTopNav ul li a:hover {
-  color: #dba93c;
-  text-decoration: underline;
-  text-shadow: 0 0 1px #caa045;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10%;
+  height: calc(100vh - 10%);
+  text-align: center;
 }
 
-.fixedTopNav nav {
-  background-color: rgb(38, 152, 180);
-  width: 80%;
-  max-width: 1280px;
-  position: fixed;
-  top: 0;
-  z-index: 8;
-  padding: 3px 0;
-}
-.fixedTopNav nav ul {
-  justify-content: center;
-}
-.fixedTopNav nav::after {
-  bottom: 0;
+.mainNav {
   width: 100%;
-  left: 0;
-  border-bottom: 2px solid rgb(255, 255, 255);
+  height: 10%;
+  position: relative;
 }
-.fixedTopNav nav p,
-.fixedTopNav nav p a,
-.fixedTopNav nav p a:visited {
-  color: rgb(255, 255, 255);
-}
-.fixedTopNav nav p a:hover {
-  color: rgb(136, 75, 185);
-  text-decoration: underline;
-  text-shadow: 0 0 0.7px rgb(136, 75, 185);
-}
-.fixedTopNav nav ul {
-  padding: 1% 0 1% 0;
-}
-.fixedTopNav nav ul li {
-  margin-right: 2%;
+
+.mainNavItems {
+  transform: rotate(-45deg);
+  margin-bottom: 50px;
 }
 
 .sectionProject {
@@ -1139,6 +1044,164 @@ footer .wrapper p:last-child {
   z-index: 5;
 }
 
+.homeWrapper {
+  position: relative;
+}
+
+.welcomAnimationStage {
+  background-color: transparent;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  -webkit-animation: stageRemove 0.1s 4s 1;
+          animation: stageRemove 0.1s 4s 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.leftBlock {
+  background-color: rgb(243, 236, 226);
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  -webkit-animation: blockLeftSlide 3s 3s 1;
+          animation: blockLeftSlide 3s 3s 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.leftBlock h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.rightBlock {
+  background-color: rgb(243, 236, 226);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  -webkit-animation: blockRightSlide 3s 3s 1;
+          animation: blockRightSlide 3s 3s 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.rightBlock h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.animatedLine::after {
+  content: "";
+  position: absolute;
+  border-left: 4px solid rgb(214, 214, 214);
+  top: 50%;
+  left: 50%;
+  -webkit-animation: dotToLine 2s 1s 1;
+          animation: dotToLine 2s 1s 1;
+}
+
+@-webkit-keyframes dotToLine {
+  0% {
+    height: 1%;
+    top: 50%;
+  }
+  100% {
+    height: 100%;
+    top: 0;
+  }
+}
+
+@keyframes dotToLine {
+  0% {
+    height: 1%;
+    top: 50%;
+  }
+  100% {
+    height: 100%;
+    top: 0;
+  }
+}
+@-webkit-keyframes blockLeftSlide {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
+@keyframes blockLeftSlide {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
+@-webkit-keyframes blockRightSlide {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: -100%;
+  }
+}
+@keyframes blockRightSlide {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: -100%;
+  }
+}
+@-webkit-keyframes stageRemove {
+  100% {
+    z-index: -20;
+  }
+}
+@keyframes stageRemove {
+  100% {
+    z-index: -20;
+  }
+}
+.mainNavItemsContainer {
+  position: absolute;
+  bottom: 110%;
+  left: 10%;
+  -webkit-animation: mainNavDrop 3S 4s 1;
+          animation: mainNavDrop 3S 4s 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes mainNavDrop {
+  0% {
+    bottom: 100%;
+  }
+  100% {
+    bottom: -500%;
+  }
+}
+
+@keyframes mainNavDrop {
+  0% {
+    bottom: 100%;
+  }
+  100% {
+    bottom: -500%;
+  }
+}
 body {
   position: relative;
 }
@@ -1195,30 +1258,6 @@ body {
     left: -100%;
   }
 }
-.hiddenInputErrorMsgContainer {
-  margin-top: 10px;
-}
-
-.hiddenInputMessage {
-  opacity: 0;
-  margin-left: 5%;
-  margin-right: 5%;
-}
-
-.hiddenInputParaVisible {
-  opacity: 1;
-  color: rgb(0, 173, 216);
-  opacity: 0.6;
-  z-index: 30;
-}
-
-.hiddenInputParaVisibleLight {
-  opacity: 1;
-  color: rgb(0, 173, 216);
-  opacity: 0.6;
-  z-index: 30;
-}
-
 .wrapperLight,
 .aboutMeLight,
 .projectsLight,
@@ -1267,174 +1306,6 @@ footer .footerDivLight,
 }
 .footerALight:hover {
   color: #dba93c;
-}
-
-#cursor {
-  color: rgb(255, 255, 255);
-}
-
-.FormAndInstructionFlexParent {
-  margin-left: 5%;
-  margin-top: 3%;
-  display: flex;
-}
-.FormAndInstructionFlexParent form {
-  width: 20%;
-}
-.FormAndInstructionFlexParent p {
-  width: 80%;
-}
-
-.hiddenInput {
-  width: 95%;
-  border: none;
-  color: rgb(121, 125, 128);
-}
-
-input:focus {
-  outline: none;
-}
-
-.inputDefault {
-  background-color: rgb(29, 29, 28);
-}
-
-.inputLight {
-  background-color: rgb(255, 255, 255);
-}
-
-#cursor {
-  font-size: 30px;
-}
-
-@-webkit-keyframes instruction {
-  0% {
-    opacity: 0;
-    color: #dba93c;
-  }
-  70% {
-    opacity: 0.4;
-    color: #dba93c;
-  }
-  100% {
-    opacity: 0;
-    color: #dba93c;
-  }
-}
-
-@keyframes instruction {
-  0% {
-    opacity: 0;
-    color: #dba93c;
-  }
-  70% {
-    opacity: 0.4;
-    color: #dba93c;
-  }
-  100% {
-    opacity: 0;
-    color: #dba93c;
-  }
-}
-.inputInstruction,
-.inputInstructionAnimate {
-  opacity: 0;
-  margin-right: 10%;
-}
-
-.inputInstructionAnimate {
-  -webkit-animation: instruction 8s 4.5s infinite;
-          animation: instruction 8s 4.5s infinite;
-}
-
-@-webkit-keyframes navFadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes navFadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.navFadeInAnimation {
-  -webkit-animation: navFadeIn 0.9s 1;
-          animation: navFadeIn 0.9s 1;
-}
-
-@-webkit-keyframes navFlash {
-  0% {
-    opacity: 1;
-    color: rgb(121, 125, 128);
-  }
-  25% {
-    opacity: 0.7;
-    color: #dba93c;
-    text-shadow: 0 0 1 rgb(136, 75, 185);
-  }
-  50% {
-    opacity: 1;
-    color: rgb(121, 125, 128);
-    text-shadow: 0 0 0;
-  }
-  75% {
-    opacity: 0.7;
-    color: #dba93c;
-    text-shadow: 0 0 1 rgb(136, 75, 185);
-  }
-  100% {
-    opacity: 1;
-    color: rgb(121, 125, 128);
-    text-shadow: 0 0 0;
-  }
-}
-
-@keyframes navFlash {
-  0% {
-    opacity: 1;
-    color: rgb(121, 125, 128);
-  }
-  25% {
-    opacity: 0.7;
-    color: #dba93c;
-    text-shadow: 0 0 1 rgb(136, 75, 185);
-  }
-  50% {
-    opacity: 1;
-    color: rgb(121, 125, 128);
-    text-shadow: 0 0 0;
-  }
-  75% {
-    opacity: 0.7;
-    color: #dba93c;
-    text-shadow: 0 0 1 rgb(136, 75, 185);
-  }
-  100% {
-    opacity: 1;
-    color: rgb(121, 125, 128);
-    text-shadow: 0 0 0;
-  }
-}
-.navFlashAnimationOne {
-  -webkit-animation: navFlash 0.9s 1.2s 1;
-          animation: navFlash 0.9s 1.2s 1;
-}
-
-.navFlashAnimationTwo {
-  -webkit-animation: navFlash 0.9s 2s 1;
-          animation: navFlash 0.9s 2s 1;
-}
-
-.navFlashAnimationThree {
-  -webkit-animation: navFlash 0.9s 2.8s 1;
-          animation: navFlash 0.9s 2.8s 1;
 }
 
 @-webkit-keyframes smileOne {
@@ -1538,6 +1409,197 @@ input:focus {
 .pictureTwo {
   -webkit-animation: smileTwo 4.5s 1s 5;
           animation: smileTwo 4.5s 1s 5;
+}
+
+.hiddenInputErrorMsgContainer {
+  margin-top: 10px;
+}
+
+.hiddenInputMessage {
+  opacity: 0;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.hiddenInputParaVisible {
+  opacity: 1;
+  color: rgb(0, 173, 216);
+  opacity: 0.6;
+  z-index: 30;
+}
+
+.hiddenInputParaVisibleLight {
+  opacity: 1;
+  color: rgb(0, 173, 216);
+  opacity: 0.6;
+  z-index: 30;
+}
+
+.FormAndInstructionFlexParent {
+  margin-left: 5%;
+  margin-top: 3%;
+  display: flex;
+}
+.FormAndInstructionFlexParent form {
+  width: 20%;
+}
+.FormAndInstructionFlexParent p {
+  width: 80%;
+}
+
+.hiddenInput {
+  width: 95%;
+  border: none;
+  color: rgb(121, 125, 128);
+}
+
+input:focus {
+  outline: none;
+}
+
+.inputDefault {
+  background-color: rgb(29, 29, 28);
+}
+
+.inputLight {
+  background-color: rgb(255, 255, 255);
+}
+
+@-webkit-keyframes instruction {
+  0% {
+    opacity: 0;
+    color: #dba93c;
+  }
+  70% {
+    opacity: 0.4;
+    color: #dba93c;
+  }
+  100% {
+    opacity: 0;
+    color: #dba93c;
+  }
+}
+
+@keyframes instruction {
+  0% {
+    opacity: 0;
+    color: #dba93c;
+  }
+  70% {
+    opacity: 0.4;
+    color: #dba93c;
+  }
+  100% {
+    opacity: 0;
+    color: #dba93c;
+  }
+}
+.inputInstruction,
+.inputInstructionAnimate {
+  opacity: 0;
+  margin-right: 10%;
+}
+
+.inputInstructionAnimate {
+  -webkit-animation: instruction 8s 4.5s infinite;
+          animation: instruction 8s 4.5s infinite;
+}
+
+#cursor {
+  color: rgb(255, 255, 255);
+}
+
+#cursor {
+  font-size: 30px;
+}
+
+.navFadeInAnimation {
+  -webkit-animation: navFadeIn 0.9s 1;
+          animation: navFadeIn 0.9s 1;
+}
+
+@-webkit-keyframes navFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes navFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes navFlash {
+  0% {
+    opacity: 1;
+    color: rgb(121, 125, 128);
+  }
+  25% {
+    opacity: 0.7;
+    color: #dba93c;
+    text-shadow: 0 0 1 rgb(136, 75, 185);
+  }
+  50% {
+    opacity: 1;
+    color: rgb(121, 125, 128);
+    text-shadow: 0 0 0;
+  }
+  75% {
+    opacity: 0.7;
+    color: #dba93c;
+    text-shadow: 0 0 1 rgb(136, 75, 185);
+  }
+  100% {
+    opacity: 1;
+    color: rgb(121, 125, 128);
+    text-shadow: 0 0 0;
+  }
+}
+@keyframes navFlash {
+  0% {
+    opacity: 1;
+    color: rgb(121, 125, 128);
+  }
+  25% {
+    opacity: 0.7;
+    color: #dba93c;
+    text-shadow: 0 0 1 rgb(136, 75, 185);
+  }
+  50% {
+    opacity: 1;
+    color: rgb(121, 125, 128);
+    text-shadow: 0 0 0;
+  }
+  75% {
+    opacity: 0.7;
+    color: #dba93c;
+    text-shadow: 0 0 1 rgb(136, 75, 185);
+  }
+  100% {
+    opacity: 1;
+    color: rgb(121, 125, 128);
+    text-shadow: 0 0 0;
+  }
+}
+.navFlashAnimationOne {
+  -webkit-animation: navFlash 0.9s 1.2s 1;
+          animation: navFlash 0.9s 1.2s 1;
+}
+
+.navFlashAnimationTwo {
+  -webkit-animation: navFlash 0.9s 2s 1;
+          animation: navFlash 0.9s 2s 1;
+}
+
+.navFlashAnimationThree {
+  -webkit-animation: navFlash 0.9s 2.8s 1;
+          animation: navFlash 0.9s 2.8s 1;
 }
 
 .wrapper {

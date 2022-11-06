@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- css link -->
   <link rel="stylesheet" href="./styles/style.css">
-  
+
   <!-- Google font link -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Niramit:wght@200;300;400&family=Nunito:wght@200;300;400&family=Roboto:wght@100;300;400;500&display=swap"
+    rel="stylesheet"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;600;700;800&family=Niramit:wght@200;300;400&family=Cabin:wght@500;700&display=swap"
     rel="stylesheet">
-  
+
   <!-- FontAwesome link -->
   <script src="https://kit.fontawesome.com/12e0e6e5dc.js" crossorigin="anonymous"></script>
 
@@ -25,94 +31,70 @@
 <!-- ==========================
              Header 
 ===============================-->
+
 <body>
   <div class="bodyDiv">
-  
-    <!-- for screen cover animation -->
-    <div class="wholeScreenSpread"></div>
-    
-    <header class="header">
-      <div class="radial">
-      <div class="wrapper">
-        <div class="topHalf">
-          <!-- <span id="cursor"> | </span> --> 
-        <!-- .topHalf ends   -->
+
+    <!-- for theme change animation -->
+    <div class="wholeScreenSpread">
+    </div>
+
+    <div class="wrapper homeWrapper">
+
+      <!-- for welcome animation -->
+      <div class="welcomAnimationStage  animatedLine">
+        <div class="leftBlock">
+          <h2>HE</h2>
         </div>
+        <div class="rightBlock">
+          <h2>LLO</h2>
+        </div>
+      </div>
+
+      <header class="headerContainer">
+          <!-- .mainNav starts -->
+        <nav class="mainNav">
+          <div class="mainNavItemsContainer">
+            <div class="logo mainNavItems">
+              <p>Logo?</p>
+            </div>
+
+            <div class="mainNavItems">
+              <p>
+                <a class="" href="#portfolioAnchorTarget">Projects</a>
+              </p>
+            </div>
+
+            <div class="mainNavItems">
+              <p>
+                <a class="" href="#aboutMeAnchorTarget">About me</a>
+              </p>
+            </div>
+
+            <div class="mainNavItems">
+              <p>
+                <a class="" href="#contactMeAnchorTarget">Contact me</a>
+              </p>
+            </div>
+          </div>
+          <!-- .mainNav ends   -->
+        </nav>
 
         
-        <div class="bottomHalf">
+
+
+        <div class="h1FlexParent">
           <h1>
-            <span aria-hidden="true" class="h1Purple">const </span>
-            <span aria-hidden="true" class="h1Orange">name </span>
-            <span aria-hidden="true" class="h1White">= </span> 
-
-            <span class="h1Blue">Christopher_Yun</span> 
+            <span class="h1_L1">I am</span>
+            <span class="h1_L3">Chris Yun</span>
             <br>
-
-            <span aria-hidden="true" class="h1Purple">let </span>
-            <span aria-hidden="true" class="h1Orange">profession </span>
-            <span aria-hidden="true" class="h1White">= </span> 
-            
-            <span class="h1Blue">Frontend_Web_Developer</span>
+            <span class="h1_L3">a Web developer</span>
           </h1>
-          
-          <!-- .topNav starts -->
-          <nav class="afterLine genaralTopNav indexTopNav navFadeInAnimation" id="stickyNav">
-            <ul>
-              <li class="mediaQueryHidden" aria-hidden="true">
-                <p>// ====</p>
-              </li>
-
-              <li>
-                <p>
-                  <a class="navFlashAnimationOne" href="#portfolioAnchorTarget">Projects</a>
-                </p>
-              </li>
-
-              <li aria-hidden="true">
-                <p>  //  </p>
-              </li>
-
-              <li>
-                <p>
-                  <a class="navFlashAnimationTwo" href="#aboutMeAnchorTarget">About me</a></p>
-              </li>
-
-              <li aria-hidden="true">
-                <p>  //  </p>
-              </li>
-
-              <li>
-                <p>
-                  <a class="navFlashAnimationThree" href="#contactMeAnchorTarget">Contact me</a></p>
-              </li>
-
-              <li class="mediaQueryHidden" aria-hidden="true">
-                <p>==== //</p>
-              </li>
-              
-            </ul>
-            
-          <!-- .topNav ends   -->
-          </nav>
-          <div class="FormAndInstructionFlexParent">
-            <form class="hiddenForm" action="">
-              <input class="hiddenInput inputDefault" type="text">
-              
-            </form>
-            <p class="inputInstruction inputInstructionAnimate" aria-hidden="true"></p>
-          </div>
-          <div class="hiddenInputErrorMsgContainer">
-            <p class="hiddenInputMessage" aria-hidden="true"></p>
-          </div>
-        <!-- .bottomHalf ends   -->
         </div>
-        
-      <!-- .wrapper for header ends -->
-      </div>
-      </div>
-    
-    </header>
+
+      </header>
+      <!--.homeWrapper ends-->
+    </div>
 
 
 
@@ -120,181 +102,209 @@
                   Main 
     ===============================-->
     <main>
-      <div class="wrapper">
-        <!-- ==========================
+
+      <!-- ==========================
                 Section About me
         ===============================-->
-        <section id="aboutMe">
-          <div id="aboutMeAnchorTarget" aria-hidden="true"></div>
-          <div class="sectionTopPadding afterLine">
-            <h2>
-              <span aria-hidden="true" class="h1Purple">let </span>
-              <span aria-hidden="true" class="h1Orange">info </span>
-              <span aria-hidden="true" class="h1White">= </span>
-              { about_me }
-            </h2>
-          </div>
-          <div class="aboutMeFlexParent contentTopPadding">
-            <div class="profilePictureContainer">
-              <div class="picturesContainer">
-                <img class="pictureThree" src="./styles/assets/5-3.jpg" alt="Picture of me, Chris Smiling more">
-                <img class="pictureTwo" src="./styles/assets/5-2.jpg" alt="Picture of me, Chris Smiling slightly">
-                <img class="pictureOne" src="./styles/assets/5-1.jpg" alt="Picture of me, Chris. Not smiling">
-              </div>
+      <section id="aboutMe">
+        <div id="aboutMeAnchorTarget" aria-hidden="true"></div>
+        <div class="sectionTopPadding afterLine">
+          <h2>
+            <span aria-hidden="true" class="h1Purple">let </span>
+            <span aria-hidden="true" class="h1Orange">info </span>
+            <span aria-hidden="true" class="h1White">= </span>
+            { about_me }
+          </h2>
+        </div>
+        <div class="aboutMeFlexParent contentTopPadding">
+          <div class="profilePictureContainer">
+            <div class="picturesContainer">
+              <img class="pictureThree" src="./styles/assets/5-3.jpg" alt="Picture of me, Chris Smiling more">
+              <img class="pictureTwo" src="./styles/assets/5-2.jpg" alt="Picture of me, Chris Smiling slightly">
+              <img class="pictureOne" src="./styles/assets/5-1.jpg" alt="Picture of me, Chris. Not smiling">
             </div>
-            <div class="textContainerFlexParent">
-              <p>// Hello! my name is Chris.<br>
+          </div>
+          <div class="textContainerFlexParent">
+            <p>// Hello! my name is Chris.<br>
               I am a front-end developer with a background in graphic design, IT support and customer service.<br><br>
 
-              // Bringing good design to life, learning new things, and finding new, clever ways to implement what I learn, are some of
+              // Bringing good design to life, learning new things, and finding new, clever ways to implement what I
+              learn, are some of
               the things I feel most passionate about web development.<br>
-              When Coding, I value efficiency, maintainability and versatility through clean and insightful coding structure, rather
+              When Coding, I value efficiency, maintainability and versatility through clean and insightful coding
+              structure, rather
               than just focusing on making it run.
               <br><br>
 
-              // With passion for development and my previous experience in design and IT, I am excited to make the leap and continue to
+              // With passion for development and my previous experience in design and IT, I am excited to make the
+              leap and continue to
               advance my skills as a developer.
-              </p>
-            </div>
+            </p>
           </div>
+        </div>
 
-          <div class="skills">
+        <div class="skills">
 
-            <div class=" contentTopMargin afterLine">
-              <h2>
+          <div class=" contentTopMargin afterLine">
+            <h2>
               <span aria-hidden="true" class="h1Purple">let </span>
               <span aria-hidden="true" class="h1Orange">skills </span>
               <span aria-hidden="true" class="h1White">= </span>
-              [ Core_Competencies ]</h2>
-            </div>
+              [ Core_Competencies ]
+            </h2>
+          </div>
 
-            <div class="skillsIconBackground contentTopMargin">
-              <ul class="skillListFlexParent ">
-                <ul class="skillNamePairFlexParent">
-                  <li><i class="fab fa-html5"></i></li>
-                  <li><p>HTML</p></li>
-                </ul>
-                <ul class="skillNamePairFlexParent">
-                  <li><i class="fab fa-css3-alt"></i></li>
-                  <li><p>CSS</p></li>
-                </ul>
-                <ul class="skillNamePairFlexParent">
-                  <li><i class="fab fa-js-square"></i></li>
-                  <li><p>JavaScript</p></li>
-                </ul>
-                <ul class="skillNamePairFlexParent">
-                  <li><i class="fab fa-sass"></i></li>
-                  <li><p>SASS</p></li>
-                </ul>
-                <ul class="skillNamePairFlexParent">
-                  <li><i class="fab fa-react"></i></li>
-                  <li><p>React</p></li>
-                </ul>
-                <ul class="skillNamePairFlexParent">
-                  <li><i class="fa-solid fa-gears"></i></li>
-                  <li>
-                    <p>REST API</p>
-                  </li>
-                </ul>
-                <!-- <ul class="skillNamePairFlexParent">
+          <div class="skillsIconBackground contentTopMargin">
+            <ul class="skillListFlexParent ">
+              <ul class="skillNamePairFlexParent">
+                <li><i class="fab fa-html5"></i></li>
+                <li>
+                  <p>HTML</p>
+                </li>
+              </ul>
+              <ul class="skillNamePairFlexParent">
+                <li><i class="fab fa-css3-alt"></i></li>
+                <li>
+                  <p>CSS</p>
+                </li>
+              </ul>
+              <ul class="skillNamePairFlexParent">
+                <li><i class="fab fa-js-square"></i></li>
+                <li>
+                  <p>JavaScript</p>
+                </li>
+              </ul>
+              <ul class="skillNamePairFlexParent">
+                <li><i class="fab fa-sass"></i></li>
+                <li>
+                  <p>SASS</p>
+                </li>
+              </ul>
+              <ul class="skillNamePairFlexParent">
+                <li><i class="fab fa-react"></i></li>
+                <li>
+                  <p>React</p>
+                </li>
+              </ul>
+              <ul class="skillNamePairFlexParent">
+                <li><i class="fa-solid fa-gears"></i></li>
+                <li>
+                  <p>REST API</p>
+                </li>
+              </ul>
+              <!-- <ul class="skillNamePairFlexParent">
                   <li><i class="fa-brands fa-git-alt"></i></li>
                   <li><p>Git</p></li>
                 </ul> -->
-                <ul class="skillNamePairFlexParent">
-                  <li><i class="fa-brands fa-github-square"></i></li>
-                  <li><p>Github</p></li>
-                </ul>
-                <ul class="skillNamePairFlexParent">
-                  <li><img src="./styles/assets/spikeyS.png" alt="logo"></li>
-                  <li><p>Firebase</p></li>
-                </ul>
-                <ul class="skillNamePairFlexParent">
-                  <li><img src="./styles/assets/spS.png" alt="logo"></li>
-                  <li><p>PhotoShop</p></li>
-                </ul>
-                <ul class="skillNamePairFlexParent">
-                  <li><img src="./styles/assets/responsiveDesignBlockedCleanedGreyS.png" alt="responsive design logo"></li>
-                  <li>
-                    <p>Responsive</br>Design</p>
-                  </li>
-                </ul>
-                
-      
+              <ul class="skillNamePairFlexParent">
+                <li><i class="fa-brands fa-github-square"></i></li>
+                <li>
+                  <p>Github</p>
+                </li>
               </ul>
-            </div>
-          </div>
-        <!-- section aboutMe ends -->
-        </section>
-
-        <!-- ==========================
-              Section projects
-        ===============================-->
-        <section class="sectionProject" id="projects">
-          <div class="sectionTopPadding afterLine">
-            <h2 id="portfolioAnchorTarget">
-              <span aria-hidden="true" class="h1Purple">let </span>
-              <span aria-hidden="true" class="h1Orange">works </span>
-              <span aria-hidden="true" class="h1White">= </span>
-              [ Projects ]
-            </h2>
-            <p>
-              // Click on left or right arrow to navigate </br>
-              // Click on slide to bring up more description and links to the project
-            </p>
-          </div>
+              <ul class="skillNamePairFlexParent">
+                <li><img src="./styles/assets/spikeyS.png" alt="logo"></li>
+                <li>
+                  <p>Firebase</p>
+                </li>
+              </ul>
+              <ul class="skillNamePairFlexParent">
+                <li><img src="./styles/assets/spS.png" alt="logo"></li>
+                <li>
+                  <p>PhotoShop</p>
+                </li>
+              </ul>
+              <ul class="skillNamePairFlexParent">
+                <li><img src="./styles/assets/responsiveDesignBlockedCleanedGreyS.png" alt="responsive design logo">
+                </li>
+                <li>
+                  <p>Responsive</br>Design</p>
+                </li>
+              </ul>
 
 
-          <!--===== carousel =====-->
-          <div class="portfolioCarousel contentTopMargin" data-pCarousel>
-            <button class="carouselButton previous" data-pCarousel-button="prev"><i class="fas fa-arrow-left"></i></button>
-            <button class="carouselButton next" data-pCarousel-button="prev"><i class="fas fa-arrow-right"></i></button>
-
-            <img class="placeHolder"src="./styles/assets/recipeAppTrimedCarouselB.jpg" alt="Screen-shot of Robo Trivia App">
-
-            <ul data-projects>
-              <li class="proOne project projectLi" data-projectNum="1" data-active><img src="./styles/assets/recipeAppTrimedCarouselB.jpg" alt="Screen-shot of Robo Trivia App"></li>
-
-              <li class="proTwo project projectLi" data-projectNum="2"><img src="./styles/assets/airAndWeatherTrimedCarouselB.jpg" alt="Screen-shot of air and weather app"></li>
-              
-              <li class="proThree project projectLi" data-projectNum="3"><img src="./styles/assets/roboTriviaTrimedCarouselB.jpg" alt="Screen-shot of Robo Trivia App"></li>
-
-              <li class="proFour project projectLi" data-projectNum="4"><img src="./styles/assets/designConversionTrimedCarouselB.jpg"
-                  alt="Screen-shot of design conversion project, CREATIVE"></li>
             </ul>
           </div>
+        </div>
+        <!-- section aboutMe ends -->
+      </section>
+
+      <!-- ==========================
+              Section projects
+        ===============================-->
+      <section class="sectionProject" id="projects">
+        <div class="sectionTopPadding afterLine">
+          <h2 id="portfolioAnchorTarget">
+            <span aria-hidden="true" class="h1Purple">let </span>
+            <span aria-hidden="true" class="h1Orange">works </span>
+            <span aria-hidden="true" class="h1White">= </span>
+            [ Projects ]
+          </h2>
+          <p>
+            // Click on left or right arrow to navigate </br>
+            // Click on slide to bring up more description and links to the project
+          </p>
+        </div>
+
+
+        <!--===== carousel =====-->
+        <div class="portfolioCarousel contentTopMargin" data-pCarousel>
+          <button class="carouselButton previous" data-pCarousel-button="prev"><i
+              class="fas fa-arrow-left"></i></button>
+          <button class="carouselButton next" data-pCarousel-button="prev"><i class="fas fa-arrow-right"></i></button>
+
+          <img class="placeHolder" src="./styles/assets/recipeAppTrimedCarouselB.jpg"
+            alt="Screen-shot of Robo Trivia App">
+
+          <ul data-projects>
+            <li class="proOne project projectLi" data-projectNum="1" data-active><img
+                src="./styles/assets/recipeAppTrimedCarouselB.jpg" alt="Screen-shot of Robo Trivia App"></li>
+
+            <li class="proTwo project projectLi" data-projectNum="2"><img
+                src="./styles/assets/airAndWeatherTrimedCarouselB.jpg" alt="Screen-shot of air and weather app"></li>
+
+            <li class="proThree project projectLi" data-projectNum="3"><img
+                src="./styles/assets/roboTriviaTrimedCarouselB.jpg" alt="Screen-shot of Robo Trivia App"></li>
+
+            <li class="proFour project projectLi" data-projectNum="4"><img
+                src="./styles/assets/designConversionTrimedCarouselB.jpg"
+                alt="Screen-shot of design conversion project, CREATIVE"></li>
+          </ul>
+        </div>
 
 
 
-          <!--===== modal =====-->
-          <div class="projectModal">
-            <div class="overlay overlayHidden">
-            </div>
-            <div class="modal modalHidden">
-              <div class="modalContents">
-                <div class="modalCloseButton">
-                  <i class="fa-solid fa-circle-xmark"></i>
-                </div>
-
-                <h2 class="shortAfterLine" id="projectTitle"></h2>
-
-                <div class="modalImageAndTextFlexParent">
-                  <div id="projectImgContainer"></div>
-                  <div class="modalTextFlexParent">
-                    <p id="projectDiscription"></p>
-                    <ul>
-                      <li id="projectLiveLink"></li>
-                      <li><p>&nbsp;//&ensp;</p></li>
-                      <li id="projectGitHubLink"></li>
-                    </ul>
-                  </div>
-                </div>
-
+        <!--===== modal =====-->
+        <div class="projectModal">
+          <div class="overlay overlayHidden">
+          </div>
+          <div class="modal modalHidden">
+            <div class="modalContents">
+              <div class="modalCloseButton">
+                <i class="fa-solid fa-circle-xmark"></i>
               </div>
+
+              <h2 class="shortAfterLine" id="projectTitle"></h2>
+
+              <div class="modalImageAndTextFlexParent">
+                <div id="projectImgContainer"></div>
+                <div class="modalTextFlexParent">
+                  <p id="projectDiscription"></p>
+                  <ul>
+                    <li id="projectLiveLink"></li>
+                    <li>
+                      <p>&nbsp;//&ensp;</p>
+                    </li>
+                    <li id="projectGitHubLink"></li>
+                  </ul>
+                </div>
+              </div>
+
             </div>
           </div>
-        </section>
-      <!-- .wrapper for main ends -->
-      </div>
+        </div>
+      </section>
+
     </main>
 
 
@@ -303,8 +313,8 @@
                   Footer
     ===============================-->
     <footer>
-      <div class="wrapper footerDiv">
-        
+      <div class="footerDiv">
+
         <div class="contentTopPadding afterLine">
           <h2 id="contactMeAnchorTarget">
             <span aria-hidden="true" class="h1Purple">const </span>
@@ -320,32 +330,38 @@
           <form method="" class="contactFormFlexParent">
             <label class="visuallyHidden" for="">Name</label>
             <input class="name" type="text" placeholder=" // Enter your name" required />
-          
+
             <label class="visuallyHidden" for="">Email</label>
             <input class="email" type="email" placeholder=" // Your email" required />
-          
+
             <label class="visuallyHidden" for="">Message</label>
-            <textarea class="messageField" name="" id="" rows="10" placeholder=" // Your kind message here" required></textarea>
+            <textarea class="messageField" name="" id="" rows="10" placeholder=" // Your kind message here"
+              required></textarea>
 
             <button class="contactSubmitDefault" type="submit">Submit</button>
 
             <ul class="contactIconFlexParent">
-              <li><a class="footerADefault" href="https://www.linkedin.com/in/christopher-yun-824458181/"><i class="fab fa-linkedin"></i></a></li>
-              <li><a class="footerADefault" href="https://github.com/Chris-YN/"><i class="fab fa-github-square"></i></a></li>
+              <li><a class="footerADefault" href="https://www.linkedin.com/in/christopher-yun-824458181/"><i
+                    class="fab fa-linkedin"></i></a></li>
+              <li><a class="footerADefault" href="https://github.com/Chris-YN/"><i class="fab fa-github-square"></i></a>
+              </li>
             </ul>
           </form>
-          
-        <!-- .footerFlexParent ends -->
+
+          <!-- .footerFlexParent ends -->
         </div>
-          
+
         <p>Designed and developed by Christopher Yun 2022</p>
       </div>
     </footer>
-      
-    
+
+
     <script type="module" src="./script.js"></script>
 
-<!-- bodyDivEnds -->
-</div>
+    <!-- wrapper ends -->
+  </div>
+  <!-- bodyDivEnds -->
+  </div>
 </body>
+
 </html>

@@ -2,28 +2,14 @@
 
 
 // _home.scss
-header{
+.headerContainer{
   height: 100vh;
 }
-
-
-.topHalf{
-  height: 50vh;
-  img{
-    width: 30%;
-  }
+.h1FlexParent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10%;
+  height: calc(100vh - 10%);
+  text-align: center;
 }
-
-
-.bottomHalf{
-  height: 50vh; 
-}
-
-
-h1{
-  text-align: left;
-  padding-left: 5%;
-}
-
-
-
