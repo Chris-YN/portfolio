@@ -270,11 +270,13 @@ html {
   line-height: 1.15;
 }
 
-h1 {
+h1,
+h2 {
   font-family: "Cabin", sans-serif;
   font-weight: 700;
   color: white;
   font-size: 5rem;
+  text-shadow: -2px -2px 0 rgb(156, 156, 156), 2px -2px 0 rgb(156, 156, 156), -2px 2px 0 rgb(156, 156, 156), 2px 2px 0 rgb(156, 156, 156);
 }
 
 .leftBlock h2,
@@ -295,33 +297,20 @@ p {
 .mainNav p {
   font-family: "Cabin", sans-serif;
   font-weight: 500;
-  font-size: 2rem;
   color: white;
 }
 
 html {
   scroll-behavior: smooth;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   overflow-x: hidden;
 }
 
 .wrapper {
   max-width: 1280px;
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
-}
-
-h2 {
-  text-align: left;
-  padding-left: 13.2%;
-}
-
-.contentTopMargin {
-  margin-top: 5.5%;
-}
-
-.contentTopPadding {
-  padding-top: 5%;
+  position: relative;
 }
 
 .beforeLine {
@@ -353,10 +342,6 @@ h2 {
 .shortAfterLine::after {
   width: 84%;
   left: 8%;
-}
-
-a {
-  cursor: pointer;
 }
 
 a:visited {
@@ -613,28 +598,35 @@ h1 .h1LightBlue {
     flex-direction: column;
   }
 }
-.headerContainer {
-  height: 100vh;
-}
-
 .h1FlexParent {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 10%;
-  height: calc(100vh - 10%);
+  margin: 0 10% 0 10%;
+  height: 100vh;
   text-align: center;
 }
 
 .mainNav {
+  position: absolute;
   width: 100%;
-  height: 10%;
-  position: relative;
+  height: 100vh;
+}
+.mainNav p,
+.mainNav a {
+  color: white;
 }
 
-.mainNavItems {
-  transform: rotate(-45deg);
-  margin-bottom: 50px;
+.mainNavItemsContainer {
+  position: fixed;
+  bottom: 100%;
+  height: 100%;
+  width: 85px;
+  display: flex;
+  -ms-writing-mode: tb-lr;
+      writing-mode: vertical-lr;
+  text-orientation: sideways-right;
+  transform: rotate(-180deg);
 }
 
 .sectionProject {
@@ -754,29 +746,28 @@ footer .wrapper p:last-child {
   background-color: #dba93c;
 }
 
-#aboutMe {
-  padding-top: 25%;
+.aboutMe {
+  margin-top: 10%;
+  width: 80%;
+  margin-left: 20%;
 }
 
-.aboutMeFlexParent,
-.textContainerFlexParent {
-  display: flex;
-  justify-content: space-evenly;
+.pictureAndTextContainer {
+  width: 60%;
+  margin-top: 10%;
 }
 
-.profilePictureContainer {
-  width: 40%;
-  padding: 0 0 0 10%;
-  margin-right: 10%;
+.picturesContainer {
+  margin-left: 5%;
+  shape-outside: margin-box;
+  width: 236px;
+  height: 337px;
+  float: right;
 }
-.profilePictureContainer img {
+.picturesContainer img {
   border-radius: 15px;
-}
-
-.textContainerFlexParent {
-  width: 40%;
-  padding: 0 10% 0 0;
-  color: rgb(121, 125, 128);
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .picturesContainer {
@@ -1049,6 +1040,7 @@ footer .wrapper p:last-child {
 }
 
 .welcomAnimationStage {
+  z-index: 30;
   background-color: transparent;
   position: absolute;
   width: 100%;
@@ -1062,6 +1054,7 @@ footer .wrapper p:last-child {
 }
 
 .leftBlock {
+  z-index: 31;
   background-color: rgb(243, 236, 226);
   position: absolute;
   top: 0;
@@ -1082,6 +1075,7 @@ footer .wrapper p:last-child {
 }
 
 .rightBlock {
+  z-index: 32;
   background-color: rgb(243, 236, 226);
   position: absolute;
   top: 0;
@@ -1103,6 +1097,7 @@ footer .wrapper p:last-child {
 }
 
 .animatedLine::after {
+  z-index: 33;
   content: "";
   position: absolute;
   border-left: 4px solid rgb(214, 214, 214);
@@ -1175,12 +1170,72 @@ footer .wrapper p:last-child {
     z-index: -20;
   }
 }
-.mainNavItemsContainer {
-  position: absolute;
-  bottom: 110%;
-  left: 10%;
-  -webkit-animation: mainNavDrop 3S 4s 1;
-          animation: mainNavDrop 3S 4s 1;
+.homeMainNavDropAni {
+  -webkit-animation: mainNavDrop 1.4S 4s 1;
+          animation: mainNavDrop 1.4S 4s 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.homeMainNavItem3 {
+  -webkit-animation: mainNavItemsSeperation 2.1s 4s 1;
+          animation: mainNavItemsSeperation 2.1s 4s 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.homeMainNavItem2 {
+  -webkit-animation: mainNavItemsSeperation 2.1s 4s 1;
+          animation: mainNavItemsSeperation 2.1s 4s 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.homeMainNavItem1 {
+  -webkit-animation: mainNavItemsSeperation 2.1s 4s 1;
+          animation: mainNavItemsSeperation 2.1s 4s 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.homeMainNavItem0 {
+  -webkit-animation: mainNavItemsSeperation 2.1s 4s 1;
+          animation: mainNavItemsSeperation 2.1s 4s 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.mainNavDropAni {
+  -webkit-animation: mainNavDrop 1.4S 0s 1;
+          animation: mainNavDrop 1.4S 0s 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.mainNavItem3 {
+  -webkit-animation: mainNavItemsSeperation 2.1s 0s 1;
+          animation: mainNavItemsSeperation 2.1s 0s 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.mainNavItem2 {
+  -webkit-animation: mainNavItemsSeperation 2.1s 0s 1;
+          animation: mainNavItemsSeperation 2.1s 0s 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.mainNavItem1 {
+  -webkit-animation: mainNavItemsSeperation 2.1s 0s 1;
+          animation: mainNavItemsSeperation 2.1s 0s 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.mainNavItem0 {
+  -webkit-animation: mainNavItemsSeperation 2.1s 4s 1;
+          animation: mainNavItemsSeperation 2.1s 4s 1;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -1190,7 +1245,7 @@ footer .wrapper p:last-child {
     bottom: 100%;
   }
   100% {
-    bottom: -500%;
+    bottom: 20%;
   }
 }
 
@@ -1199,7 +1254,63 @@ footer .wrapper p:last-child {
     bottom: 100%;
   }
   100% {
-    bottom: -500%;
+    bottom: 20%;
+  }
+}
+@-webkit-keyframes mainNavItemsSeperation {
+  100% {
+    margin-bottom: 50px;
+  }
+}
+@keyframes mainNavItemsSeperation {
+  100% {
+    margin-bottom: 50px;
+  }
+}
+.mainNavGrowTiltAni {
+  transform-origin: top left;
+}
+.mainNavGrowTiltAni p {
+  font-size: 1.5rem;
+}
+.mainNavGrowTiltAni p:hover {
+  -webkit-animation-name: mainNavFontGrow, mainNavTilt;
+          animation-name: mainNavFontGrow, mainNavTilt;
+  -webkit-animation-duration: 0.2s, 0.4s;
+          animation-duration: 0.2s, 0.4s;
+  -webkit-animation-delay: 0s, 0s;
+          animation-delay: 0s, 0s;
+  -webkit-animation-iteration-count: 1, 1;
+          animation-iteration-count: 1, 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes mainNavTilt {
+  100% {
+    transform: rotate(9deg);
+  }
+}
+
+@keyframes mainNavTilt {
+  100% {
+    transform: rotate(9deg);
+  }
+}
+@-webkit-keyframes mainNavFontGrow {
+  0% {
+    font-size: 1.5rem;
+  }
+  100% {
+    font-size: 1.8rem;
+  }
+}
+@keyframes mainNavFontGrow {
+  0% {
+    font-size: 1.5rem;
+  }
+  100% {
+    font-size: 1.8rem;
   }
 }
 body {
@@ -1402,13 +1513,17 @@ footer .footerDivLight,
   }
 }
 .pictureOne {
-  -webkit-animation: smileOne 4.5s 1s 5;
-          animation: smileOne 4.5s 1s 5;
+  -webkit-animation: smileOne 4.5s 1s 3;
+          animation: smileOne 4.5s 1s 3;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .pictureTwo {
-  -webkit-animation: smileTwo 4.5s 1s 5;
-          animation: smileTwo 4.5s 1s 5;
+  -webkit-animation: smileTwo 4.5s 1s 3;
+          animation: smileTwo 4.5s 1s 3;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .hiddenInputErrorMsgContainer {
@@ -1603,6 +1718,6 @@ input:focus {
 }
 
 .wrapper {
-  background: linear-gradient(rgb(211, 210, 205) 0, rgb(153, 153, 153) 40%, transparent 100%), repeating-linear-gradient(-45deg, transparent, transparent 5px, rgba(153, 153, 153, 0.3) 5px, rgba(153, 153, 153, 0.3) 8px, rgba(71, 71, 71, 0.3) 8px, rgba(71, 71, 71, 0.3) 10px), radial-gradient(circle at top right, rgb(153, 153, 153) 0, rgb(71, 71, 71) 100%);
-  background-color: rgb(95, 95, 95);
+  background: linear-gradient(rgb(243, 242, 228) 0, rgb(196, 197, 179) 50%, transparent 100%), repeating-linear-gradient(-55deg, transparent, transparent 6px, rgb(39, 39, 39) 6px, rgb(39, 39, 39) 8px, rgb(15, 15, 15) 8px, rgb(0, 0, 0) 9px);
+  background-color: rgb(196, 197, 179);
 }/*# sourceMappingURL=style.css.map */

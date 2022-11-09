@@ -1,68 +1,51 @@
-
-
-
 // _generalStyling.scss
-html{
+html {
   scroll-behavior: smooth;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   overflow-x: hidden;
 }
 
-.wrapper{
+.wrapper {
   max-width: 1280px;
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
-}
-
-h2{
-  text-align: left;
-  padding-left: 13.2%;
-}
-
-.contentTopMargin{
-  margin-top: 5.5%;
-}
-
-.contentTopPadding{
-  padding-top: 5%;
-}
-
-.beforeLine{
   position: relative;
-  &::before{
+}
+
+.beforeLine {
+  position: relative;
+
+  &::before {
     content: "";
     width: 72%;
     position: absolute;
     border-bottom: 1.5px solid $vsCodeCommentGrey;
-    top:35%;
+    top: 35%;
     left: 13%;
   }
 }
 
 .afterLine,
-.shortAfterLine
-.beforeLine{
+.shortAfterLine .beforeLine {
   position: relative;
-  &::after{
+
+  &::after {
     content: "";
     width: 100%;
     position: absolute;
     border-bottom: 1.5px solid $vsCodeCommentGrey;
-    bottom:-5%;
+    bottom: -5%;
     left: 0%;
   }
 }
 
-.shortAfterLine{
-  &::after{
-    width:84%;
-    left:8%;
+.shortAfterLine {
+  &::after {
+    width: 84%;
+    left: 8%;
   }
 }
 
-a{
-  cursor: pointer;
-}
-a:visited{
+a:visited {
   color: inherit;
 }

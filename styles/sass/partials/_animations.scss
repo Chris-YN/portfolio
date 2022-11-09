@@ -10,6 +10,7 @@
 }
 
 .welcomAnimationStage {
+  z-index: 30;
   background-color: transparent;
   position: absolute;
   width: 100%;
@@ -21,6 +22,7 @@
 }
 
 .leftBlock {
+  z-index: 31;
   background-color: rgb(243, 236, 226, 1);
   // border-right: 4px solid rgb(233, 233, 233);
   position: absolute;
@@ -40,7 +42,7 @@
 }
 
 .rightBlock {
-  // z-index: 0;
+  z-index: 32;
   background-color: rgb(243, 236, 226, 1);
   // border-left: 4px solid rgb(233, 233, 233);
   position: absolute;
@@ -62,6 +64,7 @@
 
 .animatedLine {
   &::after {
+    z-index: 33;
     content: "";
     position: absolute;
     border-left: 4px solid rgb(214, 214, 214);
@@ -103,8 +106,8 @@
   }
 }
 
-@keyframes stageRemove{
-  100%{
+@keyframes stageRemove {
+  100% {
     z-index: -20;
   }
 }
@@ -112,24 +115,116 @@
 
 
 ///////////////////////////////////////////////////////////////////////////
-//////////////////////////
-// theme change related //
-//////////////////////////
+///////////////////////////
+// main nav drop related //
+///////////////////////////
 ///////////////////////////////////////////////////////////////////////////
-.mainNavItemsContainer{
-  position: absolute;
-  bottom: 110%;
-  left: 10%;
-  animation: mainNavDrop 3S 4s 1;
+// for home page (different delay due to door animiation)
+.homeMainNavDropAni {
+  animation: mainNavDrop 1.4S 4s 1;
   animation-fill-mode: forwards;
 }
 
-@keyframes mainNavDrop{
-  0%{
+.homeMainNavItem3 {
+  animation: mainNavItemsSeperation 2.1s 4s 1;
+  animation-fill-mode: forwards;
+}
+
+.homeMainNavItem2 {
+  animation: mainNavItemsSeperation 2.1s 4s 1;
+  animation-fill-mode: forwards;
+}
+
+.homeMainNavItem1 {
+  animation: mainNavItemsSeperation 2.1s 4s 1;
+  animation-fill-mode: forwards;
+}
+
+.homeMainNavItem0 {
+  animation: mainNavItemsSeperation 2.1s 4s 1;
+  animation-fill-mode: forwards;
+}
+
+// for pages other than home page (different delay due to lack of door animiation)
+.mainNavDropAni {
+  animation: mainNavDrop 1.4S 0s 1;
+  animation-fill-mode: forwards;
+}
+
+.mainNavItem3 {
+  animation: mainNavItemsSeperation 2.1s 0s 1;
+  animation-fill-mode: forwards;
+}
+
+.mainNavItem2 {
+  animation: mainNavItemsSeperation 2.1s 0s 1;
+  animation-fill-mode: forwards;
+}
+
+.mainNavItem1 {
+  animation: mainNavItemsSeperation 2.1s 0s 1;
+  animation-fill-mode: forwards;
+}
+
+.mainNavItem0 {
+  animation: mainNavItemsSeperation 2.1s 4s 1;
+  animation-fill-mode: forwards;
+}
+@keyframes mainNavDrop {
+  0% {
     bottom: 100%;
   }
-  100%{
-    bottom: -500%;
+  100% {
+    bottom: 20%;
+  }
+}
+
+@keyframes mainNavItemsSeperation {
+  0% {}
+
+  100% {
+    margin-bottom: 50px;
+  }
+}
+
+
+
+///////////////////////////////////////////////////////////////////////////
+///////////////////////////////////
+// main nav hover effect related //
+///////////////////////////////////
+///////////////////////////////////////////////////////////////////////////
+.mainNavGrowTiltAni {
+  transform-origin: top left;
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  p:hover {
+    animation-name: mainNavFontGrow, mainNavTilt;
+    animation-duration: 0.2s, 0.4s;
+    animation-delay: 0s, 0s;
+    animation-iteration-count: 1, 1;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes mainNavTilt {
+  0% {}
+
+  100% {
+    transform: rotate(9deg);
+  }
+}
+
+@keyframes mainNavFontGrow {
+  0% {
+    font-size: 1.5rem;
+  }
+
+  100% {
+    font-size: 1.8rem;
   }
 }
 
@@ -301,11 +396,13 @@ footer .footerDivLight,
 }
 
 .pictureOne {
-  animation: smileOne 4.5s 1s 5;
+  animation: smileOne 4.5s 1s 3;
+  animation-fill-mode: forwards;
 }
 
 .pictureTwo {
-  animation: smileTwo 4.5s 1s 5;
+  animation: smileTwo 4.5s 1s 3;
+  animation-fill-mode: forwards;
 }
 
 

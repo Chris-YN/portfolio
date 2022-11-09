@@ -1,32 +1,29 @@
-
-
-
 // _aboutMe.scss
-#aboutMe{
-  padding-top: 25%;
-  
-  // h2{
-  //   padding-top: 13%;
-  // }
+.aboutMe {
+  margin-top: 10%;
+  width: 80%;
+  margin-left: 20%;
 }
 
-.aboutMeFlexParent,
-.textContainerFlexParent{
-  display: flex;
-  justify-content: space-evenly;
+.pictureAndTextContainer {
+  width: 60%;
+  margin-top: 10%;
 }
-.profilePictureContainer{
-  width: 40%;
-  padding: 0 0 0 10%;
-  margin-right: 10%;
-  img{
+
+.picturesContainer {
+  img {
     border-radius: 15px;
+    object-fit: cover;
   }
-}
-.textContainerFlexParent{
-  width: 40%;
-  padding: 0 10% 0 0;
-  color: $vsCodeCommentGrey;
+
+  margin-left: 5%;
+  shape-outside: margin-box;
+  // height as a fixed value is required for text wrapping
+  // adjust this value manually for media query
+  // width also is set as a fixed value to proper ensure text wrap
+  width: 236px;
+  height: 337px;
+  float: right;
 }
 
 
@@ -48,8 +45,8 @@
 
 
 //===== skills background =====/
-.skillsIconBackground{
-  margin-right:13%;
+.skillsIconBackground {
+  margin-right: 13%;
   margin-left: 13%;
   padding: 3% 0 8% 0;
   background-color: $vsCodeBlack;
@@ -60,64 +57,73 @@
 
 //===== skill list =====//
 .skillListFlexParent,
-.skillNamePairFlexParent{
+.skillNamePairFlexParent {
   display: flex;
   align-items: center;
 }
 
 
-.skillListFlexParent{
-  margin:0 auto;
+.skillListFlexParent {
+  margin: 0 auto;
   width: 75%;
   flex-wrap: wrap;
   // padding: 1%;
   justify-content: space-between;
   align-items: flex-start;
-  ul{
+
+  ul {
     width: calc(100% / 4);
-    padding-top:10%;
+    padding-top: 10%;
   }
-  ul li{
+
+  ul li {
     font-size: 3rem;
   }
-  ul li img{
+
+  ul li img {
     max-width: 53px;
     margin-bottom: 1%;
     // this is to align the img with favicons
-      // -this works together with padding top on p underneath the img
-    padding-top:7.5px;
+    // -this works together with padding top on p underneath the img
+    padding-top: 7.5px;
   }
+
   ul:nth-child(9),
-  ul:nth-child(10){
+  ul:nth-child(10) {
     width: calc(100% / 2);
   }
-  ul:nth-child(11){
-    width:calc(100% / 4 * 3);
+
+  ul:nth-child(11) {
+    width: calc(100% / 4 * 3);
     padding-right: calc(100% / 4 * 2);
-    li p{
+
+    li p {
       text-align: center;
       line-height: 1.3rem;
     }
   }
+
   ul:nth-child(8),
   ul:nth-child(9),
-  ul:nth-child(10){
-    li p{
+  ul:nth-child(10) {
+    li p {
       // this is to align the p under img with p under favicons
-        // -this works together with padding top on img above the p
-      padding-top:11.5px;
+      // -this works together with padding top on img above the p
+      padding-top: 11.5px;
     }
   }
-  ul:nth-child(6) i{
+
+  ul:nth-child(6) i {
     font-size: 1.84rem;
   }
 }
 
-.skillNamePairFlexParent{
+.skillNamePairFlexParent {
   flex-direction: column;
   align-items: center;
   color: $vsCodeCommentGrey;
-  li p{
+
+  li p {
     color: $vsCodeCommentGrey;
     font-family: 'Niramit', sans-serif;
     font-weight: 300;
@@ -126,6 +132,6 @@
   }
 }
 
-.textContainerFlexParent{
+.textContainerFlexParent {
   flex-direction: column;
 }

@@ -9,30 +9,38 @@ html {
   line-height: 1.15;
 }
 
-h1 {
+h1,
+h2 {
   font-family: 'Cabin', sans-serif;
   // font-family: 'Albert Sans', sans-serif;
   // font-family: 'Roboto', sans-serif;
   font-weight: 700;
   color: white;
   font-size: 5rem;
-  
+
   // text-outline
-  // text-shadow:
-  //     -1px -1px 0 rgb(153, 0, 255),
-  //     1px -1px 0 rgb(253, 0, 241),
-  //     -1px 1px 0 rgb(238, 255, 0),
-  //     1px 1px 0 rgb(10, 18, 87);
+  text-shadow:
+    -2px -2px 0 rgb(156, 156, 156),
+    2px -2px 0 rgb(156, 156, 156),
+    -2px 2px 0 rgb(156, 156, 156),
+    2px 2px 0 rgb(156, 156, 156),
+    // -1px -1px 0 rgb(153, 0, 255),
+    // 1px -1px 0 rgb(253, 0, 241),
+    // -1px 1px 0 rgb(238, 255, 0),
+    // 1px 1px 0 rgb(10, 18, 87),
+    // -5px -5px 0 rgb(153, 0, 255),
+    // 5px -5px 0 rgb(253, 0, 241),
+    // -5px 5px 0 rgb(238, 255, 0),
+    // 5px 5px 0 rgb(10, 18, 87);
 }
 
 .leftBlock h2,
-.rightBlock h2{
+.rightBlock h2 {
   font-family: 'Cabin', sans-serif;
   font-weight: 700;
   font-size: 7rem;
   color: white;
 }
-
 
 p {
   font-family: 'Niramit', sans-serif;
@@ -41,9 +49,8 @@ p {
   line-height: 1.5rem;
 }
 
-.mainNav p{
+.mainNav p {
   font-family: 'Cabin', sans-serif;
   font-weight: 500;
-  font-size: 2rem;
   color: white;
 }
