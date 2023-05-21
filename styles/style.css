@@ -276,7 +276,6 @@ h2 {
   font-weight: 700;
   color: white;
   font-size: 5rem;
-  text-shadow: -2px -2px 0 rgb(156, 156, 156), 2px -2px 0 rgb(156, 156, 156), -2px 2px 0 rgb(156, 156, 156), 2px 2px 0 rgb(156, 156, 156);
 }
 
 .leftBlock h2,
@@ -285,6 +284,7 @@ h2 {
   font-weight: 700;
   font-size: 7rem;
   color: white;
+  text-shadow: -2px -2px 0 rgb(156, 156, 156), 2px -2px 0 rgb(156, 156, 156), -2px 2px 0 rgb(156, 156, 156), 2px 2px 0 rgb(156, 156, 156);
 }
 
 p {
@@ -295,6 +295,8 @@ p {
 }
 
 .mainNav p {
+  font-size: 1.5rem;
+  filter: blur(0.5px);
   font-family: "Cabin", sans-serif;
   font-weight: 500;
   color: white;
@@ -325,6 +327,10 @@ html {
   left: 13%;
 }
 
+main {
+  padding-left: 11%;
+}
+
 .afterLine,
 .shortAfterLine .beforeLine {
   position: relative;
@@ -350,25 +356,25 @@ a:visited {
 
 @media (max-width: 1210px) {
   h1 .h1Blue,
-h1 .h1LightBlue {
+  h1 .h1LightBlue {
     font-size: 2.5rem;
   }
   h1 .h1Purple,
-h1 .h1Orange,
-h1 .h1White,
-h1 .spanLightRed {
+  h1 .h1Orange,
+  h1 .h1White,
+  h1 .spanLightRed {
     font-size: 1.3rem;
   }
 }
 @media (max-width: 995px) {
   h1 .h1Blue,
-h1 .h1LightBlue {
+  h1 .h1LightBlue {
     font-size: 2rem;
   }
   h1 .h1Purple,
-h1 .h1Orange,
-h1 .h1White,
-h1 .spanLightRed {
+  h1 .h1Orange,
+  h1 .h1White,
+  h1 .spanLightRed {
     font-size: 1rem;
   }
   .aboutMeFlexParent .profilePictureContainer {
@@ -412,13 +418,13 @@ h1 .spanLightRed {
     white-space: pre;
   }
   h1 .h1Blue,
-h1 .h1LightBlue {
+  h1 .h1LightBlue {
     padding-left: 3%;
   }
   h1 .h1Purple,
-h1 .h1Orange,
-h1 .h1White,
-h1 .spanLightRed {
+  h1 .h1Orange,
+  h1 .h1White,
+  h1 .spanLightRed {
     font-size: 0.8rem;
   }
   .mediaQueryHidden {
@@ -478,11 +484,11 @@ h1 .spanLightRed {
     line-height: 1.1rem;
   }
   h1 .h1Blue,
-h1 .h1LightBlue {
+  h1 .h1LightBlue {
     font-size: 1.8rem;
   }
   nav p,
-nav a {
+  nav a {
     font-size: 0.8rem;
   }
   .indexTopNav {
@@ -512,7 +518,7 @@ nav a {
 }
 @media (max-width: 470px) {
   h1 .h1Blue,
-h1 .h1LightBlue {
+  h1 .h1LightBlue {
     font-size: 1.3rem;
   }
   h2 {
@@ -609,11 +615,11 @@ h1 .h1LightBlue {
 
 .mainNav {
   position: absolute;
-  width: 100%;
-  height: 100vh;
+  width: 10%;
+  height: 100%;
+  z-index: 1;
 }
-.mainNav p,
-.mainNav a {
+.mainNav p {
   color: white;
 }
 
@@ -623,8 +629,7 @@ h1 .h1LightBlue {
   height: 100%;
   width: 85px;
   display: flex;
-  -ms-writing-mode: tb-lr;
-      writing-mode: vertical-lr;
+  writing-mode: vertical-lr;
   text-orientation: sideways-right;
   transform: rotate(-180deg);
 }
@@ -642,15 +647,13 @@ h1 .h1LightBlue {
   line-height: 1.1rem;
 }
 
-footer .wrapper {
-  background: rgb(0, 0, 0);
-}
-footer p {
-  color: rgb(121, 125, 128);
-}
-footer .wrapper p:last-child {
+.footerContainer {
+  max-width: 1280px;
+  width: 90%;
+  margin: 0 auto;
+  background-color: black;
   text-align: center;
-  padding: 3% 0 2% 0;
+  color: white;
 }
 
 .footerFlexParent {
@@ -712,9 +715,6 @@ footer .wrapper p:last-child {
 .contactFormFlexParent input::-moz-placeholder, .contactFormFlexParent textarea::-moz-placeholder {
   color: rgb(121, 125, 128);
 }
-.contactFormFlexParent input:-ms-input-placeholder, .contactFormFlexParent textarea:-ms-input-placeholder {
-  color: rgb(121, 125, 128);
-}
 .contactFormFlexParent input::placeholder,
 .contactFormFlexParent textarea::placeholder {
   color: rgb(121, 125, 128);
@@ -746,10 +746,23 @@ footer .wrapper p:last-child {
   background-color: #dba93c;
 }
 
+.snapScrollParent {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+.snapScrollParent .snapScrollChild {
+  scroll-snap-align: center;
+}
+
+.snapScrollCard {
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin: 10% 0 10% 0;
+}
+
 .aboutMe {
   margin-top: 10%;
-  width: 80%;
-  margin-left: 20%;
 }
 
 .pictureAndTextContainer {
@@ -1047,10 +1060,8 @@ footer .wrapper p:last-child {
   height: 100vh;
   top: 0;
   left: 0;
-  -webkit-animation: stageRemove 0.1s 4s 1;
-          animation: stageRemove 0.1s 4s 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation: stageRemove 0.1s 4s 1;
+  animation-fill-mode: forwards;
 }
 
 .leftBlock {
@@ -1060,10 +1071,8 @@ footer .wrapper p:last-child {
   top: 0;
   width: 50%;
   height: 100%;
-  -webkit-animation: blockLeftSlide 3s 3s 1;
-          animation: blockLeftSlide 3s 3s 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation: blockLeftSlide 3s 3s 1;
+  animation-fill-mode: forwards;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -1082,10 +1091,8 @@ footer .wrapper p:last-child {
   right: 0;
   width: 50%;
   height: 100%;
-  -webkit-animation: blockRightSlide 3s 3s 1;
-          animation: blockRightSlide 3s 3s 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation: blockRightSlide 3s 3s 1;
+  animation-fill-mode: forwards;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -1103,19 +1110,7 @@ footer .wrapper p:last-child {
   border-left: 4px solid rgb(214, 214, 214);
   top: 50%;
   left: 50%;
-  -webkit-animation: dotToLine 2s 1s 1;
-          animation: dotToLine 2s 1s 1;
-}
-
-@-webkit-keyframes dotToLine {
-  0% {
-    height: 1%;
-    top: 50%;
-  }
-  100% {
-    height: 100%;
-    top: 0;
-  }
+  animation: dotToLine 2s 1s 1;
 }
 
 @keyframes dotToLine {
@@ -1128,28 +1123,12 @@ footer .wrapper p:last-child {
     top: 0;
   }
 }
-@-webkit-keyframes blockLeftSlide {
-  0% {
-    left: 0;
-  }
-  100% {
-    left: -100%;
-  }
-}
 @keyframes blockLeftSlide {
   0% {
     left: 0;
   }
   100% {
     left: -100%;
-  }
-}
-@-webkit-keyframes blockRightSlide {
-  0% {
-    right: 0;
-  }
-  100% {
-    right: -100%;
   }
 }
 @keyframes blockRightSlide {
@@ -1160,93 +1139,59 @@ footer .wrapper p:last-child {
     right: -100%;
   }
 }
-@-webkit-keyframes stageRemove {
-  100% {
-    z-index: -20;
-  }
-}
 @keyframes stageRemove {
   100% {
     z-index: -20;
   }
 }
 .homeMainNavDropAni {
-  -webkit-animation: mainNavDrop 1.4S 4s 1;
-          animation: mainNavDrop 1.4S 4s 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation: mainNavDrop 1.4S 4s 1;
+  animation-fill-mode: forwards;
 }
 
 .homeMainNavItem3 {
-  -webkit-animation: mainNavItemsSeperation 2.1s 4s 1;
-          animation: mainNavItemsSeperation 2.1s 4s 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation: mainNavItemsSeperation 2.1s 4s 1;
+  animation-fill-mode: forwards;
 }
 
 .homeMainNavItem2 {
-  -webkit-animation: mainNavItemsSeperation 2.1s 4s 1;
-          animation: mainNavItemsSeperation 2.1s 4s 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation: mainNavItemsSeperation 2.1s 4s 1;
+  animation-fill-mode: forwards;
 }
 
 .homeMainNavItem1 {
-  -webkit-animation: mainNavItemsSeperation 2.1s 4s 1;
-          animation: mainNavItemsSeperation 2.1s 4s 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation: mainNavItemsSeperation 2.1s 4s 1;
+  animation-fill-mode: forwards;
 }
 
 .homeMainNavItem0 {
-  -webkit-animation: mainNavItemsSeperation 2.1s 4s 1;
-          animation: mainNavItemsSeperation 2.1s 4s 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation: mainNavItemsSeperation 2.1s 4s 1;
+  animation-fill-mode: forwards;
 }
 
 .mainNavDropAni {
-  -webkit-animation: mainNavDrop 1.4S 0s 1;
-          animation: mainNavDrop 1.4S 0s 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation: mainNavDrop 1.4S 0s 1;
+  animation-fill-mode: forwards;
 }
 
 .mainNavItem3 {
-  -webkit-animation: mainNavItemsSeperation 2.1s 0s 1;
-          animation: mainNavItemsSeperation 2.1s 0s 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation: mainNavItemsSeperation 2.1s 0s 1;
+  animation-fill-mode: forwards;
 }
 
 .mainNavItem2 {
-  -webkit-animation: mainNavItemsSeperation 2.1s 0s 1;
-          animation: mainNavItemsSeperation 2.1s 0s 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation: mainNavItemsSeperation 2.1s 0s 1;
+  animation-fill-mode: forwards;
 }
 
 .mainNavItem1 {
-  -webkit-animation: mainNavItemsSeperation 2.1s 0s 1;
-          animation: mainNavItemsSeperation 2.1s 0s 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation: mainNavItemsSeperation 2.1s 0s 1;
+  animation-fill-mode: forwards;
 }
 
 .mainNavItem0 {
-  -webkit-animation: mainNavItemsSeperation 2.1s 4s 1;
-          animation: mainNavItemsSeperation 2.1s 4s 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes mainNavDrop {
-  0% {
-    bottom: 100%;
-  }
-  100% {
-    bottom: 20%;
-  }
+  animation: mainNavItemsSeperation 2.1s 4s 1;
+  animation-fill-mode: forwards;
 }
 
 @keyframes mainNavDrop {
@@ -1257,39 +1202,20 @@ footer .wrapper p:last-child {
     bottom: 20%;
   }
 }
-@-webkit-keyframes mainNavItemsSeperation {
-  100% {
-    margin-bottom: 50px;
-  }
-}
 @keyframes mainNavItemsSeperation {
   100% {
-    margin-bottom: 50px;
+    margin-bottom: 45px;
   }
 }
 .mainNavGrowTiltAni {
   transform-origin: top left;
 }
-.mainNavGrowTiltAni p {
-  font-size: 1.5rem;
-}
 .mainNavGrowTiltAni p:hover {
-  -webkit-animation-name: mainNavFontGrow, mainNavTilt;
-          animation-name: mainNavFontGrow, mainNavTilt;
-  -webkit-animation-duration: 0.2s, 0.4s;
-          animation-duration: 0.2s, 0.4s;
-  -webkit-animation-delay: 0s, 0s;
-          animation-delay: 0s, 0s;
-  -webkit-animation-iteration-count: 1, 1;
-          animation-iteration-count: 1, 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes mainNavTilt {
-  100% {
-    transform: rotate(9deg);
-  }
+  animation-name: mainNavFontGrow, mainNavTilt;
+  animation-duration: 0.2s, 0.4s;
+  animation-delay: 0s, 0s;
+  animation-iteration-count: 1, 1;
+  animation-fill-mode: forwards;
 }
 
 @keyframes mainNavTilt {
@@ -1297,20 +1223,11 @@ footer .wrapper p:last-child {
     transform: rotate(9deg);
   }
 }
-@-webkit-keyframes mainNavFontGrow {
-  0% {
-    font-size: 1.5rem;
-  }
-  100% {
-    font-size: 1.8rem;
-  }
-}
 @keyframes mainNavFontGrow {
-  0% {
-    font-size: 1.5rem;
-  }
   100% {
     font-size: 1.8rem;
+    color: rgb(58, 58, 58);
+    filter: blur(0);
   }
 }
 body {
@@ -1330,18 +1247,6 @@ body {
   position: absolute;
 }
 
-@-webkit-keyframes slideFlashIn {
-  0% {
-    left: -100%;
-  }
-  70% {
-    left: 0;
-  }
-  100% {
-    left: 0;
-  }
-}
-
 @keyframes slideFlashIn {
   0% {
     left: -100%;
@@ -1351,14 +1256,6 @@ body {
   }
   100% {
     left: 0;
-  }
-}
-@-webkit-keyframes slideFlashOut {
-  0% {
-    left: 0;
-  }
-  100% {
-    left: -100%;
   }
 }
 @keyframes slideFlashOut {
@@ -1419,30 +1316,6 @@ footer .footerDivLight,
   color: #dba93c;
 }
 
-@-webkit-keyframes smileOne {
-  0% {
-    opacity: 1;
-  }
-  1% {
-    opacity: 0;
-  }
-  25% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0;
-  }
-  75% {
-    opacity: 0;
-  }
-  76% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 @keyframes smileOne {
   0% {
     opacity: 1;
@@ -1451,29 +1324,6 @@ footer .footerDivLight,
     opacity: 0;
   }
   25% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0;
-  }
-  75% {
-    opacity: 0;
-  }
-  76% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes smileTwo {
-  0% {
-    opacity: 1;
-  }
-  25% {
-    opacity: 1;
-  }
-  26% {
     opacity: 0;
   }
   50% {
@@ -1513,17 +1363,13 @@ footer .footerDivLight,
   }
 }
 .pictureOne {
-  -webkit-animation: smileOne 4.5s 1s 3;
-          animation: smileOne 4.5s 1s 3;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation: smileOne 4.5s 1s 3;
+  animation-fill-mode: forwards;
 }
 
 .pictureTwo {
-  -webkit-animation: smileTwo 4.5s 1s 3;
-          animation: smileTwo 4.5s 1s 3;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation: smileTwo 4.5s 1s 3;
+  animation-fill-mode: forwards;
 }
 
 .hiddenInputErrorMsgContainer {
@@ -1580,21 +1426,6 @@ input:focus {
   background-color: rgb(255, 255, 255);
 }
 
-@-webkit-keyframes instruction {
-  0% {
-    opacity: 0;
-    color: #dba93c;
-  }
-  70% {
-    opacity: 0.4;
-    color: #dba93c;
-  }
-  100% {
-    opacity: 0;
-    color: #dba93c;
-  }
-}
-
 @keyframes instruction {
   0% {
     opacity: 0;
@@ -1616,8 +1447,7 @@ input:focus {
 }
 
 .inputInstructionAnimate {
-  -webkit-animation: instruction 8s 4.5s infinite;
-          animation: instruction 8s 4.5s infinite;
+  animation: instruction 8s 4.5s infinite;
 }
 
 #cursor {
@@ -1629,17 +1459,7 @@ input:focus {
 }
 
 .navFadeInAnimation {
-  -webkit-animation: navFadeIn 0.9s 1;
-          animation: navFadeIn 0.9s 1;
-}
-
-@-webkit-keyframes navFadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  animation: navFadeIn 0.9s 1;
 }
 
 @keyframes navFadeIn {
@@ -1648,32 +1468,6 @@ input:focus {
   }
   100% {
     opacity: 1;
-  }
-}
-@-webkit-keyframes navFlash {
-  0% {
-    opacity: 1;
-    color: rgb(121, 125, 128);
-  }
-  25% {
-    opacity: 0.7;
-    color: #dba93c;
-    text-shadow: 0 0 1 rgb(136, 75, 185);
-  }
-  50% {
-    opacity: 1;
-    color: rgb(121, 125, 128);
-    text-shadow: 0 0 0;
-  }
-  75% {
-    opacity: 0.7;
-    color: #dba93c;
-    text-shadow: 0 0 1 rgb(136, 75, 185);
-  }
-  100% {
-    opacity: 1;
-    color: rgb(121, 125, 128);
-    text-shadow: 0 0 0;
   }
 }
 @keyframes navFlash {
@@ -1703,21 +1497,18 @@ input:focus {
   }
 }
 .navFlashAnimationOne {
-  -webkit-animation: navFlash 0.9s 1.2s 1;
-          animation: navFlash 0.9s 1.2s 1;
+  animation: navFlash 0.9s 1.2s 1;
 }
 
 .navFlashAnimationTwo {
-  -webkit-animation: navFlash 0.9s 2s 1;
-          animation: navFlash 0.9s 2s 1;
+  animation: navFlash 0.9s 2s 1;
 }
 
 .navFlashAnimationThree {
-  -webkit-animation: navFlash 0.9s 2.8s 1;
-          animation: navFlash 0.9s 2.8s 1;
+  animation: navFlash 0.9s 2.8s 1;
 }
 
 .wrapper {
-  background: linear-gradient(rgb(243, 242, 228) 0, rgb(196, 197, 179) 50%, transparent 100%), repeating-linear-gradient(-55deg, transparent, transparent 6px, rgb(39, 39, 39) 6px, rgb(39, 39, 39) 8px, rgb(15, 15, 15) 8px, rgb(0, 0, 0) 9px);
+  background: linear-gradient(rgb(243, 242, 228) 0, rgb(196, 197, 179) 50%, transparent 100%), repeating-linear-gradient(-55deg, transparent, transparent 6px, rgba(39, 39, 39, 0.3) 6px, rgba(39, 39, 39, 0.3) 8px, rgba(15, 15, 15, 0.3) 8px, rgba(0, 0, 0, 0.3) 9px);
   background-color: rgb(196, 197, 179);
 }/*# sourceMappingURL=style.css.map */

@@ -18,12 +18,7 @@ h2 {
   color: white;
   font-size: 5rem;
 
-  // text-outline
-  text-shadow:
-    -2px -2px 0 rgb(156, 156, 156),
-    2px -2px 0 rgb(156, 156, 156),
-    -2px 2px 0 rgb(156, 156, 156),
-    2px 2px 0 rgb(156, 156, 156),
+  // text-shadow:
     // -1px -1px 0 rgb(153, 0, 255),
     // 1px -1px 0 rgb(253, 0, 241),
     // -1px 1px 0 rgb(238, 255, 0),
@@ -40,6 +35,12 @@ h2 {
   font-weight: 700;
   font-size: 7rem;
   color: white;
+  // text-outline
+  text-shadow:
+    -2px -2px 0 rgb(156, 156, 156),
+    2px -2px 0 rgb(156, 156, 156),
+    -2px 2px 0 rgb(156, 156, 156),
+    2px 2px 0 rgb(156, 156, 156),
 }
 
 p {
@@ -50,6 +51,8 @@ p {
 }
 
 .mainNav p {
+  font-size: 1.5rem;
+  filter: blur(.5px);
   font-family: 'Cabin', sans-serif;
   font-weight: 500;
   color: white;

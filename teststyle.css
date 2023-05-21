@@ -1,16 +1,41 @@
 /* CSS code, add in a separate file or style tag */
 /* always applied */
-nav {
+/* nav {
   width: 100%;
   background-color: black;
   text-align: center;
   margin: 0 auto;
   color: white;
-}
+} */
 
 /* applied after scroll height reached */
-.fixed-nav nav {
+/* .fixed-nav nav {
   position: fixed;
-  top:0;
+  top: 0;
   z-index: 10;
+} */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 100vh;
+
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+
+}
+
+.child {
+  height: 100vh;
+  font-size: 5rem;
+  /* display: grid;
+  place-items: center; */
+  scroll-snap-align: start;
+}
+
+.child:nth-of-type(2n){
+  background-color: red;
 }

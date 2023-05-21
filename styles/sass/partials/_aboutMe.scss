@@ -1,8 +1,23 @@
 // _aboutMe.scss
+.snapScrollParent{
+  // for scroll snapping
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  .snapScrollChild{
+    // height: 100vh;
+    scroll-snap-align: center;
+  }
+}
+
+.snapScrollCard{
+  border-radius: 20px;
+  background-color: rgba(0,0,0,0.3);
+  margin: 10% 0 10% 0;
+}
+
 .aboutMe {
   margin-top: 10%;
-  width: 80%;
-  margin-left: 20%;
 }
 
 .pictureAndTextContainer {

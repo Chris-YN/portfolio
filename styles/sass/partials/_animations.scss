@@ -180,10 +180,15 @@
 }
 
 @keyframes mainNavItemsSeperation {
-  0% {}
+  0% {
+    // height: 180px;
+    // text-align: center;
+  }
 
   100% {
-    margin-bottom: 50px;
+    margin-bottom: 45px;
+    // height: 180px;
+    // text-align: center;
   }
 }
 
@@ -196,10 +201,6 @@
 ///////////////////////////////////////////////////////////////////////////
 .mainNavGrowTiltAni {
   transform-origin: top left;
-
-  p {
-    font-size: 1.5rem;
-  }
 
   p:hover {
     animation-name: mainNavFontGrow, mainNavTilt;
@@ -220,11 +221,12 @@
 
 @keyframes mainNavFontGrow {
   0% {
-    font-size: 1.5rem;
   }
 
   100% {
     font-size: 1.8rem;
+    color: rgb(58, 58, 58);
+    filter: blur(0);
   }
 }
 

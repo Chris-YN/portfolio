@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- css link -->
+  <link rel="stylesheet" href="./styles/style.css">
+
+  <!-- Google font link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;600;700;800&family=Niramit:wght@200;300;400&family=Cabin:wght@500;700&display=swap"
+    rel="stylesheet">
+
+  <!-- FontAwesome link -->
+  <script src="https://kit.fontawesome.com/12e0e6e5dc.js" crossorigin="anonymous"></script>
+
+  <title>Christopher</title>
+</head>
+
+
+
+<body>
+  <!-- for theme change animation -->
+  <div class="wholeScreenSpread">
+  </div>
+
+  <div class="wrapper">
+    <header>
+      <!-- .mainNav starts -->
+      <nav class="mainNav">
+        <div class="mainNavItemsContainer mainNavDropAni">
+          <div class="mainNavItems mainNavItem3 ">
+            <p>
+              <a class="" href="./contact.html">Contact Me</a>
+            </p>
+          </div>
+
+          <div class="mainNavItems mainNavItem2 ">
+            <p>
+              <a class="" href="./index.html">Home</a>
+            </p>
+          </div>
+
+          <div class="mainNavItems mainNavItem1 ">
+            <p>
+              <a class="" href="./aboutMe.html">About Me!</a>
+            </p>
+          </div>
+
+          <div class="logo mainNavItems mainNavItem0 ">
+            <p>Logo?</p>
+          </div>
+        </div>
+        <!-- .mainNav ends   -->
+      </nav>
+    </header>
+
+
+
+    <!-- ==========================
+                  Main 
+    ===============================-->
+    <main>
+      <!-- ==========================
+               Section projects
+      ===============================-->
+      <section class="sectionProject" id="projects">
+        <div class="sectionTopPadding afterLine">
+          <h2 id="portfolioAnchorTarget">
+            <span aria-hidden="true" class="h1Purple">let </span>
+            <span aria-hidden="true" class="h1Orange">works </span>
+            <span aria-hidden="true" class="h1White">= </span>
+            [ Projects ]
+          </h2>
+          <p>
+            // Click on left or right arrow to navigate </br>
+            // Click on slide to bring up more description and links to the project
+          </p>
+        </div>
+
+
+        <!--===== carousel =====-->
+        <div class="portfolioCarousel contentTopMargin" data-pCarousel>
+          <button class="carouselButton previous" data-pCarousel-button="prev"><i
+              class="fas fa-arrow-left"></i></button>
+          <button class="carouselButton next" data-pCarousel-button="prev"><i class="fas fa-arrow-right"></i></button>
+
+          <img class="placeHolder" src="./styles/assets/recipeAppTrimedCarouselB.jpg"
+            alt="Screen-shot of Robo Trivia App">
+
+          <ul data-projects>
+            <li class="proOne project projectLi" data-projectNum="1" data-active><img
+                src="./styles/assets/recipeAppTrimedCarouselB.jpg" alt="Screen-shot of Robo Trivia App"></li>
+
+            <li class="proTwo project projectLi" data-projectNum="2"><img
+                src="./styles/assets/airAndWeatherTrimedCarouselB.jpg" alt="Screen-shot of air and weather app"></li>
+
+            <li class="proThree project projectLi" data-projectNum="3"><img
+                src="./styles/assets/roboTriviaTrimedCarouselB.jpg" alt="Screen-shot of Robo Trivia App"></li>
+
+            <li class="proFour project projectLi" data-projectNum="4"><img
+                src="./styles/assets/designConversionTrimedCarouselB.jpg"
+                alt="Screen-shot of design conversion project, CREATIVE"></li>
+          </ul>
+        </div>
+
+
+
+        <!--===== modal =====-->
+        <div class="projectModal">
+          <div class="overlay overlayHidden">
+          </div>
+          <div class="modal modalHidden">
+            <div class="modalContents">
+              <div class="modalCloseButton">
+                <i class="fa-solid fa-circle-xmark"></i>
+              </div>
+
+              <h2 class="shortAfterLine" id="projectTitle"></h2>
+
+              <div class="modalImageAndTextFlexParent">
+                <div id="projectImgContainer"></div>
+                <div class="modalTextFlexParent">
+                  <p id="projectDiscription"></p>
+                  <ul>
+                    <li id="projectLiveLink"></li>
+                    <li>
+                      <p>&nbsp;//&ensp;</p>
+                    </li>
+                    <li id="projectGitHubLink"></li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+
+  <!-- ===========================
+               Footer
+  ===============================-->
+  <footer>
+    <div class="footerContainer">
+      <p>Designed and developed by Christopher Yun 2022</p>
+    </div>
+  </footer>
+
+  <script type="module" src="./animation.js"></script>
+</body>
+
+</html>

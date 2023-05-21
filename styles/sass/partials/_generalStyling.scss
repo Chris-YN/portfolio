@@ -8,6 +8,7 @@ html {
 .wrapper {
   max-width: 1280px;
   width: 90%;
+  // height: 100vh;
   margin: 0 auto;
   position: relative;
 }
@@ -23,6 +24,11 @@ html {
     top: 35%;
     left: 13%;
   }
+}
+
+main{
+  // padding-left applied for mainNav
+  padding-left: 11%;
 }
 
 .afterLine,
